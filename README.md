@@ -18,7 +18,8 @@ A Sliding Puzzle game is a popular classic type of puzzle that involves arrangin
   - [**Features**](#features)
     - [**Header**](#header)
     - [**Logo**](#logo)
-    - [**Menu**](#menu)
+    - [**Main menu**](#main-menu)
+      - [**Sub menus**](#sub-menus)
     - [**Footer**](#footer)
   - [**Testing**](#testing)
   - [**Deployment**](#deployment)
@@ -32,6 +33,7 @@ A Sliding Puzzle game is a popular classic type of puzzle that involves arrangin
 ### **Intended Users**
 
 * Anyone who loves puzzles.
+* Anyone with nostalgia for classic games.
 * People who are looking for fun with added challenge.
 
 ### **User Stories**
@@ -64,11 +66,20 @@ A Sliding Puzzle game is a popular classic type of puzzle that involves arrangin
 
 ### **Logo**
 
-### **Menu**
+### **Main menu**
+
+#### **Sub menus**
+
+* Objective
+* Rules
+* Change puzzle
+* Change level
 
 ### **Footer**
 
 ## **Testing**
+
+I have included details of testing in a separate file [TESTING.md](TESTING.md).
 
 ## **Deployment**
 
