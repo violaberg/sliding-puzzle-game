@@ -1,6 +1,29 @@
-# **Sliding puzzle**
+# **Sliding Puzzle**
 
 ## **Overview**
+
+## Table of Contents:
+- [**Sliding Puzzle**](#sliding-puzzle)
+  - [**Overview**](#overview)
+  - [Table of Contents:](#table-of-contents)
+  - [**Planning**](#planning)
+    - [**Intended Users**](#intended-users)
+    - [**User Stories**](#user-stories)
+    - [**Goals**](#goals)
+    - [**Wireframes**](#wireframes)
+    - [**Color Scheme**](#color-scheme)
+    - [**Fonts**](#fonts)
+  - [**Features**](#features)
+    - [**Header**](#header)
+    - [**Logo**](#logo)
+    - [**Menu**](#menu)
+    - [**Footer**](#footer)
+  - [**Testing**](#testing)
+  - [**Deployment**](#deployment)
+  - [**Credits**](#credits)
+    - [**Content**](#content)
+    - [**Media**](#media)
+  - [**Future development**](#future-development)
 
 ## **Planning**
 
@@ -22,7 +45,7 @@
 
 ### **Logo**
 
-### **Hero image**
+### **Menu**
 
 ### **Footer**
 
@@ -40,6 +63,10 @@ The website was deployed to GitHub pages:
 Live link to the website -
 
 ## **Credits**
+
+* The biggest thank you as always to my family during this busy time of juggling project, hackathon and life in general.
+* Thank you as well to my mentor David Bowers who supported my ambitious idea of making puzzle game in such a short time with no previous experience. And thank you for introducing me to rubber duck idea - it really did listen and solve my coding bugs.
+* And thank you to Kim for support and in general for convincing me to take on this course.
 
 ### **Content**
 
