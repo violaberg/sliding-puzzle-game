@@ -1,65 +1,53 @@
-// Define puzzle size
-
-let numRows = 3;
-let numCols = 3;
-let totalTiles = numRows * numCols;
-
-const puzzleContainer = document.querySelector('.puzzle-container');
-const newGameButton = document.getElementById('new-game');
-
-let puzzleState = [...Array(totalTiles).keys()];
-
-// Function to shuffle puzzle tiles
-
-function shufflePuzzle() {
-    for (let i = puzzleState.length - 1; i > 0; i--){
-        const j = Math.floor(Math.random() * (i + 1));
-        [puzzleState [i], puzzleState [j] = puzzleState[j], puzzleState[i]];
-    }
-    updatePuzzle();
+function moveTiles(cell1, cell2) {
+    let temp = document.getElementById(cell1).className;
+    document.getElementById(cell1).className = document.getElementById(cell2).className;
+    document.getElementById(cell2).className = temp;
 }
 
-function updatePuzzle() {
-    puzzleContainer.innerHTML = '';
+function shuffle() {
+    //Nested loops for each cell of the table
+    for (let row = 1; row <= 3; row++) {
+        for (let column = 1; column <= 3; column++) {
 
-    for (let i = 0; i < puzzleState.length; i++){
-        const tile = document.createElement('div');
-        tile.className = `tile tile${puzzleState[i] + 1}`;
-        tile.innerText = puzzleState[i] + 1;
-        tile.addEventListener = ('click', () => moveTile(i));
-        puzzleContainer.appendChild(tile);
-    }
-}
+            let row2 = Math.floor(Math.random() * 3 + 1);
+            let column2 = Math.floor(Math.random() * 3 + 1);
 
-// Function to check if puzzle is solved
-
-function isPuzzleSolved() {
-    for (let i = 0; i < puzzleState.length; i++){
-        if (puzzleState[i] !== i) {
-            return false;
-        }
-    }
-    return true;
-}
-
-// Function to move tile
-
-function moveTile(tileIndex){
-    const emptyIndex = puzzleState.indexOf(total - 1);
-    const rowDiff = Math.abs(Math.floor(tileIndex / numCols) - Math.floor(emptyIndex / numCols));
-    const colDiff = Math.abs((titleIndex % numCols) - (emptyIndex % numCols));
-
-    if ((rowDiff === 1 && colDiff === 0) || (rowDiff === 0 && colDiff === 1)) {
-        [puzzleState[tileIndex], puzzleState[emptyIndex]] = [puzzleState[emptyIndex], puzzleState[tileIndex]];
-
-        updatePuzzle();
-
-        if (isPuzzleSolved()){
-            alert ('Congratulations! You solved the puzzle!');
+            moveTiles("cell" + row + column, "cell" + row2 + column2);
         }
     }
 }
 
-newGameButton.addEventListener('click', shufflePuzzle);
+function chooseTile(row, column) {
+    var cell = document.getElementById("cell" + row + column);
+    var tile = cell.className;
+    if (tile != "tile9") {
+        if (column < 3) {
+            if (document.getElementById("cell" + row + (column + 1)).className == "tile9") {
+                moveTiles("cell" + row + column, "cell" + row + (column + 1));
+                return;
+            }
+        }
+        
+        if (column > 1) {
+            if (document.getElementById("cell" + row + (column - 1)).className == "tile9") {
+                moveTiles("cell" + row + column, "cell" + row + (column - 1));
+                return;
+            }
+        }
+        
+        if (row > 1) {
+            if (document.getElementById("cell" + (row - 1) + column).className == "tile9") {
+                moveTiles("cell" + row + column, "cell" + (row - 1) + column);
+                return;
+            }
+        }
+        
+        if (row < 3) {
+            if (document.getElementById("cell" + (row + 1) + column).className == "tile9") {
+                moveTiles("cell" + row + column, "cell" + (row + 1) + column);
+                return;
+            }
+        }
+    }
 
-shufflePuzzle();
+}

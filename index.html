@@ -13,25 +13,25 @@
     <div class="flex-container">
     <div class="puzzle-container" style="display: table;">
         <div class="first-row" style="display: table-row;">
-            <div class="tile1"></div>
-            <div class="tile2"></div>
-            <div class="tile3"></div>
+            <div id="cell11" class="tile1" onClick="chooseTile(1,1);"></div>
+            <div id="cell12" class="tile2" onClick="chooseTile(1,2);"></div>
+            <div id="cell13" class="tile3" onClick="chooseTile(1,3);"></div>
         </div>
         <div class="second-row" style="display: table-row;">
-            <div class="tile4"></div>
-            <div class="tile5"></div>
-            <div class="tile6"></div>
+            <div id="cell21" class="tile4" onClick="chooseTile(2,1);"></div>
+            <div id="cell22" class="tile5" onClick="chooseTile(2,2);"></div>
+            <div id="cell23" class="tile6" onClick="chooseTile(2,3);"></div>
         </div>
         <div class="third-row" style="display: table-row;">
-            <div class="tile7"></div>
-            <div class="tile8"></div>
-            <div class="tile9"></div>
+            <div id="cell31" class="tile7" onClick="chooseTile(3,1);"></div>
+            <div id="cell32" class="tile8" onClick="chooseTile(3,2);"></div>
+            <div id="cell33" class="tile9" onClick="chooseTile(3,3);"></div>
         </div>
     </div>
     <div class="buttons">
         <button id="menu">Menu</button>
         <button onclick="shuffle();" id="new-game">New Game</button>
-        <div id="moves-counter">Moves:</div>
+        <div id="moves-counter">Moves: 0</div>
     </div>
     <div class="image">
         <img src="assets/images/coast-of-galway.JPG" alt="Photo of Galway coast on a sunny day">

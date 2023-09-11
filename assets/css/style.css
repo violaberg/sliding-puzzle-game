@@ -84,6 +84,7 @@ button#menu {
 #moves-counter {
     background-color: #F5F5F5;
     margin-top: 60px;
+    padding-left: 5px;
 }
 
 button#new-game {
