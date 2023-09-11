@@ -6,13 +6,14 @@ body {
 }
 
 h1 {
-    margin-top: 20px;
+    margin-top: 40px;
     text-align: center;
 }
 
 .flex-container {
     display: flex;
     flex-direction: row;
+    margin-top: 50px;
 }
 
 /*Styling and positioning for puzzle*/
@@ -75,14 +76,29 @@ h1 {
 
 button#menu {
     font-family: 'Orbitron', sans-serif;
+    padding: 5px;
     cursor: pointer;
     margin-bottom: 20px;
 }
 
+#moves-counter {
+    background-color: #F5F5F5;
+    margin-top: 60px;
+}
+
 button#new-game {
     font-family: 'Orbitron', sans-serif;
+    padding: 5px;
     cursor: pointer;
-    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+button#menu:hover {
+    background-color: aquamarine;
+}
+
+button#new-game:hover {
+    background-color: aquamarine;
 }
 
 /*Original image positioning*/
