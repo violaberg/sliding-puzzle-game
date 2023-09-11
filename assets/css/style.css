@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+/**Remove browser defaults**/
+* {
+    margin: 0;
+    padding: 0;
+    bottom: none;
+}
+
+body {
+    background: #242F36;
+    font-family: 'Architects Daughter', cursive, sans-serif;
+}
+
+/*Styling for tiles*/
+
+.tile1, .tile2, .tile3, .tile4, .tile5, .tile6, .tile7, .tile8, .tile9 {
+    width: 200px;
+    height: 200px;
+    display: table-cell;
+    border: 1px solid white;
+    background: url(../images/lake.jpg);
+    cursor: pointer;
+}
+
+/*Tile positioning*/
+
+.tile1 {
+    background-position: left top;
+}
+.tile2 {
+    background-position: center top;
+}
+.tile3 {
+    background-position: right top;
+}
+.tile4 {
+    background-position: left center;
+}
+.tile5 {
+    background-position: center center;
+}
+.tile6 {
+    background-position: center right;
+}
+.tile7 {
+    background-position: left bottom;
+}
+.tile8 {
+    background-position: center bottom;
+}
+.tile9 {
+    background-position: right bottom;
+    cursor: default;
+}
