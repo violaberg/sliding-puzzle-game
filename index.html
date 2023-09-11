@@ -10,6 +10,7 @@
 </head>
 <body>
     <h1>Sliding Puzzle</h1>
+    <div class="flex-container">
     <div class="puzzle-container" style="display: table;">
         <div class="first-row" style="display: table-row;">
             <div class="tile1"></div>
@@ -27,7 +28,15 @@
             <div class="tile9"></div>
         </div>
     </div>
-    <button id="new-game">New Game</button>
+    <div class="buttons">
+        <button id="menu">Menu</button>
+        <div>Moves:</div>
+        <button onclick="shuffle();" id="new-game">New Game</button>
+    </div>
+    <div class="image">
+        <img src="assets/images/coast-of-galway.JPG" alt="Photo of Galway coast on a sunny day">
+    </div>
+    </div>
     <footer>
         <p class="copyright">&copy; Sliding Puzzle</p>
     </footer>

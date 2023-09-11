@@ -52,13 +52,17 @@ A Sliding Puzzle game is a popular classic type of puzzle that involves arrangin
 
 ### **Wireframes**
 
-* Desktop wireframes:
+To help planning and designing this project I made desktop and mobile wireframes. While I made some changes as I went along, please find original wireframes attached bellow:
 
-* Mobile wireframes:
+* [Desktop main page](assets/images/Desktop%20wireframe.png)
+* [Desktop menu](assets/images/Desktop%20menu%20wireframe.png)
+* [Mobile wireframes](assets/images/Mobile%20wireframe.png)
  
 ### **Color Scheme**
 
 ### **Fonts**
+
+I chose Orbitron font to suit the game theme of project.
 
 ## **Features**
 
