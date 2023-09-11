@@ -1,24 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
-
-/**Remove browser defaults**/
-* {
-    margin: 0;
-    padding: 0;
-    bottom: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
 body {
     background: #242F36;
-    font-family: 'Architects Daughter', cursive, sans-serif;
+    font-family: 'Orbitron', sans-serif;
+}
+
+h1 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/*Styling and positioning for puzzle*/
+
+.puzzle-container {
+    margin: 0 auto;
 }
 
 /*Styling for tiles*/
 
 .tile1, .tile2, .tile3, .tile4, .tile5, .tile6, .tile7, .tile8, .tile9 {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     display: table-cell;
-    border: 1px solid white;
+    border: 1px solid #F5F5F5;
     background: url(../images/lake.jpg);
     cursor: pointer;
 }
@@ -50,6 +54,6 @@ body {
     background-position: center bottom;
 }
 .tile9 {
-    background-position: right bottom;
+    background: #F5F5F5;
     cursor: default;
 }
