@@ -1,13 +1,13 @@
 //Menu
 
-const close = document.getElementById('close');
-
-function closeMenu() {
-    menu.style.top = -100vh;
+function openMenu(){
+    const subMenu = document.querySelector('.sub-menu');
+    subMenu.style.display = 'block';
 }
 
-function openMenu() {
-    menu.style.top = -100vh;
+function closeMenu(){
+    const subMenu = document.querySelector('.sub-menu');
+    subMenu.style.display = 'none';
 }
 
 function moveTiles(cell1, cell2) {
