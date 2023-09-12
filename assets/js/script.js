@@ -4,22 +4,23 @@ function moveTiles(cell1, cell2) {
     document.getElementById(cell2).className = temp;
 }
 
-function shuffle() {
-    //Nested loops for each cell of the table
+//Nested loops for each cell of the table
+
+function shufflePuzzle() {
     for (let row = 1; row <= 3; row++) {
         for (let column = 1; column <= 3; column++) {
 
-            let row2 = Math.floor(Math.random() * 3 + 1);
-            let column2 = Math.floor(Math.random() * 3 + 1);
+            let secondRow = Math.floor(Math.random() * 3 + 1);
+            let secondCol = Math.floor(Math.random() * 3 + 1);
 
-            moveTiles("cell" + row + column, "cell" + row2 + column2);
+            moveTiles("cell" + row + column, "cell" + secondRow + secondCol);
         }
     }
 }
 
 function chooseTile(row, column) {
-    var cell = document.getElementById("cell" + row + column);
-    var tile = cell.className;
+    let cell = document.getElementById("cell" + row + column);
+    let tile = cell.className;
     if (tile != "tile9") {
         if (column < 3) {
             if (document.getElementById("cell" + row + (column + 1)).className == "tile9") {

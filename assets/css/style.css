@@ -11,6 +11,7 @@ h1 {
 }
 
 .flex-container {
+    width: 80%;
     display: flex;
     flex-direction: row;
     margin-top: 50px;
@@ -20,15 +21,15 @@ h1 {
 
 .puzzle-container {
     margin: 0 auto;
-    width: 600px;
-    height: 600px;
+    width: 450px;
+    height: 450px;
 }
 
 /*Styling for tiles*/
 
 .tile1, .tile2, .tile3, .tile4, .tile5, .tile6, .tile7, .tile8, .tile9 {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     display: table-cell;
     border: 1px solid #F5F5F5;
     background: url(../images/coast-of-galway.JPG);
