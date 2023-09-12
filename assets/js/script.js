@@ -1,3 +1,22 @@
+//Menu and sub menu buttons
+
+const menuButton = document.getElementById('menu');
+const subMenu = document.getElementById('sub-menu');
+
+//Click event listener for the menu button
+
+menuButton.addEventListener('click', () => {
+    subMenu.style.display = subMenu.style.display === 'block' ? 'none' : 'block';
+});
+
+//Event listener to close menu when clicked outside of it
+
+document.addEventListener('click', (e) => {
+    if (!menuButton.contains(e.target) && !subMenu.contains(e.target)) {
+        subMenu.style.display = none;
+    }
+});
+
 function moveTiles(cell1, cell2) {
     let temp = document.getElementById(cell1).className;
     document.getElementById(cell1).className = document.getElementById(cell2).className;

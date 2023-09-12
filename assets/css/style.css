@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
 
 body {
-    background: #242F36;
+    background: #ebf5fb;
     font-family: 'Orbitron', sans-serif;
 }
 
@@ -10,11 +10,80 @@ h1 {
     text-align: center;
 }
 
+.game-window {
+    background: #242F36;
+}
+
 .flex-container {
-    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 60%;
     display: flex;
     flex-direction: row;
     margin-top: 50px;
+}
+
+/*Menu styling*/
+
+nav {
+    position: relative;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+li {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+li:hover {
+    background-color: aquamarine;
+}
+
+/*Button styling and positioning*/
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+button#menu {
+    font-family: 'Orbitron', sans-serif;
+    padding: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#moves-counter {
+    background-color: #F5F5F5;
+    text-align: center;
+    margin-top: 60px;
+    padding-left: 5px;
+}
+
+button#new-game {
+    font-family: 'Orbitron', sans-serif;
+    padding: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+button#menu:hover {
+    background-color: aquamarine;
+}
+
+button#new-game:hover {
+    background-color: aquamarine;
 }
 
 /*Styling and positioning for puzzle*/
@@ -32,7 +101,7 @@ h1 {
     height: 150px;
     display: table-cell;
     border: 1px solid #F5F5F5;
-    background: url(../images/coast-of-galway.JPG);
+    background: url(../images/coast-of-galway1.jpg);
     cursor: pointer;
 }
 
@@ -65,42 +134,6 @@ h1 {
 .tile9 {
     background: #F5F5F5;
     cursor: default;
-}
-
-/*Button styling and positioning*/
-
-.buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-}
-
-button#menu {
-    font-family: 'Orbitron', sans-serif;
-    padding: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-#moves-counter {
-    background-color: #F5F5F5;
-    margin-top: 60px;
-    padding-left: 5px;
-}
-
-button#new-game {
-    font-family: 'Orbitron', sans-serif;
-    padding: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-button#menu:hover {
-    background-color: aquamarine;
-}
-
-button#new-game:hover {
-    background-color: aquamarine;
 }
 
 /*Original image positioning*/
