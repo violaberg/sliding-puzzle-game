@@ -12,15 +12,15 @@
     <h1>Sliding Puzzle</h1>
     <div class="menu-container">
         <div class="main-menu">Main Menu</div>
-        <div class="closing-button">
+        <div class="closing-button" id="close" onclick="closeMenu()">
             <a href="#"><i class="fa-sharp fa-regular fa-rectangle-xmark fa-2xl" style="color: #2f97a0;"></i></a>
         </div>
-        <ul>
-            <li id="sub-menu">Objective</li>
-            <li id="sub-menu">Rules</li>
-            <li id="sub-menu">Change Puzzle</li>
-            <li id="sub-menu">Change Level</li>
-        </ul>
+        <div class="sub-menu">
+            <a href="#">Objective</a>
+            <a href="#">Rules</a>
+            <a href="#">Change Puzzle</a>
+            <a href="#">Change Level</a>
+        </div>
     </div>
     <div class="game-window">
     <div class="flex-container">
@@ -42,7 +42,7 @@
         </div>
     </div>
     <div class="buttons">
-        <button id="menu">Menu</button>
+        <button id="menu" onclick="openMenu()">Menu</button>
         <button onclick="shufflePuzzle();" id="new-game">New Game</button>
         <div id="moves-counter">Moves: 0</div>
     </div>

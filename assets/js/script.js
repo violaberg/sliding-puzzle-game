@@ -1,5 +1,15 @@
 //Menu
 
+const close = document.getElementById('close');
+
+function closeMenu() {
+    menu.style.top = -100vh;
+}
+
+function openMenu() {
+    menu.style.top = -100vh;
+}
+
 function moveTiles(cell1, cell2) {
     let temp = document.getElementById(cell1).className;
     document.getElementById(cell1).className = document.getElementById(cell2).className;
