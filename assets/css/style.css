@@ -34,11 +34,10 @@ h1 {
 }
 
 /*Menu modal styling*/
-
 .menu-modal {
     width: 65vw;
-    background: #242F36;
-    position: absolute;
+    background: #ebf5fb;
+    position: fixed;
     z-index: 1;
     margin: 0 auto;
     display: none;
@@ -48,17 +47,16 @@ h1 {
 }
 
 .menu-title {
-    position: relative;
+    position: absolute;
     top: 20px;
     padding-bottom: 10px;
-    margin-bottom: 20px;
     text-align: center;
-    color:#ebf5fb;
+    color:#242F36;
     font-size: 25px;
     font-weight: 700;
 }
 
-.closing-button {
+.close-button {
     position: absolute;
     top: 20px;
     right: 20px;
@@ -88,7 +86,7 @@ h1 {
     padding-bottom: 5px;
     font-size: 18px;
     cursor: pointer;
-    color: #ebf5fb;
+    color: #2f97a0;
     transition: background-color 0.3s;
 }
 
@@ -96,8 +94,15 @@ h1 {
     font-weight: 700;
 }
 
-/*Button styling and positioning*/
+.sub-menu p {
+    color: #242F36;
+}
 
+.bold {
+    font-weight: 700;
+}
+
+/*Button styling and positioning*/
 .buttons {
     display: flex;
     flex-direction: column;
@@ -129,7 +134,6 @@ button#new-game:hover {
 }
 
 /*Styling and positioning for puzzle*/
-
 .puzzle-container {
     margin: 0 auto;
     width: 450px;
@@ -143,14 +147,12 @@ button#new-game:hover {
 }
 
 /*Original image positioning*/
-
 .image {
     margin: 0 auto;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
 
 /*Footer styling*/
-
 .footer-icons {
     list-style: none;
     display: flex;
