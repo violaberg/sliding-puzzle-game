@@ -37,8 +37,9 @@ h1 {
 .menu-container {
     width: 65vw;
     background: #242F36;
-    position: relative;
+    position: absolute;
     margin: 0 auto;
+    display: none;
     overflow: hidden;
     padding-bottom: 30px;
     border: 15px solid #2f97a0;
@@ -111,11 +112,11 @@ button#new-game {
 }
 
 button#menu:hover {
-    background-color: aquamarine;
+    background-color: #2f97a0;
 }
 
 button#new-game:hover {
-    background-color: aquamarine;
+    background-color: #2f97a0;
 }
 
 /*Styling and positioning for puzzle*/
@@ -124,48 +125,11 @@ button#new-game:hover {
     margin: 0 auto;
     width: 450px;
     height: 450px;
-}
-
-/*Styling for tiles*/
-
-.tile1, .tile2, .tile3, .tile4, .tile5, .tile6, .tile7, .tile8, .tile9 {
-    width: 150px;
-    height: 150px;
-    display: table-cell;
-    border: 1px solid #F5F5F5;
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-gap: 1px solid #F5F5F5;
     background: url(../images/coast-of-galway1.jpg);
     cursor: pointer;
-}
-
-/*Tile positioning*/
-
-.tile1 {
-    background-position: left top;
-}
-.tile2 {
-    background-position: center top;
-}
-.tile3 {
-    background-position: right top;
-}
-.tile4 {
-    background-position: left center;
-}
-.tile5 {
-    background-position: center center;
-}
-.tile6 {
-    background-position: center right;
-}
-.tile7 {
-    background-position: left bottom;
-}
-.tile8 {
-    background-position: center bottom;
-}
-.tile9 {
-    background: #F5F5F5;
-    cursor: default;
 }
 
 /*Original image positioning*/
@@ -176,8 +140,21 @@ button#new-game:hover {
 
 /*Footer styling*/
 
+.footer-icons {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-icons li {
+    display: inline;
+    padding: 5px 5px 0;
+    align-items: center;
+}
+
 footer p {
     margin-bottom: 0;
-    padding-top: 20px;
     text-align: center;
 }
