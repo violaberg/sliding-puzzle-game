@@ -11,23 +11,35 @@
   <body>
     <h1>Sliding Puzzle</h1>
     <main>
-      <section class="menu-container">
-        <h2 class="main-menu">Main Menu</h2>
-        <div class="closing-button" id="close" onclick="closeMenu();">
+      <div class="menu-modal"> <!--The Modal-->
+        <h2 class="menu-title">Main Menu</h2>
+        <span class="closing-button" id="close" onclick="closeMenu();">
           <a href="#"
             ><i
               class="fa-sharp fa-regular fa-rectangle-xmark fa-2xl"
               style="color: #2f97a0"
             ></i
           ></a>
-        </div>
+        </span>
         <div class="sub-menu">
           <a href="#">Objective</a>
+        <p>Solve a puzzle by rearranging tiles in correct order to make a complete image.</p>
           <a href="#">Rules</a>
+        <p>New Game: At the beginning of the game click New Game button to shuffle the tiles.</p>
+        <p>Tile Movement: The game is played on a grid with square tiles. There is one empty space that allows
+        tiles to slide into it.</p>
+        <p>Tile Sliding: Tiles can be moved horizontally or vertically into the empty space. Only one tile can occupy the empty
+        space at a time, and tiles cannot jump over one another.</p>
+        <p>Winning: The game is considered solved or won when the tiles are in the correct order to make complete image.</p>
+        <p>Reset and Shuffle: Players can reset the puzzle to its initial state by clicking New Game to shuffle the tiles if they want to start over.</p>
+        <p>Change Puzzle: Player can change image of puzzle by clicking on Menu button, then Change Puzzle to see options of images.</p>
+        <p>Change Level: Player can change level by clicking on Menu button, then Change Level. Options available are 3x3 or 4x4 grid.</p>
           <a href="#">Change Puzzle</a>
+        <p>Change image to one of the options below:</p>
           <a href="#">Change Level</a>
+        <p>Change level by choosing 3x3 or 4x4 grid:</p>
         </div>
-      </section>
+      </div>
       <div class="game-window">
         <div class="flex-container">
           <section class="puzzle-container">
@@ -42,8 +54,8 @@
             <div id="empty" class="tile empty"></div>
           </section>
           <section class="buttons">
-            <button id="menu" onclick="openMenu()">Menu</button>
-            <button onclick="shufflePuzzle();" id="new-game">New Game</button>
+            <button id="menu-button">Menu</button> <!--Open modal-->
+            <button id="new-game">New Game</button>
             <div id="moves-counter">Moves: 0</div>
           </section>
           <section class="image">
