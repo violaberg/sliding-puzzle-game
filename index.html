@@ -13,8 +13,8 @@
     <main>
       <div class="menu-modal" id="modal"> <!--The Modal-->
         <h2 class="menu-title">Main Menu</h2>
-        <span class="close-button" id="close">
-          <a href="#"
+        <span class="close-button">
+          <a href="#" id="close"
             ><i
               class="fa-sharp fa-regular fa-rectangle-xmark fa-2xl"
               style="color: #2f97a0"
@@ -22,9 +22,12 @@
           ></a>
         </span>
         <div class="sub-menu">
-          <a href="#">Objective</a>
+          <button class="accordion">Objective</button>
+          <div class="menu-text">
         <p>Solve a puzzle by rearranging tiles in correct order to make a complete image.</p>
-          <a href="#">Rules</a>
+        </div>
+          <button class="accordion">Rules</button>
+          <div class="menu-text">
         <p><span class="bold">New Game:</span> At the beginning of the game click New Game button to shuffle the tiles.</p>
         <p><span class="bold">Tile Movement:</span> The game is played on a grid with square tiles. There is one empty space that allows
         tiles to slide into it.</p>
@@ -34,10 +37,15 @@
         <p><span class="bold">Reset and Shuffle:</span> Players can reset the puzzle to its initial state by clicking New Game to shuffle the tiles if they want to start over.</p>
         <p><span class="bold">Change Puzzle:</span> Player can change image of puzzle by clicking on Menu button, then Change Puzzle to see options of images.</p>
         <p><span class="bold">Change Level:</span> Player can change level by clicking on Menu button, then Change Level. Options available are 3x3 or 4x4 grid.</p>
-          <a href="#">Change Puzzle</a>
+        </div>
+          <button class="accordion">Change Puzzle</button>
+          <div class="menu-text">
         <p>Change image to one of the options below:</p>
-          <a href="#">Change Level</a>
+        </div>
+          <button class="accordion">Change Level</button>
+          <div class="menu-text">
         <p>Change level by choosing 3x3 or 4x4 grid:</p>
+        </div>
         </div>
       </div>
       <div class="game-window">

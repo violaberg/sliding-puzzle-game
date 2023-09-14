@@ -2,7 +2,6 @@
 
 * {
     font-family: 'Orbitron', sans-serif;
-    overflow: hidden;
 }
 
 body {
@@ -11,7 +10,7 @@ body {
 
 h1 {
     font-size: 35px;
-    margin-top: 20px;
+    margin-top: 10px;
     text-align: center;
 }
 
@@ -23,7 +22,7 @@ p {
     font-size: 14px;
 }
 
-.game-window, .puzzle-container, .image, #menu-button, #moves-counter, button#new-game {
+.game-window, .puzzle-container, .image, .menu-modal, #menu-button, #moves-counter, button#new-game {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
 
@@ -36,6 +35,7 @@ p {
 }
 
 .flex-container {
+    display: flex;
     flex-direction: row;
     display: flex;
     margin-left: auto;
@@ -52,11 +52,11 @@ p {
     border: 15px solid #2f97a0;
     display: none;
     height: 65vh;
-    margin: 0 auto;
+    left: 175px;
     overflow: auto;
-    padding-bottom: 30px;
-    position: fixed;
-    width: 65vw;
+    padding-bottom: 35px;
+    position: absolute;
+    width: 70vw;
     z-index: 1;
 }
 
@@ -64,10 +64,10 @@ p {
     color: #242F36;
     font-size: 25px;
     font-weight: 700;
-    padding-bottom: 10px;
-    position: absolute;
+    padding-bottom: 20px;
+    position: relative;
     text-align: center;
-    top: 20px;
+    top: 10px;
 }
 
 .close-button {
@@ -90,25 +90,30 @@ p {
     text-decoration: none;
 }
 
-.sub-menu a{
+.accordion {
+    background-color: #ebf5fb;
+    border: none;
     color: #2f97a0;
     cursor: pointer;
     display: block;
     font-size: 18px;
     margin:0 auto;
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     padding-top: 10px;
+    text-align: center;
     text-decoration: none;
-    transition: background-color 0.3s;
-    width: fit-content;
+    transition: 0.4s;
+    width: 100%;
 }
 
-.sub-menu a:hover {
+.active, .accordion:hover {
     font-weight: 700;
 }
 
-.sub-menu p {
+.menu-text p {
     color: black;
+    display: none;
+    overflow: hidden;
 }
 
 .bold {
@@ -150,15 +155,17 @@ button#new-game:hover {
     cursor: pointer;
     display: grid;
     grid-gap: 1px solid #F5F5F5;
-    grid-template-columns: repeat(3, 150px);
-    height: 450px;
+    grid-template-columns: repeat(3, 120px);
+    height: 360px;
     margin: 0 auto;
-    width: 450px;
+    width: 360px;
 }
 
 /*Original image positioning*/
 .image {
+    height: 360px;
     margin: 0 auto;
+    width: 360px;
 }
 
 /*Footer styling*/
@@ -174,7 +181,7 @@ button#new-game:hover {
 .footer-icons li {
     align-items: center;
     display: inline;
-    padding: 20px 5px 0;
+    padding: 0 5px;
 }
 
 footer p {
