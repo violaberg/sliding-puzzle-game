@@ -2,6 +2,7 @@
 
 * {
     font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
 }
 
 body {
@@ -9,17 +10,29 @@ body {
 }
 
 h1 {
-    margin-top: 40px;
+    margin-top: 20px;
     text-align: center;
-    font-size: 40px;
+    font-size: 35px;
+}
+
+h2 {
+    margin: 0 auto;
+}
+
+p {
+    font-size: 14px;
+}
+
+.game-window, .puzzle-container, .image, #menu-button, #moves-counter, button#new-game {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
 
 .game-window {
     margin: 0 auto;
-    width: 65vw;
+    width: 70vw;
+    height: 70vh;
     background: #242F36;
     border: 15px solid #2f97a0;
-    box-shadow: 0 0 30px rgba(36, 47, 54, 0.8);
 }
 
 .flex-container {
@@ -36,6 +49,7 @@ h1 {
 /*Menu modal styling*/
 .menu-modal {
     width: 65vw;
+    height: 65vh;
     background: #ebf5fb;
     position: fixed;
     z-index: 1;
@@ -66,7 +80,6 @@ h1 {
     padding: 5px;
     cursor: pointer;
     margin-bottom: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
 
 #menu-button:hover {
@@ -95,7 +108,7 @@ h1 {
 }
 
 .sub-menu p {
-    color: #242F36;
+    color: black;
 }
 
 .bold {
@@ -114,7 +127,6 @@ h1 {
     text-align: center;
     margin-top: 60px;
     padding-left: 5px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
 
 button#new-game {
@@ -122,7 +134,6 @@ button#new-game {
     padding: 5px;
     cursor: pointer;
     margin-bottom: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
 
 button#menu:hover {
@@ -142,14 +153,12 @@ button#new-game:hover {
     grid-template-columns: repeat(3, 150px);
     grid-gap: 1px solid #F5F5F5;
     background: url(../images/coast-of-galway1.jpg);
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
     cursor: pointer;
 }
 
 /*Original image positioning*/
 .image {
     margin: 0 auto;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
 
 /*Footer styling*/
