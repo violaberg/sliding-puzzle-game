@@ -38,11 +38,9 @@ p {
     display: flex;
     flex-direction: row;
     display: flex;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 50px;
+    margin: 0 auto;
     padding-bottom: 70px;
-    padding-top: 20px;
+    padding-top: 50px;
     width: 100%;
 }
 
@@ -156,15 +154,20 @@ button#new-game:hover {
     display: grid;
     grid-gap: 1px solid #F5F5F5;
     grid-template-columns: repeat(3, 120px);
-    height: 360px;
+    height: auto;
     margin: 0 auto;
     width: 360px;
 }
 
+.tile {
+    border: 1px solid #F5F5F5;
+}
+
 /*Original image positioning*/
-.image {
-    height: 360px;
-    margin: 0 auto;
+.image img {
+    background-repeat: no-repeat;
+    border: 1px solid #F5F5F5;
+    height: auto;
     width: 360px;
 }
 
