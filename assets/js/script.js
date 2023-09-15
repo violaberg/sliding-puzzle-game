@@ -13,7 +13,7 @@ function moveTiles(tile1, tile2) {
     document.getElementById(tile2).className = temp;
     }
 
-    //Nested loops for each cell of the table
+    //Nested loops for each tile of the table
     function shufflePuzzle() {
         for (let row = 1; row <= 3; row++) {
             for (let column = 1; column <= 3; column++) {

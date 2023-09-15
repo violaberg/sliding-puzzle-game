@@ -160,11 +160,16 @@ button#new-game:hover {
 .puzzle-container {
     background: url(../images/coast-of-galway360.jpg);
     cursor: pointer;
-    display: grid;
-    grid-template-columns: repeat(3, 120px);
     height: 360px;
     margin: 0 auto;
     width: 360px;
+}
+
+.puzzle-tile {
+    border: 1px solid #F5F5F5;
+    display: table-cell;
+    height: 120px;
+    width: 120px;
 }
 
 .puzzle-tile1 {
@@ -194,13 +199,6 @@ button#new-game:hover {
 .puzzle-tile9 {
     background: #F5F5F5;
     cursor: default;
-}
-
-.puzzle-tile {
-    border: 1px solid #F5F5F5;
-    display: table-cell;
-    height: 120px;
-    width: 120px;
 }
 
 /*Original image positioning*/
