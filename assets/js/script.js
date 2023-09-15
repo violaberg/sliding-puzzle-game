@@ -7,90 +7,59 @@ const newGame = document.getElementById('new-game'); //Get a new game button
 let movesCounter = document.getElementById('moves-counter'); //Get moves counter button
 let i;
 
-document.addEventListener('DOMContentLoaded', function() {
-    const puzzle = document.getElementsByClassName('puzzle-container');
-    const tiles = [];
-
-    //Create puzzle pieces
-    for (i = 1; i <= 8; i++) {
-        const tile = document.createElement('div');
-        tile.classList.add('puzzle-tile');
-        tile.textContent = i;
-        tiles.push(tile);
+function moveTiles(tile1, tile2) {
+    let temp = document.getElementById(tile1).className;
+    document.getElementById(tile1).className = document.getElementById(tile2).className;
+    document.getElementById(tile2).className = temp;
     }
 
-    //Add empty tile
-    const emptyTile = document.createElement('div');
-    emptyTile.classList.add('puzzle-tile-empty');
-    tiles.push(emptyTile);
+    //Nested loops for each cell of the table
+    function shufflePuzzle() {
+        for (let row = 1; row <= 3; row++) {
+            for (let column = 1; column <= 3; column++) {
 
-    shuffleTiles();
+                let secondRow = Math.floor(Math.random() * 3 + 1);
+                let secondCol = Math.floor(Math.random() * 3 + 1);
 
-    //Add tiles to puzzle container
-    tiles.forEach((tile) => {
-        puzzle.appendChild(tile);
-    });
+                moveTiles("tile" + row + column, "tile" + secondRow + secondCol);
+            }
+        }
+    }
 
-    //Event listeners for tile movement
-        tiles.addEventListener('click', (event) => {
-            const clickedTile = event.target;
-            if (clickedTile.classList.contains('puzzle-tile')) {
-                if (isAdjacentToEmpty(clickedTile)) {
-                swapTiles(clickedTile, emptyTile);
-                    if (isPuzzleSolved()) {
-                    alert ("Congratulations! You solved the puzzle!");
-                    }
+    function chooseTile(row, column) {
+        let tile = document.getElementById("cell" + row + column);
+        let tiles = tile.className;
+        if (tiles != "puzzle-tile9") {
+            if (column < 3) {
+                if (document.getElementById("tile" + row + (column + 1)).className == "puzzle-tile9") {
+                    moveTiles("tile" + row + column, "tile" + row + (column + 1));
+                    return;
                 }
             }
-        });
 
-    //Check if tile is adjacent to the empty tile
-    function isAdjacentToEmpty(tile) {
-        const tileIndex = tiles.indexOf(tile);
-        const emptyIndex = tiles.indexOf(emptyTile);
+            if (column > 1) {
+                if (document.getElementById("tile" + row + (column - 1)).className == "puzzle-tile9") {
+                    moveTiles("tile" + row + column, "tile" + row + (column - 1));
+                    return;
+                }
+            }
 
-        const rowDiff = Math.abs(Math.floor(tileIndex / 3) - Math.floor(emptyIndex / 3));
-        const colDiff = Math.abs((tileIndex % 3) - (emptyIndex % 3));
+            if (row > 1) {
+                if (document.getElementById("tile" + (row - 1) + column).className == "puzzle-tile9") {
+                    moveTiles("tile" + row + column, "tile" + (row - 1) + column);
+                    return;
+                }
+            }
 
-        return (rowDiff === 1 && colDiff === 0) || (rowDiff === 0 && colDiff === 1);
-    }
-
-    //Function to swap tiles
-    function swapTiles(tile1, tile2) {
-        const index1 = tiles.indexOf(tile1);
-        const index2 = tiles.indexOf(tile2);
-
-        tiles[index1] = tile2;
-        tiles[index2] = tile1;
-
-        updatePuzzle();
-    }
-
-    //Function to shuffle tiles
-    function shuffleTiles() {
-        for (let i = tiles.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [tiles[i], tiles[j]] = [tiles[j], tiles[i]];
-        }
-    }
-
-    //Function to update puzzle
-    function updatePuzzle() {
-        tiles.forEach((tile) => {
-            puzzle.appendChild(tile);
-        });
-    }
-
-    //Check if puzzle is solved
-    function isPuzzleSolved() {
-        for (let i = 0; i < tiles.length - 1; i++) {
-            if (tiles[i].textContent !== i + 1 + '') {
-                return false;
+            if (row < 3) {
+                if (document.getElementById("tile" + (row + 1) + column).className == "puzzle-tile9") {
+                    moveTiles("tile" + row + column, "tile" + (row + 1) + column);
+                    return;
+                }
             }
         }
-        return true;
+
     }
-});
 
 //Open the modal if button is clicked
 menuButton.onclick = function() {

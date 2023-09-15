@@ -158,7 +158,7 @@ button#new-game:hover {
 
 /*Styling and positioning for puzzle*/
 .puzzle-container {
-    background: url(../images/coast-of-galway1.jpg);
+    background: url(../images/coast-of-galway360.jpg);
     cursor: pointer;
     display: grid;
     grid-template-columns: repeat(3, 120px);
