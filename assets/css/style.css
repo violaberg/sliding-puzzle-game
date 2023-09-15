@@ -154,12 +154,20 @@ button#new-game:hover {
     display: grid;
     grid-gap: 1px solid #F5F5F5;
     grid-template-columns: repeat(3, 120px);
-    height: auto;
+    height: 360px;
     margin: 0 auto;
     width: 360px;
 }
 
-.tile {
+.puzzle-tile {
+    border: 1px solid #F5F5F5;
+    display: flex;
+    height: 120px;
+    width: 120px;
+}
+
+.puzzle-tile-empty {
+    background: #F5F5F5;
     border: 1px solid #F5F5F5;
 }
 
