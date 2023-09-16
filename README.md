@@ -16,6 +16,7 @@ A Sliding Puzzle game is a popular classic type of puzzle that involves arrangin
     - [**Color Scheme**](#color-scheme)
     - [**Fonts**](#fonts)
   - [**Features**](#features)
+    - [**Favicon**](#favicon)
     - [**Header**](#header)
     - [**Logo**](#logo)
     - [**Main menu**](#main-menu)
@@ -60,15 +61,27 @@ To help planning and designing this project I made desktop and mobile wireframes
  
 ### **Color Scheme**
 
+For color scheme I chose cool colors as, especially shades of blue, are often associated with a sense of calm and relaxation. Puzzle games can be mentally challenging, and using calming colors can help players stay focused without feeling overwhelmed. They can promote concentration and mental clarity to improve critical thinking and problem-solving. Cool colors are less likely to cause eye strain therefore prolonging gaming sessions without visual discomfort. For gaming window background I chose dark gray allowing puzzle pieces to stand out with higher contrast. This can make it easier for players to see and interact with the game elements.
+
 ### **Fonts**
 
-I chose Orbitron font to suit the game theme of project.
+I chose Orbitron font to suit the game theme of the project.
 
 ## **Features**
 
+### **Favicon**
+
+Favicon was created by myself with idea to recreate the look of sliding puzzle.
+![Favicon](../sliding-puzzle-game/favicon.ico)
+
 ### **Header**
 
+Header was kept minimalistic as it keeps the game's focus on the gameplay itself. Since puzzle games often require players to concentrate and think critically, having a clutter-free header reduces distractions and allows players to immerse themselves in the game's challenges.
+
 ### **Logo**
+
+During development I decided against adding an image for logo not to cluster the game look and kept it simple with title in a font suitable for my game.
+![Logo](assets/images/logo.PNG)
 
 ### **Main menu**
 
@@ -80,6 +93,9 @@ I chose Orbitron font to suit the game theme of project.
 * Change level
 
 ### **Footer**
+
+A clean footer adapts well to various screen sizes, including mobile devices. It ensures that the footer remains legible and functional on smaller screens, enhancing the user experience. Social media icons provide users with easy access to my social profiles, including Instagram where users can find some of images used for puzzles.
+![Footer](assets/images/footer.PNG)
 
 ## **Testing**
 
