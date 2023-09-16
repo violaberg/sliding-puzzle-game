@@ -105,12 +105,12 @@ I have included details of testing in a separate file [TESTING.md](TESTING.md).
 
 The website was deployed to GitHub pages:
 
-1. From this project's [link for repository](), go to the **Settings**.
+1. From this project's [repository](https://github.com/violaberg/sliding-puzzle-game), go to the **Settings**.
 2. From the left-hand menu, click on the **Pages**.
 3. Under the **Source** section, select the **Main** branch from the drop-down menu and click **Save**.
 4. A message will appear to confirm a successful deployment to GitHub pages and provide the live link.
 
-Live link to the website -
+[Link to the live website](https://violaberg.github.io/sliding-puzzle-game/)
 
 ## **Credits**
 
