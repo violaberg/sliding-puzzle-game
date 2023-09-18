@@ -132,7 +132,7 @@ p {
     justify-content: center;
 }
 
-#moves-counter {
+#moves {
     background-color: #F5F5F5;
     margin-right: 20%;
     margin-top: 60px;
@@ -158,24 +158,20 @@ button#new-game:hover {
 
 /*Styling and positioning for puzzle*/
 .puzzle-container {
-    background: url(../images/coast-of-galway360.jpg);
     cursor: pointer;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     height: 360px;
     margin: 0 auto;
     width: 360px;
 }
 
-.puzzle-tile {
+/*Styling for tiles*/
+.puzzle-container img {
+    width: 118px;
+    height: 118px;
     border: 1px solid #F5F5F5;
-    height: 120px;
-    width: 120px;
-}
-
-.empty-tile {
-    background: #F5F5F5;
+    cursor: pointer;
 }
 
 /*Original image positioning*/
