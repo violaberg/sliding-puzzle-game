@@ -124,9 +124,17 @@ Content was written by myself.
 
 ### **Media**
 
-* Photos used for puzzles were all taken by myself.
-* All icons are from [Font Awesome](https://fontawesome.com/)
-* Favicon was generated with [Faviconer](http://www.faviconer.com/)
+I extensively used various sources to learn about JavaScript to create sliding puzzle such as:
+* [Geeks for geeks](https://www.geeksforgeeks.org/)
+* [W3 schools](https://www.w3schools.com/)
+* Watched many tutorials on [Youtube](https://www.youtube.com/)
+* Explored repositories on [GitHub](https://github.com/)
+* [CSS tricks](https://css-tricks.com/)
+
+- Photos used for puzzles were all taken by myself.
+- Images were cut by [Imagy](https://imagy.app/)
+- All icons are from [Font Awesome](https://fontawesome.com/)
+- Favicon was generated with [Faviconer](http://www.faviconer.com/)
 
 ## **Future development**
 

@@ -7,93 +7,72 @@ const newGame = document.getElementById('new-game'); //Get a new game button
 let moves = document.querySelector('.moves'); //Get moves counter button
 let i;
 
-let rows = 3;
-let columns = 3;
-let currentTile;
-let nextTile; //empty tile
+//Atach event listeners to tiles
+document.addEventListener('DOMContentLoaded', function() {
+    newGame.addEventListener('click', shufflePuzzle);
 
-//let imgSeq = ['1', '2', '3', '4',' 5', '6', '7', '8',' 9'];
+    for (let row = 1; row <= 3; row++) {
+        for (let column = 1; column <= 3; column++) {
+            const tile = document.getElementById('tile' + row + column);
+            tile.addEventListener('click', function() {
+                chooseTile(row, column);
+            });
+        }
+    }
+});
 
-imgSeq = ['4', '2', '8', '5', '1', '6', '7', '9', '3']; //3 for the empty tile
+function moveTiles(tile1, tile2) {
+    let temp = document.getElementById(tile1).className;
+    document.getElementById(tile1).className = document.getElementById(tile2).className;
+    document.getElementById(tile2).className = temp;
+}
 
-window.onload = function() {
-    for (let r = 0; r < rows; r++) {
-        for (let c =0; c < columns; c++) {
+//Nested loops for each cell of the table
+function shufflePuzzle() {
+    for (let row = 1; row <= 3; row++) {
+        for (let column = 1; column <= 3; column++) {
 
-            let tile = document.createElement('tile');
-            tile.id = r.toString() + '-' + c.toString();
-            tile.src = imgSeq.shift() + '.jpg'; //Uses js instead of 9 div in html
+            let secondRow = Math.floor(Math.random() * 3 + 1);
+            let secondCol = Math.floor(Math.random() * 3 + 1);
 
-            //Tile movement function
-            tile.addEventListener('moveOut', moveOut); //Click tile to move
-            tile.addEventListener('moveIt', moveIt); //Hold and move
-            tile.addEventListener('moveIn', moveIn); //Move over other tile
-            tile.addEventListener('leave', leave); //Moved image leaving
-            tile.addEventListener('put', put); //Put tile over other and leave it
-            tile.addEventListener('finish', finish); //Last move to swap tiles
-
-            document.getElementsByClassName('puzzle-container').append(tile);
+            moveTiles("tile" + row + column, "tile" + secondRow + secondCol);
         }
     }
 }
 
-function moveOut() {
-    currentTile = this; //tile being moved
-}
+function chooseTile(row, column) {
+    let cell = document.getElementById("tile" + row + column);
+    let tile = tile.className;
+    if (tile != "tile9") {
+        if (column < 3) {
+            if (document.getElementById("tile" + row + (column + 1)).className == "tile9") {
+                moveTiles("tile" + row + column, "tile" + row + (column + 1));
+                return;
+            }
+        }
 
-function moveIt(event) {
-    event.preventDefault;
-}
+        if (column > 1) {
+            if (document.getElementById("tile" + row + (column - 1)).className == "tile9") {
+                moveTiles("tile" + row + column, "tile" + row + (column - 1));
+                return;
+            }
+        }
 
-function moveIn(event) {
-    event.preventDefault;
-}
+        if (row > 1) {
+            if (document.getElementById("tile" + (row - 1) + column).className == "tile9") {
+                moveTiles("tile" + row + column, "tile" + (row - 1) + column);
+                return;
+            }
+        }
 
-function leave() {
-}
-
-function put() {
-    nextTile = this;
-}
-
-function finish() {
-    if (nextTile.src.includes('tile3.jpg')) {
-        return;
-    }
-
-    let currentCoordinations = currentTile.id.split('-'); //splits position into array 3-3 => ['3', '3']
-    let r = parseInt(currentCoordinations[0]);
-    let c = parseInt(currentCoordinations[1]);
-
-    let nextCoordinations = nextTile.id.split('-');
-    let r2 = parseInt(nextCoordinations[0]);
-    let c2 = parseInt(nextCoordinations[1]);
-
-    let moveLeft = r == r2 && c2 == c - 1;
-    let moveRight = r == r2 && c2 == c + 1;
-
-    let moveUp = c == c2 && r2 == r - 1;
-    let moveDown = c == c2 && r2 == r + 1;
-
-    let isAdjacent = moveLeft || moveRight || moveUp || moveDown;
-
-    if (isAdjacent) {
-        let presentTile = currentTile.src;
-        let newTile = nextTile.src;
-
-        currentTile.src = newTile;
-        nextTile.src = presentTile;
-
-        let moves = setInterval(updated);
-        let upto = 0;
-        function updated() {
-            let move = document.getElementById('moves');
-            move.innerHTML = --upto;
-            if (upto == 100) {
-                clearInterval(moves);
+        if (row < 3) {
+            if (document.getElementById("tile" + (row + 1) + column).className == "tile9") {
+                moveTiles("tile" + row + column, "tile" + (row + 1) + column);
+                return;
             }
         }
     }
+
 }
 
 //Open the modal if button is clicked
@@ -125,3 +104,13 @@ for (i = 0; i < accordion.length; i++) {
         }
     });
 };
+
+moves = setInterval(updated);
+let from = 0;
+function updated() {
+    let move = document.getElementById('moves');
+    move.innerHTML = --upto;
+    if (from == 100) {
+        clearInterval(moves);
+    }
+}

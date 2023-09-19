@@ -159,19 +159,56 @@ button#new-game:hover {
 /*Styling and positioning for puzzle*/
 .puzzle-container {
     cursor: pointer;
-    display: flex;
-    flex-wrap: wrap;
+    display: table;
     height: 360px;
     margin: 0 auto;
     width: 360px;
 }
 
 /*Styling for tiles*/
-.puzzle-container img {
-    width: 118px;
-    height: 118px;
+.tile1 {
     border: 1px solid #F5F5F5;
     cursor: pointer;
+    display: table-cell;
+    height: 120px;
+    width: 120px;
+}
+
+/*Tile positioning*/
+
+.tile {
+    background: url(../images/coast-of-galway360.jpg);
+    background-position: left top;
+    border: 1px solid #F5F5F5;
+    cursor: pointer;
+    display: table-cell;
+    height: 120px;
+    width: 120px;
+}
+.tile2 {
+    background-position: center top;
+}
+.tile3 {
+    background-position: right top;
+}
+.tile4 {
+    background-position: left center;
+}
+.tile5 {
+    background-position: center center;
+}
+.tile6 {
+    background-position: center right;
+}
+.tile7 {
+    background-position: left bottom;
+}
+.tile8 {
+    background-position: center bottom;
+}
+.tile9 {
+    background: #F5F5F5;
+    cursor: default;
 }
 
 /*Original image positioning*/
