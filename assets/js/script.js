@@ -5,6 +5,7 @@ const accordion = document.getElementsByClassName('accordion');
 const menuText = document.getElementsByClassName('menu-text');
 const newGame = document.getElementById('new-game'); //Get a new game button
 let moves = document.querySelector('.moves'); //Get moves counter button
+let i;
 
 let rows = 3;
 let columns = 3;
@@ -83,8 +84,15 @@ function finish() {
         currentTile.src = newTile;
         nextTile.src = presentTile;
 
-        moves += 1;
-        document.getElementById('moves').innerText = moves;
+        let moves = setInterval(updated);
+        let upto = 0;
+        function updated() {
+            let move = document.getElementById('moves');
+            move.innerHTML = --upto;
+            if (upto == 100) {
+                clearInterval(moves);
+            }
+        }
     }
 }
 

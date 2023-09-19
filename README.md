@@ -129,3 +129,5 @@ Content was written by myself.
 * Favicon was generated with [Faviconer](http://www.faviconer.com/)
 
 ## **Future development**
+
+In future I would like to add a hint option, timer for additional challenge, login and a scoreboard.
