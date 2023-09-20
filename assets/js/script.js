@@ -179,7 +179,75 @@ for ( let i = 0; i < accordion.length; i++) {
 
 document.getElementById('moves');
     let count = 0;
-movesCounter.addEventListener = ('click', function () {
+movesCounter.addEventListener('click', function () {
     count += 1;
     movesCounter.innerHTML = 'Moves: ' + count;
+});
+
+//Get all the anchor links
+const anchorLinks = document.querySelectorAll('.menu-text a');
+
+//Array of image sets
+const imageSets = [
+    {
+        completeImage: 'assets/images/coast-of-galway360.jpg',
+        puzzleImage: 'assets/images/coast-of-galway360.jpg',
+    },
+    {
+        completeImage: 'assets/images/duck360.jpg',
+        puzzleImage: 'assets/images/duck360.jpg',
+    },
+    {
+        completeImage: 'assets/images/glendalough-lake360.jpg',
+        puzzleImage: 'assets/images/glendalough-lake360.jpg',
+    },
+    {
+        completeImage: 'assets/images/gorse-and-heathers360.jpg',
+        puzzleImage: 'assets/images/gorse-and-heathers360.jpg',
+    },
+    {
+        completeImage: 'assets/images/lake360.jpg',
+        puzzleImage: 'assets/images/lake360.jpg',
+    },
+    {
+        completeImage: 'assets/images/log-pile360.jpg',
+        puzzleImage: 'assets/images/log-pile360.jpg',
+    },
+    {
+        completeImage: 'assets/images/seagull360.jpg',
+        puzzleImage: 'assets/images/seagull360.jpg',
+    },
+    {
+        completeImage: 'assets/images/splash360.jpg',
+        puzzleImage: 'assets/images/splash360.jpg',
+    },
+];
+
+//Function to change both images depending on selected set
+function changeImageSet(setIndex) {
+    const selectedSet = imageSets[setIndex];
+
+    changeCompleteImage(selectedSet.completeImage);
+    changePuzzleImage(selectedSet.puzzleImage);
+};
+
+function changeCompleteImage(newImageSrc) {
+    const completeImage = document.querySelector('.image img');
+    completeImage.src = newImageSrc;
+}
+
+function changePuzzleImage(newImageSrc) {
+    const tiles = document.querySelectorAll('.tile');
+    tiles.forEach((tile) => {
+        tile.style.backgroundImage = `url(${newImageSrc})`;
+    });
+}
+
+//Event listeners for anchor links
+anchorLinks.forEach((link, index) => {
+    link.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        changeImageSet(index);
+    });
 });
