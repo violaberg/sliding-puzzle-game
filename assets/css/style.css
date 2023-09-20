@@ -202,6 +202,9 @@ button#new-game:hover {
     height: 120px;
     width: 120px;
 }
+.tile1 {
+    background-position: left top;
+}
 .tile2 {
     background-position: center top;
 }
@@ -223,7 +226,7 @@ button#new-game:hover {
 .tile8 {
     background-position: center bottom;
 }
-.tile9 {
+.tile.tile9 {
     background: #F5F5F5;
     cursor: default;
 }

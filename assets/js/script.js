@@ -168,7 +168,7 @@ for ( let i = 0; i < accordion.length; i++) {
     accordion[i].addEventListener('click', function () {
         this.classList.toggle('active');
 
-        let menuText = this.nextElementSibling;
+        menuText = this.nextElementSibling;
         if (menuText.style.maxHeight) {
             menuText.style.maxHeight = null;
         } else {
@@ -183,9 +183,6 @@ movesCounter.addEventListener('click', function () {
     count += 1;
     movesCounter.innerHTML = 'Moves: ' + count;
 });
-
-//Get all the anchor links
-const anchorLinks = document.querySelectorAll('.menu-text a');
 
 //Array of image sets
 const imageSets = [
@@ -223,13 +220,49 @@ const imageSets = [
     },
 ];
 
+let currentImageSetIndex = 0;
+
 //Function to change both images depending on selected set
 function changeImageSet(setIndex) {
     const selectedSet = imageSets[setIndex];
 
     changeCompleteImage(selectedSet.completeImage);
     changePuzzleImage(selectedSet.puzzleImage);
+
+    shufflePuzzle();
+    attachTileEventListeners();
 };
+
+//Event listeners for anchor links
+anchorLinks.forEach((link, index) => {
+    link.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        changeImageSet(index);
+
+        currentImageSetIndex = index;
+    });
+});
+
+function attachTileEventListeners() {
+    for (let row = 1; row <= 3; row++) {
+        for (let column = 1; column <= 3; column++) {
+            const tile = document.getElementById('tile' + row + column);
+            tile.addEventListener('click', function () {
+                chooseTile(row, column);
+                moveTiles('tile' + row + column, 'tile tile9');
+
+                // Check if puzzle is solved
+                if (isPuzzleSolved()) {
+                    alert('Congratulations! You solved the puzzle!');
+                }
+            });
+        }
+    }
+}
+
+// Call attachTileEventListeners initially
+attachTileEventListeners();
 
 function changeCompleteImage(newImageSrc) {
     const completeImage = document.querySelector('.image img');
@@ -238,16 +271,62 @@ function changeCompleteImage(newImageSrc) {
 
 function changePuzzleImage(newImageSrc) {
     const tiles = document.querySelectorAll('.tile');
-    tiles.forEach((tile) => {
-        tile.style.backgroundImage = `url(${newImageSrc})`;
+    tiles.forEach((tile, index) => {
+            tile.style.backgroundImage = `url(${newImageSrc})`;
+
+            //Calculate background positions for new image based on tile index
+            const row = Math.floor(index / 3) + 1;
+            const column = (index % 3) + 1;
+            const backgroundPositionX = (column - 1) * 120 + 'px';
+        const backgroundPositionY = (row - 1) * 120 + 'px';
+
+        tile.style.backgroundPosition = `${backgroundPositionX} ${backgroundPositionY}`;
     });
+
+    //Reset the background for empty tile
+    const tile9 = document.getElementById('tile33');
+    tile9.style.background = '#F5F5F5';
 }
 
 //Event listeners for anchor links
+anchorLinks = document.querySelectorAll('.menu-text a');
 anchorLinks.forEach((link, index) => {
     link.addEventListener('click', function(event) {
         event.preventDefault();
 
         changeImageSet(index);
+
+        currentImageSetIndex = index;
+
+        shufflePuzzle();
     });
 });
+
+function shufflePuzzle() {
+    const currentImageSet = imageSets[currentImageSetIndex];
+    const initialPuzzle = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 0]
+    ];
+
+    if (!isSolvable(initialPuzzle)) {
+        alert ('Puzzle is not solvable! Please start a new game!');
+        return;
+    }
+
+    document.getElementById('moves').innerHTML = 'Moves: 0';
+
+    for (let row = 1; row <= 3; row++) {
+        for (let column = 1; column <= 3; column++) {
+            let secondRow = Math.floor(Math.random() * 3 + 1);
+            let secondCol = Math.floor(Math.random() * 3 + 1);
+
+            if (row !== secondRow || column !== secondCol) {
+                moveTiles('tile' + row + column, 'tile' + secondRow + secondCol);
+            }
+        }
+    }
+}
+
+shufflePuzzle();
