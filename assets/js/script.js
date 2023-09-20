@@ -6,6 +6,7 @@ let menuText = document.getElementsByClassName('menu-text');
 const newGame = document.getElementById('new-game'); //Get a new game button
 let movesCounter = document.querySelector('#moves'); //Get moves counter button
 let i;
+let count;
 
 //Initial puzzle array
 const initialPuzzle = [
@@ -34,7 +35,7 @@ function isPuzzleSolved() {
     }
 
     //The last tile is an empty one
-    return tileNumbers[tileNumbers - 1] === 'tile tile9';
+    return tileNumbers[tileNumbers - 1] === '9';
 }
 
 //Change puzzle to array
@@ -55,19 +56,23 @@ function isSolvable(puzzle) {
 };
 
 //Atach event listeners to tiles
-document.addEventListener('DOMContentLoaded', function() {
-    newGame.addEventListener('click', shufflePuzzle);
+document.addEventListener('DOMContentLoaded', function () {
+    newGame.addEventListener('click', function() {
+        shufflePuzzle();
+        count = 0;
+        movesCounter.innerHTML = 'Moves: ' + count;
+    });
 
     for (let row = 1; row <= 3; row++) {
         for (let column = 1; column <= 3; column++) {
             const tile = document.getElementById('tile' + row + column);
-            tile.addEventListener('click', function() {
+            tile.addEventListener('click', function () {
                 chooseTile(row, column);
                 moveTiles('tile' + row + column, 'tile tile9');
 
                 //Check if puzzle is solved
                 if (isPuzzleSolved()) {
-                    alert ('Congratulations! You solved the puzzle!');
+                    alert('Congratulations! You solved the puzzle!');
                 }
             });
         }
@@ -78,28 +83,35 @@ function moveTiles(tile1, tile2) {
     let temp = document.getElementById(tile1).className;
     document.getElementById(tile1).className = document.getElementById(tile2).className;
     document.getElementById(tile2).className = temp;
-    movesCounter.innerHTML = 'Moves: ' (++moves);
+
+    //Count moves
+    count++;
+    movesCounter.innerHTML = 'Moves: ' + count;
 }
 
 //Nested loops for each cell of the table
 function shufflePuzzle() {
     if (!isSolvable(initialPuzzle)) {
-        alert ('Puzzle is not solvable! Please start new game!');
+        alert('Puzzle is not solvable! Please start new game!');
         return;
     }
 
-    moves = 0; //Resets move count back to 0 when shuffling
     document.getElementById('moves').innerHTML = 'Moves: 0';
+
     for (let row = 1; row <= 3; row++) {
         for (let column = 1; column <= 3; column++) {
 
             let secondRow = Math.floor(Math.random() * 3 + 1);
             let secondCol = Math.floor(Math.random() * 3 + 1);
 
-            moveTiles("tile" + row + column, "tile" + secondRow + secondCol);
+            if (row !== secondRow || column !== secondCol) {
+                moveTiles("tile" + row + column, "tile" + secondRow + secondCol);
+            }
         }
     }
 }
+
+newGame.addEventListener('click', shufflePuzzle);
 
 function chooseTile(row, column) {
     let tile = document.getElementById("tile" + row + column);
@@ -166,12 +178,9 @@ for (i = 0; i < accordion.length; i++) {
     });
 };
 
-let count;
-let moves;
-
 document.getElementById('moves'),
-count = 0;
-moves.addEventListener = ('click', function () {
+    count = 0;
+movesCounter.addEventListener = ('click', function () {
     count += 1;
-    moves.innerHTML = 'Moves: ' + count;
+    movesCounter.innerHTML = 'Moves: ' + count;
 });

@@ -90,7 +90,6 @@ During development I decided against adding an image for logo not to cluster the
 * Objective
 * Rules
 * Change puzzle
-* Change level
 
 ### **Footer**
 
@@ -138,4 +137,4 @@ I extensively used various sources to learn about JavaScript to create sliding p
 
 ## **Future development**
 
-In future I would like to add a hint option, timer for additional challenge, login and a scoreboard.
+In future I would like to add a separate color theme for each puzzle, a hint option, a timer for additional challenge, a login and a scoreboard. Originally I had planned to have 2 levels for game, such as 3x3 and 4x4 sliding puzzle but as I ran out of time, it has become another feature to add in future.
