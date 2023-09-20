@@ -6,7 +6,6 @@ let menuText = document.getElementsByClassName('menu-text');
 const newGame = document.getElementById('new-game'); //Get a new game button
 let movesCounter = document.querySelector('#moves'); //Get moves counter button
 let i;
-let count;
 
 //Initial puzzle array
 const initialPuzzle = [
@@ -159,13 +158,13 @@ close.onclick = function (event) {
 };
 
 //If user clicks outside of modal, close it
-window.addEventListener = ('click', function (event) {
+window.addEventListener('click', function (event) {
     if (event.target === modal) {
         modal.style.display = 'none';
     }
 });
 
-for (i = 0; i < accordion.length; i++) {
+for ( let i = 0; i < accordion.length; i++) {
     accordion[i].addEventListener('click', function () {
         this.classList.toggle('active');
 
@@ -178,8 +177,8 @@ for (i = 0; i < accordion.length; i++) {
     });
 };
 
-document.getElementById('moves'),
-    count = 0;
+document.getElementById('moves');
+    let count = 0;
 movesCounter.addEventListener = ('click', function () {
     count += 1;
     movesCounter.innerHTML = 'Moves: ' + count;
