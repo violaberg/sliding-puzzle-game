@@ -9,6 +9,8 @@
 
 main {
     margin: 0 auto;
+    max-height: 490px;
+    max-width: 912px;
     width: 95%;
 }
 
@@ -46,6 +48,8 @@ p {
     display: flex;
     flex-direction: row;
     margin-left: 0.5em;
+    max-height: 419px;
+    max-width: 846px;
     padding-top: 6%;
     width: 96%;
 }
@@ -56,11 +60,12 @@ p {
     border: 15px solid #2f97a0;
     display: none;
     height: 65vh;
-    left: 25px;
+    max-height: 490px;
+    max-width: 912px;
     overflow: auto;
     padding-bottom: 35px;
     position: absolute;
-    width: 92%;
+    width: 490px;
     z-index: 1;
 }
 
@@ -151,6 +156,7 @@ p {
 
 #moves {
     background-color: #F5F5F5;
+    font-size: 14px;
     margin-right: 20%;
     margin-top: 60px;
     padding: 2px;
@@ -159,7 +165,6 @@ p {
 
 button#new-game {
     cursor: pointer;
-    font-family: 'Orbitron', sans-serif;
     margin-bottom: 20px;
     margin-right: 20%;
     padding: 2px;
@@ -257,4 +262,8 @@ button#new-game:hover {
 footer p {
     margin-bottom: 0;
     text-align: center;
+}
+
+.copyright {
+    padding-top: 2px;
 }
