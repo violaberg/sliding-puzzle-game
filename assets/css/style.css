@@ -65,7 +65,7 @@ p {
     overflow: auto;
     padding-bottom: 35px;
     position: absolute;
-    width: 490px;
+    width: 882px;
     z-index: 1;
 }
 
@@ -156,7 +156,7 @@ p {
 
 #moves {
     background-color: #F5F5F5;
-    font-size: 14px;
+    font-size: 13px;
     margin-right: 20%;
     margin-top: 60px;
     padding: 2px;

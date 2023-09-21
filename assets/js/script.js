@@ -189,34 +189,74 @@ const imageSets = [
     {
         completeImage: 'assets/images/coast-of-galway360.jpg',
         puzzleImage: 'assets/images/coast-of-galway360.jpg',
+        order: [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 0]
+        ]
     },
     {
         completeImage: 'assets/images/duck360.jpg',
         puzzleImage: 'assets/images/duck360.jpg',
+        order: [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 0]
+        ]
     },
     {
         completeImage: 'assets/images/glendalough-lake360.jpg',
         puzzleImage: 'assets/images/glendalough-lake360.jpg',
+        order: [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 0]
+        ]
     },
     {
         completeImage: 'assets/images/gorse-and-heathers360.jpg',
         puzzleImage: 'assets/images/gorse-and-heathers360.jpg',
+        order: [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 0]
+        ]
     },
     {
         completeImage: 'assets/images/lake360.jpg',
         puzzleImage: 'assets/images/lake360.jpg',
+        order: [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 0]
+        ]
     },
     {
         completeImage: 'assets/images/log-pile360.jpg',
         puzzleImage: 'assets/images/log-pile360.jpg',
+        order: [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 0]
+        ]
     },
     {
         completeImage: 'assets/images/seagull360.jpg',
         puzzleImage: 'assets/images/seagull360.jpg',
+        order: [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 0]
+        ]
     },
     {
         completeImage: 'assets/images/splash360.jpg',
         puzzleImage: 'assets/images/splash360.jpg',
+        order: [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 0]
+        ]
     },
 ];
 
@@ -229,20 +269,16 @@ function changeImageSet(setIndex) {
     changeCompleteImage(selectedSet.completeImage);
     changePuzzleImage(selectedSet.puzzleImage);
 
+    for (let row = 1; row <= 3; row++) {
+        for (let column = 1; column <= 3; column++) {
+            const tile = document.getElementById('tile' + row + column);
+            tile.id = 'tile' + selectedSet.order[row - 1][column - 1];
+        }
+    }
+
     shufflePuzzle();
     attachTileEventListeners();
 };
-
-//Event listeners for anchor links
-anchorLinks.forEach((link, index) => {
-    link.addEventListener('click', function (event) {
-        event.preventDefault();
-
-        changeImageSet(index);
-
-        currentImageSetIndex = index;
-    });
-});
 
 function attachTileEventListeners() {
     for (let row = 1; row <= 3; row++) {
@@ -289,7 +325,7 @@ function changePuzzleImage(newImageSrc) {
 }
 
 //Event listeners for anchor links
-anchorLinks = document.querySelectorAll('.menu-text a');
+const anchorLinks = document.querySelectorAll('.menu-text a');
 anchorLinks.forEach((link, index) => {
     link.addEventListener('click', function(event) {
         event.preventDefault();
