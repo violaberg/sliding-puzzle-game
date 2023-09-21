@@ -317,10 +317,17 @@ footer p {
         width: 100px;
     }
     .buttons {
+        color: #242F36;
+        font-size: 14px;
         left: 2%;
         margin-top: 0;
         position: relative;
         width: 35%;
+    }
+    .menu-modal {
+        height: 70vh;
+        position: absolute;
+        width: 87%;
     }
     #menu-button {
         margin-bottom: 10px;
@@ -334,10 +341,6 @@ footer p {
         margin-top: 0;
         padding: 4px;
         width: 100%;
-    }
-    .hidden-on-desktop {
-        cursor: pointer;
-        display: block;
     }
     #change-image {
         margin-top: 5px;
