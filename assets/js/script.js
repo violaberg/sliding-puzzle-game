@@ -1,7 +1,6 @@
 const modal = document.getElementById('modal'); //Get modal
 const menuButton = document.getElementById('menu-button'); //Get the button to open modal
 const close = document.getElementsByClassName('close-button')[0]; //Get the element that closes modal
-const accordion = document.getElementsByClassName('accordion');
 let menuText = document.getElementsByClassName('menu-text');
 const newGame = document.getElementById('new-game'); //Get a new game button
 let movesCounter = document.querySelector('#moves'); //Get moves counter button
@@ -163,19 +162,6 @@ window.addEventListener('click', function (event) {
     }
 });
 
-for ( let i = 0; i < accordion.length; i++) {
-    accordion[i].addEventListener('click', function () {
-        this.classList.toggle('active');
-
-        menuText = this.nextElementSibling;
-        if (menuText.style.maxHeight) {
-            menuText.style.maxHeight = null;
-        } else {
-            menuText.style.maxHeight = menuText.scrollHeight + 'px';
-        }
-    });
-}
-
 document.getElementById('moves');
     let count = 0;
 movesCounter.addEventListener('click', function () {
@@ -313,7 +299,7 @@ function changePuzzleImage(newImageSrc) {
             const row = Math.floor(index / 3) + 1;
             const column = (index % 3) + 1;
             const backgroundPositionX = (column - 1) * 120 + 'px';
-        const backgroundPositionY = (row - 1) * 120 + 'px';
+            const backgroundPositionY = (row - 1) * 120 + 'px';
 
         tile.style.backgroundPosition = `${backgroundPositionX} ${backgroundPositionY}`;
     });

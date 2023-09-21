@@ -32,7 +32,7 @@ p {
     font-size: 14px;
 }
 
-.game-window, .puzzle-container, .image, .menu-modal, #menu-button, #moves-counter, button#new-game {
+.game-window, .puzzle-container, .image, .menu-modal, #menu-button, #moves-counter, #change-image, button#new-game {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
 
@@ -85,10 +85,6 @@ p {
     top: 20px;
 }
 
-.hidden-on-desktop {
-    display: none;
-}
-
 #menu-button {
     cursor: pointer;
     margin-bottom: 20px;
@@ -104,7 +100,7 @@ p {
     text-decoration: none;
 }
 
-.accordion {
+.menu-subtitle {
     background-color: #ebf5fb;
     border: none;
     color: #2f97a0;
@@ -119,7 +115,7 @@ p {
     width: 100%;
 }
 
-.active, .accordion:hover {
+.active, .menu-subtitle:hover {
     font-weight: 700;
 }
 
@@ -131,19 +127,26 @@ p {
     transition: max-height 0.4s ease-out;
 }
 
-.menu-text img {
+.image-modal {
+    background: #ebf5fb;
+    border: 15px solid #2f97a0;
+    display: none;
+    height: 65vh;
+    max-height: 490px;
+    max-width: 912px;
+    overflow: auto;
+    padding-bottom: 35px;
+    position: absolute;
+    width: 882px;
+    z-index: 1;
+}
+
+.image-modal img {
     height: 100px;
     width: 100px;
 }
 
-#flex-box-img {
-    align-content: center;
-    display: flex;
-    justify-content: center;
-    margin-left: 10px;
-}
-
-#flex-box-img a {
+.image-modal a {
     flex: 1;
 }
 
@@ -274,47 +277,78 @@ footer p {
 
 /* for screen size over 320px and under 360px wide */
 @media (max-width: 420px) and (min-width: 360px) {
+    body {
+        height: 100vh;
+    }
     h1 {
-        margin-bottom: 3%;
+        font-size: 30px;
+        margin-bottom: 4%;
     }
     .game-window {
-        max-height: 700px;
+        height: 75vh;
     }
     .flex-container {
         display: flex;
         flex-direction: column-reverse;
+        margin-bottom: 0;
+        margin-top: 15%;
     }
     .puzzle-container {
-        max-height: 270px;
-        max-width: 270px;
+        max-height: 300px;
+        max-width: 300px;
+        padding: 0;
     }
     .image img {
-        max-height: 270px;
-        max-width: 270px;
+        max-height: 150px;
+        max-width: 150px;
+        position: absolute;
+        right: 10%;
+        top: 14%;
     }
     .image {
-        max-height: 270px;
-        max-width: 270px;
+        max-height: 150px;
+        max-width: 150px;
+        position: absolute;
+        right: 10%;
+        top: 14%;
     }
     .tile {
-        height: 90px;
-        width: 90px;
+        height: 100px;
+        width: 100px;
     }
     .buttons {
-        left: 10%;
+        left: 2%;
+        margin-top: 0;
+        position: relative;
+        width: 35%;
+    }
+    #menu-button {
+        margin-bottom: 10px;
+        padding: 4px;
+        position: absolute;
+        top: -40px;
+        width: 100%;
     }
     button#new-game {
-        padding-bottom: 0;
+        margin-bottom: 10px;
+        margin-top: 0;
+        padding: 4px;
+        width: 100%;
     }
     .hidden-on-desktop {
         cursor: pointer;
         display: block;
     }
+    #change-image {
+        margin-top: 5px;
+        padding: 4px;
+    }
     #moves {
-        margin-top: 0;
-        padding-top: 0;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        width: 95%;
     }
     .footer-icons {
-        padding-top: 55px;
+        padding-top: 65px;
     }
 }
