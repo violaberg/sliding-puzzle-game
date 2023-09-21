@@ -85,6 +85,10 @@ p {
     top: 20px;
 }
 
+.hidden-on-desktop {
+    display: none;
+}
+
 #menu-button {
     cursor: pointer;
     margin-bottom: 20px;
@@ -266,4 +270,51 @@ footer p {
 
 .copyright {
     padding-top: 2px;
+}
+
+/* for screen size over 320px and under 360px wide */
+@media (max-width: 420px) and (min-width: 360px) {
+    h1 {
+        margin-bottom: 3%;
+    }
+    .game-window {
+        max-height: 700px;
+    }
+    .flex-container {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .puzzle-container {
+        max-height: 270px;
+        max-width: 270px;
+    }
+    .image img {
+        max-height: 270px;
+        max-width: 270px;
+    }
+    .image {
+        max-height: 270px;
+        max-width: 270px;
+    }
+    .tile {
+        height: 90px;
+        width: 90px;
+    }
+    .buttons {
+        left: 10%;
+    }
+    button#new-game {
+        padding-bottom: 0;
+    }
+    .hidden-on-desktop {
+        cursor: pointer;
+        display: block;
+    }
+    #moves {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .footer-icons {
+        padding-top: 55px;
+    }
 }

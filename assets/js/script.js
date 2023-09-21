@@ -5,7 +5,6 @@ const accordion = document.getElementsByClassName('accordion');
 let menuText = document.getElementsByClassName('menu-text');
 const newGame = document.getElementById('new-game'); //Get a new game button
 let movesCounter = document.querySelector('#moves'); //Get moves counter button
-let i;
 
 //Initial puzzle array
 const initialPuzzle = [
@@ -52,7 +51,7 @@ function isSolvable(puzzle) {
     }
 
     return inversions % 2 === 0;
-};
+}
 
 //Atach event listeners to tiles
 document.addEventListener('DOMContentLoaded', function () {
@@ -175,7 +174,7 @@ for ( let i = 0; i < accordion.length; i++) {
             menuText.style.maxHeight = menuText.scrollHeight + 'px';
         }
     });
-};
+}
 
 document.getElementById('moves');
     let count = 0;
