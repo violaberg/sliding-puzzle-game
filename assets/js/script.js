@@ -1,10 +1,7 @@
 const modal = document.getElementById('modal'); //Get menu modal
-const imageModal = document.querySelector('.image-modal'); //Get image modal
-const imageModalClose = document.getElementById('close-image-modal'); //Get the button to close image modal
 const changeImageButton = document.getElementById('change-image'); //Get the change image modal button
 const menuButton = document.getElementById('menu-button'); //Get the button to open modal
 const close = document.getElementsByClassName('close-button')[0]; //Get the element that closes modal
-let menuText = document.getElementsByClassName('menu-text');
 const newGame = document.getElementById('new-game'); //Get a new game button
 let movesCounter = document.querySelector('#moves'); //Get moves counter button
 
@@ -78,7 +75,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    const changeImageButton = document.getElementById('change-image');
     const imageModal = document.querySelector('.image-modal');
 
     changeImageButton.addEventListener('click', function () {
