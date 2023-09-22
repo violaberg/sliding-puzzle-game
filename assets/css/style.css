@@ -93,10 +93,6 @@ p {
     padding: 2px;
 }
 
-#menu-button:hover {
-    background-color: #2f97a0;
-}
-
 .sub-menu {
     text-decoration: none;
 }
@@ -120,12 +116,15 @@ p {
     font-weight: 700;
 }
 
+.menu-text {
+    display: block;
+}
+
 .menu-text p {
     color: black;
-    display: none;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease-out;
+    display: block;
+    font-size: 14px;
+    margin: 10px;
 }
 
 .image-modal {
@@ -133,18 +132,22 @@ p {
     border: 15px solid #2f97a0;
     display: none;
     height: 65vh;
+    left: 184px;
     max-height: 490px;
     max-width: 912px;
     overflow: auto;
     padding-bottom: 35px;
     position: absolute;
+    top: 14%;
     width: 882px;
     z-index: 1;
 }
 
 .image-modal img {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    margin-left: 6%;
+    margin-top: 3%;
+    width: 150px;
 }
 
 .image-modal a {
@@ -188,7 +191,7 @@ button#new-game {
     padding: 2px;
 }
 
-button#menu:hover {
+button#menu-button:hover {
     background-color: #2f97a0;
 }
 

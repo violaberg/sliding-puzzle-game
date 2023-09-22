@@ -1,4 +1,6 @@
-const modal = document.getElementById('modal'); //Get modal
+const modal = document.getElementById('modal'); //Get menu modal
+const imageModal = document.querySelector('.image-modal'); //Get image modal
+const changeImageButton = document.getElementById('change-image'); //Get the change image modal button
 const menuButton = document.getElementById('menu-button'); //Get the button to open modal
 const close = document.getElementsByClassName('close-button')[0]; //Get the element that closes modal
 let menuText = document.getElementsByClassName('menu-text');
@@ -74,6 +76,27 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
+
+    const changeImageButton = document.getElementById('change-image');
+    const imageModal = document.querySelector('.image-modal');
+
+    changeImageButton.addEventListener('click', function () {
+        imageModal.style.display = 'block'; //Opens the image modal when the "Change Image" button is clicked
+    });
+
+    //Add event listeners to the images inside the image modal to close it when clicked
+    const imageLinks = document.querySelectorAll('.image-modal a');
+    imageLinks.forEach(function (link, index) {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            //Change the image set when an option is clicked
+            changeImageSet(index);
+
+            //Close the image modal
+            imageModal.style.display = 'none';
+        });
+    });
 });
 
 function moveTiles(tile1, tile2) {
@@ -263,7 +286,7 @@ function changeImageSet(setIndex) {
 
     shufflePuzzle();
     attachTileEventListeners();
-};
+}
 
 function attachTileEventListeners() {
     for (let row = 1; row <= 3; row++) {
