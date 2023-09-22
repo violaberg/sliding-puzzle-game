@@ -89,18 +89,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const imageLinks = document.querySelectorAll('.image-modal a');
     imageLinks.forEach(function (link, index) {
         link.addEventListener('click', function (event) {
-            event.preventDefault();
+            imageModal.style.display = 'none';
 
             //Change the image set when an option is clicked
             changeImageSet(index);
-
-            //Close the image modal
-            imageModalClose.onclick = function (event) {
-                imageModal.style.display = 'none';
-            };
+            });
         });
     });
-});
 
 function moveTiles(tile1, tile2) {
     let temp = document.getElementById(tile1).className;

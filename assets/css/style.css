@@ -154,13 +154,6 @@ p {
     flex: 1;
 }
 
-.close-image-modal {
-    cursor: pointer;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-}
-
 .bold {
     font-weight: 700;
 }
