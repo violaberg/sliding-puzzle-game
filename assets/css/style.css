@@ -222,6 +222,7 @@ button#new-game:hover {
 .tile {
     background: url(../images/coast-of-galway360.jpg);
     background-position: left top;
+    background-size: 360px 360px;
     border: 1px solid #F5F5F5;
     cursor: pointer;
     display: table-cell;
@@ -367,5 +368,158 @@ footer p {
     }
     .footer-icons {
         padding-top: 65px;
+    }
+}
+
+/* for screen size over 880px and under 899px wide */
+@media (max-width: 899px) and (min-width: 880px)
+
+/* for screen size over 900px and under 910px wide */
+@media (max-width: 910px) and (min-width: 900px) {
+    .flex-container {
+        margin-left: 0.4em;
+        padding-top: 8%;
+    }
+    .puzzle-container {
+        background-size: 330px 330px;
+        height: 330px;
+        width: 330px;
+    }
+    .tile {
+        height: 110px;
+        width: 110px;
+    }
+    .image {
+        height: 330px;
+        width: 330px;
+    }
+    .image img {
+        height: 330px;
+        width: 330px;
+    }
+    .menu-modal {
+        max-width: 825px;
+        overflow-y: hidden;
+    }
+    .menu-text p {
+        margin-left: 2%;
+    }
+    .image-modal {
+        left: 2.5%;
+        max-width: 825px;
+        top: 12%;
+        width: 825px;
+    }
+    .image-modal img {
+        height: 120px;
+        margin-left: 8%;
+        margin-top: 6%;
+        width: 120px;
+    }
+    .menu-title {
+        top: 5%;
+    }
+    .buttons {
+        margin-right: 1%;
+    }
+}
+
+/* for screen size over 910px and under 920px wide */
+@media (max-width: 920px) and (min-width: 910px) {
+    .flex-container {
+        margin-left: 0.3em;
+        padding-top: 8%;
+    }
+    .puzzle-container {
+        background-size: 330px 330px;
+        height: 330px;
+        width: 330px;
+    }
+    .tile {
+        height: 110px;
+        width: 110px;
+    }
+    .image {
+        height: 330px;
+        width: 330px;
+    }
+    .image img {
+        height: 330px;
+        width: 330px;
+    }
+    .buttons {
+        margin-right: 1.5%;
+    }
+    .menu-modal {
+        max-width: 840px;
+        overflow-y: hidden;
+    }
+    .menu-text p {
+        margin-left: 2%;
+    }
+    .image-modal {
+        left: 2.5%;
+        max-width: 840px;
+        top: 12%;
+        width: 840px;
+    }
+    .image-modal img {
+        height: 120px;
+        margin-left: 8%;
+        margin-top: 6%;
+        width: 120px;
+    }
+    .menu-title {
+        top: 5%;
+    }
+}
+
+/* for screen size over 959px and under 921px wide */
+@media (max-width: 959px) and (min-width: 921px) {
+    .flex-container {
+        margin-left: 1px;
+        padding-top: 7%;
+    }
+    .puzzle-container {
+        background-size: 330px 330px;
+        height: 330px;
+        width: 330px;
+    }
+    .tile {
+        height: 110px;
+        width: 110px;
+    }
+    .image {
+        height: 330px;
+        width: 330px;
+    }
+    .image img {
+        height: 330px;
+        width: 330px;
+    }
+    .buttons {
+        margin-right: 2%;
+    }
+    .menu-modal {
+        max-width: 865px;
+        overflow-y: hidden;
+    }
+    .menu-text p {
+        margin-left: 3%;
+    }
+    .image-modal {
+        left: 2.5%;
+        max-width: 865px;
+        top: 12%;
+        width: 865px;
+    }
+    .image-modal img {
+        height: 120px;
+        margin-left: 8%;
+        margin-top: 6%;
+        width: 120px;
+    }
+    .menu-title {
+        top: 5%;
     }
 }

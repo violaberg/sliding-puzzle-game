@@ -264,12 +264,24 @@ const imageSets = [
 
 let currentImageSetIndex = 0;
 
+function updateTileBackgrounds(imageURL) {
+    const tiles = document.querySelectorAll('.tile'); //Get all tiles by class
+
+    tiles.forEach(function(tile) {
+        tile.style.background = `url(${imageURL})`;
+        tile.style.backgroundPosition = 'left top';
+    });
+}
+
+const tile9 = document.getElementById('tile33');
+
 //Function to change both images depending on selected set
 function changeImageSet(setIndex) {
     const selectedSet = imageSets[setIndex];
-
     changeCompleteImage(selectedSet.completeImage);
     changePuzzleImage(selectedSet.puzzleImage);
+    tile9 = document.getElementById('tile33');
+    tile9.style.background = '#F5F5F5';
 
     for (let row = 1; row <= 3; row++) {
         for (let column = 1; column <= 3; column++) {
@@ -277,6 +289,9 @@ function changeImageSet(setIndex) {
             tile.id = 'tile' + selectedSet.order[row - 1][column - 1];
         }
     }
+
+    // Call the updateTileBackgrounds function with the URL of the new image
+    updateTileBackgrounds(selectedSet.puzzleImage);
 
     shufflePuzzle();
     attachTileEventListeners();
@@ -310,15 +325,13 @@ function changeCompleteImage(newImageSrc) {
 function changePuzzleImage(newImageSrc) {
     const tiles = document.querySelectorAll('.tile');
     tiles.forEach((tile, index) => {
-            tile.style.backgroundImage = `url(${newImageSrc})`;
-
-            //Calculate background positions for new image based on tile index
-            const row = Math.floor(index / 3) + 1;
-            const column = (index % 3) + 1;
+            const row = tile.getAttribute('data-row');
+            const column = tile.getAttribute('data-column');
             const backgroundPositionX = (column - 1) * 120 + 'px';
             const backgroundPositionY = (row - 1) * 120 + 'px';
 
-        tile.style.backgroundPosition = `${backgroundPositionX} ${backgroundPositionY}`;
+            tile.style.backgroundImage = `url(${newImageSrc})`;
+            tile.style.backgroundPosition = `${backgroundPositionX} ${backgroundPositionY}`;
     });
 
     //Reset the background for empty tile

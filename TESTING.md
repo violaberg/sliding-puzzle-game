@@ -19,6 +19,8 @@
 
 ### **Validator Testing**
 
+* While testing in JShint during development, I noticed few unused valuables that I haven't noticed before and could delete safely.
+
 ![Validator screenshot]()
 
 ### **Lighthouse**
