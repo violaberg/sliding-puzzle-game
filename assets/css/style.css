@@ -372,7 +372,54 @@ footer p {
 }
 
 /* for screen size over 880px and under 899px wide */
-@media (max-width: 899px) and (min-width: 880px)
+@media (max-width: 899px) and (min-width: 880px) {
+    .flex-container {
+        margin-left: -2px;
+        padding-top: 10%;
+    }
+    .puzzle-container {
+        background-size: 300px 300px;
+        height: 300px;
+        width: 300px;
+    }
+    .tile {
+        height: 100px;
+        width: 100px;
+    }
+    .image {
+        height: 300px;
+        width: 300px;
+    }
+    .image img {
+        height: 300px;
+        width: 300px;
+    }
+    .menu-modal {
+        max-width: 820px;
+        overflow-y: hidden;
+    }
+    .menu-text p {
+        margin-left: 2%;
+    }
+    .image-modal {
+        left: 2.5%;
+        max-width: 820px;
+        top: 11.5%;
+        width: 820px;
+    }
+    .image-modal img {
+        height: 120px;
+        margin-left: 8%;
+        margin-top: 6%;
+        width: 120px;
+    }
+    .menu-title {
+        top: 5%;
+    }
+    .buttons {
+        margin-right: 3%;
+    }
+}
 
 /* for screen size over 900px and under 910px wide */
 @media (max-width: 910px) and (min-width: 900px) {
