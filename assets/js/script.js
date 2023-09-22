@@ -1,5 +1,6 @@
 const modal = document.getElementById('modal'); //Get menu modal
 const imageModal = document.querySelector('.image-modal'); //Get image modal
+const imageModalClose = document.getElementById('close-image-modal'); //Get the button to close image modal
 const changeImageButton = document.getElementById('change-image'); //Get the change image modal button
 const menuButton = document.getElementById('menu-button'); //Get the button to open modal
 const close = document.getElementsByClassName('close-button')[0]; //Get the element that closes modal
@@ -94,7 +95,9 @@ document.addEventListener('DOMContentLoaded', function () {
             changeImageSet(index);
 
             //Close the image modal
-            imageModal.style.display = 'none';
+            imageModalClose.onclick = function (event) {
+                imageModal.style.display = 'none';
+            };
         });
     });
 });
@@ -333,8 +336,8 @@ function changePuzzleImage(newImageSrc) {
 }
 
 //Event listeners for anchor links
-const anchorLinks = document.querySelectorAll('.menu-text a');
-anchorLinks.forEach((link, index) => {
+const imageLinks = document.querySelectorAll('.image-modal a');
+imageLinks.forEach((link, index) => {
     link.addEventListener('click', function(event) {
         event.preventDefault();
 

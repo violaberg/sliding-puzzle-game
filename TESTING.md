@@ -12,8 +12,8 @@
 
 ### **Bugs and fixes**
 
-* **Wanted Outcome** - 
-  * ***Issue Found and solution used*** - 
+* **Wanted Outcome** - Clearly shown paragraphs in menu under Objectives and Rules.
+  * ***Issue Found and solution used*** - Paragraphs weren't visible at all. Eventually I found two properties set in CSS for them: 'overflow: hidden' and 'max-height: 0', once I removed them, issue was fixed.
 
 ## **Testing after development**
 
