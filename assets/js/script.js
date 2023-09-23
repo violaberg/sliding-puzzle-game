@@ -1,8 +1,11 @@
-const modal = document.getElementById('modal'); //Get menu modal
+const modal = document.getElementById('modal'); //Get modal
 const menuButton = document.getElementById('menu-button'); //Get the button to open modal
 const close = document.getElementsByClassName('close-button')[0]; //Get the element that closes modal
+const accordion = document.getElementsByClassName('accordion');
+let menuText = document.getElementsByClassName('menu-text');
 const newGame = document.getElementById('new-game'); //Get a new game button
 let movesCounter = document.querySelector('#moves'); //Get moves counter button
+let i;
 
 //Initial puzzle array
 const initialPuzzle = [
@@ -49,11 +52,11 @@ function isSolvable(puzzle) {
     }
 
     return inversions % 2 === 0;
-}
+};
 
 //Atach event listeners to tiles
 document.addEventListener('DOMContentLoaded', function () {
-    newGame.addEventListener('click', function() {
+    newGame.addEventListener('click', function () {
         shufflePuzzle();
         count = 0;
         movesCounter.innerHTML = 'Moves: ' + count;
@@ -73,12 +76,12 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
-
+});
 function moveTiles(tile1, tile2) {
     let temp = document.getElementById(tile1).className;
     document.getElementById(tile1).className = document.getElementById(tile2).className;
     document.getElementById(tile2).className = temp;
-
+    
     //Count moves
     count++;
     movesCounter.innerHTML = 'Moves: ' + count;
@@ -98,7 +101,7 @@ function shufflePuzzle() {
 
             let secondRow = Math.floor(Math.random() * 3 + 1);
             let secondCol = Math.floor(Math.random() * 3 + 1);
-
+            
             if (row !== secondRow || column !== secondCol) {
                 moveTiles("tile" + row + column, "tile" + secondRow + secondCol);
             }
@@ -109,97 +112,51 @@ function shufflePuzzle() {
 newGame.addEventListener('click', shufflePuzzle);
 
 function chooseTile(row, column) {
-    let tile = document.getElementById("tile" + row + column);
-    let tileClass = tile.className;
-    if (tileClass != "tile tile9") {
-        if (column < 3) {
-            if (document.getElementById("tile" + row + (column + 1)).className == "tile tile9") {
-                moveTiles("tile" + row + column, "tile" + row + (column + 1));
-                return;
+        let tile = document.getElementById("tile" + row + column);
+        let tileClass = tile.className;
+        if (tileClass != "tile tile9") {
+            if (column < 3) {
+                if (document.getElementById("tile" + row + (column + 1)).className == "tile tile9") {
+                    moveTiles("tile" + row + column, "tile" + row + (column + 1));
+                    return;
+                }
             }
-        }
 
-        if (column > 1) {
-            if (document.getElementById("tile" + row + (column - 1)).className == "tile tile9") {
-                moveTiles("tile" + row + column, "tile" + row + (column - 1));
-                return;
+            if (column > 1) {
+                if (document.getElementById("tile" + row + (column - 1)).className == "tile tile9") {
+                    moveTiles("tile" + row + column, "tile" + row + (column - 1));
+                    return;
+                }
             }
-        }
 
-        if (row > 1) {
-            if (document.getElementById("tile" + (row - 1) + column).className == "tile tile9") {
-                moveTiles("tile" + row + column, "tile" + (row - 1) + column);
-                return;
+            if (row > 1) {
+                if (document.getElementById("tile" + (row - 1) + column).className == "tile tile9") {
+                    moveTiles("tile" + row + column, "tile" + (row - 1) + column);
+                    return;
+                }
             }
-        }
 
-        if (row < 3) {
-            if (document.getElementById("tile" + (row + 1) + column).className == "tile tile9") {
-                moveTiles("tile" + row + column, "tile" + (row + 1) + column);
-                return;
+            if (row < 3) {
+                if (document.getElementById("tile" + (row + 1) + column).className == "tile tile9") {
+                    moveTiles("tile" + row + column, "tile" + (row + 1) + column);
+                    return;
+                }
             }
         }
     }
 
-}
+    //Open the modal if button is clicked
+    menuButton.onclick = function () {
+        modal.style.display = 'block';
+    };
 
-//Open the modal if button is clicked
-menuButton.onclick = function () {
-    modal.style.display = 'block';
-};
+    //Close modal when close (x) element is clicked
+    close.onclick = function (event) {
+        modal.style.display = 'none';
+    };
 
-//Close modal when close (x) element is clicked
-close.onclick = function (event) {
-    modal.style.display = 'none';
-};
-
-document.getElementById('moves');
-    let count = 0;
-movesCounter.addEventListener('click', function () {
+count = 0;
+movesCounter.addEventListener = ('click', function () {
     count += 1;
     movesCounter.innerHTML = 'Moves: ' + count;
-});
-
-function attachTileEventListeners() {
-    for (let row = 1; row <= 3; row++) {
-        for (let column = 1; column <= 3; column++) {
-            const tile = document.getElementById('tile' + row + column);
-            tile.addEventListener('click', function () {
-                chooseTile(row, column);
-                moveTiles('tile' + row + column, 'tile tile9');
-
-                // Check if puzzle is solved
-                if (isPuzzleSolved()) {
-                    alert('Congratulations! You solved the puzzle!');
-                }
-            });
-        }
-    }
-}
-
-// Call attachTileEventListeners initially
-attachTileEventListeners();
-
-    //Reset the background for empty tile
-    const tile9 = document.getElementById('tile33');
-    tile9.style.background = '#F5F5F5';
-
-    if (!isSolvable(initialPuzzle)) {
-        alert ('Puzzle is not solvable! Please start a new game!');
-        return;
-    }
-
-    document.getElementById('moves').innerHTML = 'Moves: 0';
-
-    for (let row = 1; row <= 3; row++) {
-        for (let column = 1; column <= 3; column++) {
-            let secondRow = Math.floor(Math.random() * 3 + 1);
-            let secondCol = Math.floor(Math.random() * 3 + 1);
-
-            if (row !== secondRow || column !== secondCol) {
-                moveTiles('tile' + row + column, 'tile' + secondRow + secondCol);
-            }
-        }
-    }
-
-shufflePuzzle();
+    });

@@ -32,7 +32,7 @@ p {
     font-size: 14px;
 }
 
-.game-window, .puzzle-container, .image, .menu-modal, #menu-button, #moves-counter, #change-image, button#new-game {
+.game-window, .puzzle-container, .image, .menu-modal, #menu-button, #moves-counter, button#new-game {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
 
@@ -127,33 +127,6 @@ p {
     margin: 10px;
 }
 
-.image-modal {
-    background: #ebf5fb;
-    border: 15px solid #2f97a0;
-    display: none;
-    height: 65vh;
-    left: 184px;
-    max-height: 490px;
-    max-width: 912px;
-    overflow: auto;
-    padding-bottom: 35px;
-    position: absolute;
-    top: 14%;
-    width: 882px;
-    z-index: 1;
-}
-
-.image-modal img {
-    height: 150px;
-    margin-left: 6%;
-    margin-top: 3%;
-    width: 150px;
-}
-
-.image-modal a {
-    flex: 1;
-}
-
 .bold {
     font-weight: 700;
 }
@@ -173,15 +146,6 @@ p {
     margin-top: 60px;
     padding: 2px;
     text-align: center;
-}
-
-button#change-image {
-    margin-right: 12%;
-    padding: 2px 0;
-}
-
-button#change-image:hover {
-    background-color: #2f97a0;
 }
 
 button#new-game {
@@ -357,10 +321,6 @@ footer p {
         padding: 4px;
         width: 100%;
     }
-    #change-image {
-        margin-top: 5px;
-        padding: 4px;
-    }
     #moves {
         margin-bottom: 15px;
         margin-top: 15px;
@@ -401,18 +361,6 @@ footer p {
     .menu-text p {
         margin-left: 2%;
     }
-    .image-modal {
-        left: 2.5%;
-        max-width: 820px;
-        top: 11.5%;
-        width: 820px;
-    }
-    .image-modal img {
-        height: 120px;
-        margin-left: 8%;
-        margin-top: 6%;
-        width: 120px;
-    }
     .menu-title {
         top: 5%;
     }
@@ -450,18 +398,6 @@ footer p {
     }
     .menu-text p {
         margin-left: 2%;
-    }
-    .image-modal {
-        left: 2.5%;
-        max-width: 825px;
-        top: 12%;
-        width: 825px;
-    }
-    .image-modal img {
-        height: 120px;
-        margin-left: 8%;
-        margin-top: 6%;
-        width: 120px;
     }
     .menu-title {
         top: 5%;
@@ -504,18 +440,6 @@ footer p {
     .menu-text p {
         margin-left: 2%;
     }
-    .image-modal {
-        left: 2.5%;
-        max-width: 840px;
-        top: 12%;
-        width: 840px;
-    }
-    .image-modal img {
-        height: 120px;
-        margin-left: 8%;
-        margin-top: 6%;
-        width: 120px;
-    }
     .menu-title {
         top: 5%;
     }
@@ -553,18 +477,6 @@ footer p {
     }
     .menu-text p {
         margin-left: 3%;
-    }
-    .image-modal {
-        left: 2.5%;
-        max-width: 865px;
-        top: 12%;
-        width: 865px;
-    }
-    .image-modal img {
-        height: 120px;
-        margin-left: 8%;
-        margin-top: 6%;
-        width: 120px;
     }
     .menu-title {
         top: 5%;
