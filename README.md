@@ -47,6 +47,7 @@ A Sliding Puzzle game is a popular classic type of puzzle that involves arrangin
 ### **Goals**
 
 * Make site easy to navigate through.
+* Make a responsive game for media screens from 310px wide and up
 * Provide a free puzzle game.
 * Provide simple and short rules of the game.
 * Provide information of moves used to complete the puzzle.
