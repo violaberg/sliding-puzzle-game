@@ -371,8 +371,8 @@ footer p {
     }
 }
 
-/* for screen size under 330px and over 316px wide */
-@media (max-width: 330px) and (min-width: 316px) {
+/* for screen size under 350px and over 316px wide */
+@media (max-width: 350px) and (min-width: 316px) {
     * {
         overflow-x: visible;
         overflow-y: visible;
@@ -396,11 +396,126 @@ footer p {
         position: fixed;
     }
     .puzzle-container {
-        left: 34px;
+        left: -1.5em;
         max-height: 225px;
         max-width: 225px;
         padding: 0;
+        position: relative;
+    }
+    .image img {
+        max-height: 140px;
+        max-width: 140px;
         position: fixed;
+        right: 35px;
+        top: 103px;
+    }
+    .image {
+        bottom: 180px;
+        left: 95px;
+        max-height: 140px;
+        max-width: 140px;
+        position: relative;
+    }
+    .tile {
+        background-size: 225px 225px;
+        height: 75px;
+        position: relative;
+        width: 75px;
+    }
+    .buttons {
+        color: #242F36;
+        font-size: 12px;
+        left: 2.8em;
+        position: fixed;
+        top: 100px;
+        width: 32%;
+    }
+    .menu-modal {
+        height: 65vh;
+        position: absolute;
+        width: 87%;
+    }
+    .sub-menu {
+        position: relative;
+    }
+    .menu-title {
+        font-size: 18px;
+    }
+    .menu-subtitle {
+        font-size: 15px;
+        padding: 0;
+    }
+    .menu-text p {
+        font-size: 12px;
+        margin: 7px;
+        padding: 1px 3px;
+    }
+    .close-button {
+        font-size: 10px;
+        right: 10px;
+        top: 16px;
+    }
+    #menu-button {
+        font-size: 12px;
+        margin-bottom: 10px;
+        padding: 4px;
+        position: absolute;
+        top: 10px;
+        width: 75%;
+    }
+    button#new-game {
+        font-size: 12px;
+        margin-bottom: 10px;
+        padding: 4px;
+        position: relative;
+        top: 47px;
+        width: 75%;
+    }
+    #moves {
+        font-size: 12px;
+        margin-bottom: 15px;
+        margin-top: 70px;
+        width: 70%;
+    }
+    .footer-icons {
+        font-size: 12px;
+        padding-top: 8px;
+    }
+    .copyright {
+        font-size: 12px;
+    }
+}
+
+/* for screen size under 350px and over 316px wide */
+@media (max-width: 350px) and (min-width: 316px) {
+    * {
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+    body {
+        height: 100vh;
+    }
+    h1 {
+        font-size: 25px;
+        margin-bottom: 4%;
+    }
+    .game-window {
+        margin: 0;
+    }
+    .flex-container {
+        bottom: 143px;
+        flex-direction: column-reverse;
+        margin: 0 auto;
+        padding-left: 7px;
+        padding-right: 7px;
+        position: fixed;
+    }
+    .puzzle-container {
+        left: -1.5em;
+        max-height: 225px;
+        max-width: 225px;
+        padding: 0;
+        position: relative;
     }
     .image img {
         max-height: 140px;
