@@ -89,7 +89,6 @@ During development I decided against adding an image for logo not to cluster the
 
 * Objective
 * Rules
-* Change puzzle
 
 ### **Footer**
 
@@ -127,14 +126,13 @@ I extensively used various sources to learn about JavaScript to create sliding p
 * [Geeks for geeks](https://www.geeksforgeeks.org/)
 * [W3 schools](https://www.w3schools.com/)
 * Watched many tutorials on [Youtube](https://www.youtube.com/)
-* Explored repositories on [GitHub](https://github.com/)
+* Explored severel repositories on [GitHub](https://github.com/)
 * [CSS tricks](https://css-tricks.com/)
 
-- Photos used for puzzles were all taken by myself.
-- Images were cut by [Imagy](https://imagy.app/)
+- Photo used for puzzle was taken by myself.
 - All icons are from [Font Awesome](https://fontawesome.com/)
 - Favicon was generated with [Faviconer](http://www.faviconer.com/)
 
 ## **Future development**
 
-In future I would like to add a separate color theme for each puzzle, a hint option, a timer for additional challenge, a login and a scoreboard. Originally I had planned to have 2 levels for game, such as 3x3 and 4x4 sliding puzzle but as I ran out of time, it has become another feature to add in future.
+In future I would like to add image choice for puzzle, a separate color theme for each puzzle, a hint option, a timer for additional challenge, a login and a scoreboard. Originally I had planned to have 2 levels for game, such as 3x3 and 4x4 sliding puzzle but as I ran out of time, it has become another feature to add in future.
