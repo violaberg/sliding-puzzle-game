@@ -1,5 +1,4 @@
 const modal = document.getElementById('modal'); //Get menu modal
-const changeImageButton = document.getElementById('change-image'); //Get the change image modal button
 const menuButton = document.getElementById('menu-button'); //Get the button to open modal
 const close = document.getElementsByClassName('close-button')[0]; //Get the element that closes modal
 const newGame = document.getElementById('new-game'); //Get a new game button
@@ -74,24 +73,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     }
-
-    const imageModal = document.querySelector('.image-modal');
-
-    changeImageButton.addEventListener('click', function () {
-        imageModal.style.display = 'block'; //Opens the image modal when the "Change Image" button is clicked
-    });
-
-    //Add event listeners to the images inside the image modal to close it when clicked
-    const imageLinks = document.querySelectorAll('.image-modal a');
-    imageLinks.forEach(function (link, index) {
-        link.addEventListener('click', function (event) {
-            imageModal.style.display = 'none';
-
-            //Change the image set when an option is clicked
-            changeImageSet(index);
-            });
-        });
-    });
 
 function moveTiles(tile1, tile2) {
     let temp = document.getElementById(tile1).className;
@@ -172,130 +153,12 @@ close.onclick = function (event) {
     modal.style.display = 'none';
 };
 
-//If user clicks outside of modal, close it
-window.addEventListener('click', function (event) {
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
-});
-
 document.getElementById('moves');
     let count = 0;
 movesCounter.addEventListener('click', function () {
     count += 1;
     movesCounter.innerHTML = 'Moves: ' + count;
 });
-
-//Array of image sets
-const imageSets = [
-    {
-        completeImage: 'assets/images/coast-of-galway360.jpg',
-        puzzleImage: 'assets/images/coast-of-galway360.jpg',
-        order: [
-            [1, 2, 3],
-            [4, 5, 6],
-            [7, 8, 0]
-        ]
-    },
-    {
-        completeImage: 'assets/images/duck360.jpg',
-        puzzleImage: 'assets/images/duck360.jpg',
-        order: [
-            [1, 2, 3],
-            [4, 5, 6],
-            [7, 8, 0]
-        ]
-    },
-    {
-        completeImage: 'assets/images/glendalough-lake360.jpg',
-        puzzleImage: 'assets/images/glendalough-lake360.jpg',
-        order: [
-            [1, 2, 3],
-            [4, 5, 6],
-            [7, 8, 0]
-        ]
-    },
-    {
-        completeImage: 'assets/images/gorse-and-heathers360.jpg',
-        puzzleImage: 'assets/images/gorse-and-heathers360.jpg',
-        order: [
-            [1, 2, 3],
-            [4, 5, 6],
-            [7, 8, 0]
-        ]
-    },
-    {
-        completeImage: 'assets/images/lake360.jpg',
-        puzzleImage: 'assets/images/lake360.jpg',
-        order: [
-            [1, 2, 3],
-            [4, 5, 6],
-            [7, 8, 0]
-        ]
-    },
-    {
-        completeImage: 'assets/images/log-pile360.jpg',
-        puzzleImage: 'assets/images/log-pile360.jpg',
-        order: [
-            [1, 2, 3],
-            [4, 5, 6],
-            [7, 8, 0]
-        ]
-    },
-    {
-        completeImage: 'assets/images/seagull360.jpg',
-        puzzleImage: 'assets/images/seagull360.jpg',
-        order: [
-            [1, 2, 3],
-            [4, 5, 6],
-            [7, 8, 0]
-        ]
-    },
-    {
-        completeImage: 'assets/images/splash360.jpg',
-        puzzleImage: 'assets/images/splash360.jpg',
-        order: [
-            [1, 2, 3],
-            [4, 5, 6],
-            [7, 8, 0]
-        ]
-    },
-];
-
-let currentImageSetIndex = 0;
-
-function updateTileBackgrounds(imageURL) {
-    const tiles = document.querySelectorAll('.tile'); //Get all tiles by class
-
-    tiles.forEach(function(tile) {
-        tile.style.background = `url(${imageURL})`;
-        tile.style.backgroundPosition = 'left top';
-    });
-}
-
-const tile9 = document.getElementById('tile33');
-
-//Function to change both images depending on selected set
-function changeImageSet(setIndex) {
-    const selectedSet = imageSets[setIndex];
-    changeCompleteImage(selectedSet.completeImage);
-    changePuzzleImage(selectedSet.puzzleImage);
-    tile9 = document.getElementById('tile33');
-    tile9.style.background = '#F5F5F5';
-
-    for (let row = 1; row <= 3; row++) {
-        for (let column = 1; column <= 3; column++) {
-            const tile = document.getElementById('tile' + row + column);
-            tile.id = 'tile' + selectedSet.order[row - 1][column - 1];
-        }
-    }
-
-    // Call the updateTileBackgrounds function with the URL of the new image
-    updateTileBackgrounds(selectedSet.puzzleImage);
-
-    shufflePuzzle();
-    attachTileEventListeners();
-}
 
 function attachTileEventListeners() {
     for (let row = 1; row <= 3; row++) {
@@ -317,49 +180,9 @@ function attachTileEventListeners() {
 // Call attachTileEventListeners initially
 attachTileEventListeners();
 
-function changeCompleteImage(newImageSrc) {
-    const completeImage = document.querySelector('.image img');
-    completeImage.src = newImageSrc;
-}
-
-function changePuzzleImage(newImageSrc) {
-    const tiles = document.querySelectorAll('.tile');
-    tiles.forEach((tile, index) => {
-            const row = tile.getAttribute('data-row');
-            const column = tile.getAttribute('data-column');
-            const backgroundPositionX = (column - 1) * 120 + 'px';
-            const backgroundPositionY = (row - 1) * 120 + 'px';
-
-            tile.style.backgroundImage = `url(${newImageSrc})`;
-            tile.style.backgroundPosition = `${backgroundPositionX} ${backgroundPositionY}`;
-    });
-
     //Reset the background for empty tile
     const tile9 = document.getElementById('tile33');
     tile9.style.background = '#F5F5F5';
-}
-
-//Event listeners for anchor links
-const imageLinks = document.querySelectorAll('.image-modal a');
-imageLinks.forEach((link, index) => {
-    link.addEventListener('click', function(event) {
-        event.preventDefault();
-
-        changeImageSet(index);
-
-        currentImageSetIndex = index;
-
-        shufflePuzzle();
-    });
-});
-
-function shufflePuzzle() {
-    const currentImageSet = imageSets[currentImageSetIndex];
-    const initialPuzzle = [
-        [1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 0]
-    ];
 
     if (!isSolvable(initialPuzzle)) {
         alert ('Puzzle is not solvable! Please start a new game!');
@@ -378,6 +201,5 @@ function shufflePuzzle() {
             }
         }
     }
-}
 
 shufflePuzzle();
