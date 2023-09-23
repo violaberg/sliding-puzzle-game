@@ -1,11 +1,8 @@
 const modal = document.getElementById('modal'); //Get modal
 const menuButton = document.getElementById('menu-button'); //Get the button to open modal
 const close = document.getElementsByClassName('close-button')[0]; //Get the element that closes modal
-const accordion = document.getElementsByClassName('accordion');
-let menuText = document.getElementsByClassName('menu-text');
 const newGame = document.getElementById('new-game'); //Get a new game button
 let movesCounter = document.querySelector('#moves'); //Get moves counter button
-let i;
 
 //Initial puzzle array
 const initialPuzzle = [
@@ -52,13 +49,13 @@ function isSolvable(puzzle) {
     }
 
     return inversions % 2 === 0;
-};
+}
 
 //Atach event listeners to tiles
 document.addEventListener('DOMContentLoaded', function () {
     newGame.addEventListener('click', function () {
         shufflePuzzle();
-        count = 0;
+        let count = 0;
         movesCounter.innerHTML = 'Moves: ' + count;
     });
 
@@ -155,7 +152,7 @@ function chooseTile(row, column) {
         modal.style.display = 'none';
     };
 
-count = 0;
+let count = 0;
 movesCounter.addEventListener = ('click', function () {
     count += 1;
     movesCounter.innerHTML = 'Moves: ' + count;
