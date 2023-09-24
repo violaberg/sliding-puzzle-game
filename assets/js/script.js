@@ -11,6 +11,8 @@ const initialPuzzle = [
     [7, 8, 0] //0 for the empty tile
 ];
 
+let count = 0;
+
 //Check if puzzle is solved
 function isPuzzleSolved() {
     let tileNumbers = [];
@@ -55,7 +57,7 @@ function isSolvable(puzzle) {
 document.addEventListener('DOMContentLoaded', function () {
     newGame.addEventListener('click', function () {
         shufflePuzzle();
-        let count = 0;
+        count = 0;
         movesCounter.innerHTML = 'Moves: ' + count;
     });
 
@@ -152,7 +154,6 @@ function chooseTile(row, column) {
         modal.style.display = 'none';
     };
 
-let count = 0;
 movesCounter.addEventListener = ('click', function () {
     count += 1;
     movesCounter.innerHTML = 'Moves: ' + count;
