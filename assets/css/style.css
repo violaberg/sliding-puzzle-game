@@ -47,7 +47,6 @@ p {
 .flex-container {
     display: flex;
     flex-direction: row;
-    /*margin: 0 auto;*/
     margin-left: 1em;
     max-height: 419px;
     max-width: 846px;
@@ -60,7 +59,6 @@ p {
     background: #ebf5fb;
     border: 15px solid #2f97a0;
     display: none;
-    height: 65vh;
     max-height: 490px;
     max-width: 912px;
     overflow: auto;
@@ -357,7 +355,7 @@ footer p {
         width: 70%;
     }
     .footer-icons {
-        font-size: 12px;
+        font-size: 14px;
         padding-top: 8px;
     }
     .copyright {
@@ -468,7 +466,7 @@ footer p {
         width: 70%;
     }
     .footer-icons {
-        font-size: 12px;
+        font-size: 14px;
         padding-top: 8px;
     }
     .copyright {
@@ -478,9 +476,6 @@ footer p {
 
 /* for screen size under 350px and over 321px wide */
 @media (max-width: 350px) and (min-width: 321px) {
-    body {
-        height: 100vh;
-    }
     h1 {
         font-size: 25px;
         margin-bottom: 4%;
@@ -507,7 +502,7 @@ footer p {
         max-height: 140px;
         max-width: 140px;
         position: absolute;
-        right: -1em;
+        right: -1.5em;
         top: 15px;
     }
     .image {
@@ -532,7 +527,7 @@ footer p {
         width: 32%;
     }
     .menu-modal {
-        height: 65vh;
+        min-height: 20em;
         position: absolute;
         width: 87%;
     }
@@ -579,8 +574,8 @@ footer p {
         width: 70%;
     }
     .footer-icons {
-        font-size: 12px;
-        padding-top: 8px;
+        font-size: 14px;
+        padding-top: 10px;
     }
     .copyright {
         font-size: 12px;
@@ -927,16 +922,13 @@ footer p {
 
 /* for screen size under 419px and over 401px wide */
 @media (max-width: 419px) and (min-width: 401px) {
-    body {
-        height: 100vh;
-    }
     h1 {
         font-size: 30px;
         margin-bottom: 4%;
     }
     .game-window {
-        height: 75vh;
         margin: 0;
+        min-height: 33em;
         position: relative;
     }
     .flex-container {
@@ -983,9 +975,8 @@ footer p {
         width: 35%;
     }
     .menu-modal {
-        height: 70vh;
         left: 0.6em;
-        min-height: 40em;
+        min-height: 31em;
         position: absolute;
         width: 88%;
     }
@@ -1032,9 +1023,13 @@ footer p {
         padding: 5px;
         width: 67%;
     }
+    .footer {
+        bottom: -70px;
+        position: relative;
+    }
     .footer-icons {
         font-size: 14px;
-        padding-top: 120px;
+        padding-top: 10px;
     }
     .copyright {
         font-size: 12px;
