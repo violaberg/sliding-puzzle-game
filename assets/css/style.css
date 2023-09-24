@@ -486,8 +486,8 @@ footer p {
     }
 }
 
-/* for screen size under 350px and over 316px wide */
-@media (max-width: 350px) and (min-width: 316px) {
+/* for screen size under 400px and over 351px wide */
+@media (max-width: 400px) and (min-width: 351px) {
     * {
         overflow-x: visible;
         overflow-y: visible;
@@ -512,37 +512,37 @@ footer p {
     }
     .puzzle-container {
         left: -1.5em;
-        max-height: 225px;
-        max-width: 225px;
+        max-height: 240px;
+        max-width: 240px;
         padding: 0;
         position: relative;
     }
     .image img {
-        max-height: 140px;
-        max-width: 140px;
+        max-height: 150px;
+        max-width: 150px;
         position: fixed;
-        right: 35px;
-        top: 103px;
+        right: 45px;
+        top: 95px;
     }
     .image {
         bottom: 180px;
-        left: 95px;
-        max-height: 140px;
-        max-width: 140px;
+        left: 134px;
+        max-height: 150px;
+        max-width: 150px;
         position: relative;
     }
     .tile {
-        background-size: 225px 225px;
-        height: 75px;
+        background-size: 240px 240px;
+        height: 80px;
         position: relative;
-        width: 75px;
+        width: 80px;
     }
     .buttons {
         color: #242F36;
         font-size: 12px;
-        left: 2.8em;
+        left: 3.5em;
         position: fixed;
-        top: 100px;
+        top: 105px;
         width: 32%;
     }
     .menu-modal {
@@ -602,7 +602,7 @@ footer p {
 }
 
 /* for screen size over 320px and under 360px wide */
-@media (max-width: 420px) and (min-width: 360px) {
+@media (max-width: 480px) and (min-width: 451px) {
     body {
         height: 100vh;
     }
