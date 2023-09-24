@@ -598,9 +598,10 @@ footer p {
     }
     .game-window {
         margin: 0;
+        position: relative;
     }
     .flex-container {
-        bottom: 135px;
+        bottom: 55px;
         flex-direction: column-reverse;
         margin: 0 auto;
         padding-left: 7px;
@@ -608,7 +609,6 @@ footer p {
         position: absolute;
     }
     .puzzle-container {
-        left: -1.5em;
         max-height: 240px;
         max-width: 240px;
         padding: 0;
@@ -618,7 +618,7 @@ footer p {
         max-height: 150px;
         max-width: 150px;
         position: absolute;
-        right: 1em;
+        right: 0.1em;
         top: 15px;
     }
     .image {
@@ -637,9 +637,9 @@ footer p {
     .buttons {
         color: #242F36;
         font-size: 12px;
-        left: 1.5em;
+        left: 2em;
         position: absolute;
-        top: -130px;
+        top: -140px;
         width: 32%;
     }
     .menu-modal {
@@ -691,7 +691,7 @@ footer p {
     }
     .footer-icons {
         font-size: 12px;
-        padding-top: 8px;
+        padding-top: 85px;
     }
     .copyright {
         font-size: 12px;
@@ -709,10 +709,12 @@ footer p {
     }
     .game-window {
         margin: 0;
+        position: relative;
     }
     .flex-container {
-        bottom: 135px;
+        bottom: 30px;
         flex-direction: column-reverse;
+        left: 1.5em;
         margin: 0 auto;
         padding-left: 7px;
         padding-right: 7px;
@@ -729,7 +731,7 @@ footer p {
         max-height: 150px;
         max-width: 150px;
         position: absolute;
-        right: 0.5em;
+        right: 1.3em;
         top: 15px;
     }
     .image {
@@ -748,13 +750,14 @@ footer p {
     .buttons {
         color: #242F36;
         font-size: 12px;
-        left: 1.8em;
+        left: 1em;
         position: absolute;
-        top: -130px;
+        top: -140px;
         width: 32%;
     }
     .menu-modal {
         height: 65vh;
+        left: 1em;
         position: absolute;
         width: 87%;
     }
@@ -802,7 +805,7 @@ footer p {
     }
     .footer-icons {
         font-size: 12px;
-        padding-top: 8px;
+        padding-top: 30px;
     }
     .copyright {
         font-size: 12px;
@@ -820,10 +823,12 @@ footer p {
     }
     .game-window {
         margin: 0;
+        position: relative;
     }
     .flex-container {
-        bottom: 130px;
+        bottom: 60px;
         flex-direction: column-reverse;
+        left: 1.5em;
         margin: 0 auto;
         padding-left: 7px;
         padding-right: 7px;
@@ -837,11 +842,11 @@ footer p {
         position: relative;
     }
     .image img {
-        left: 0.5em;
         max-height: 150px;
         max-width: 150px;
         position: absolute;
-        top: 15px;
+        right: 1em;
+        top: -50px;
     }
     .image {
         bottom: 180px;
@@ -861,7 +866,7 @@ footer p {
         font-size: 12px;
         left: 1.5em;
         position: absolute;
-        top: -130px;
+        top: -200px;
         width: 32%;
     }
     .menu-modal {
@@ -913,7 +918,7 @@ footer p {
     }
     .footer-icons {
         font-size: 12px;
-        padding-top: 8px;
+        padding-top: 150px;
     }
     .copyright {
         font-size: 12px;
@@ -932,17 +937,19 @@ footer p {
     .game-window {
         height: 75vh;
         margin: 0;
+        position: relative;
     }
     .flex-container {
-        bottom: 78px;
+        bottom: 40px;
         flex-direction: column-reverse;
+        left: 0.3em;
         margin: 0 auto;
         padding-left: 7px;
         padding-right: 7px;
         position: absolute;
     }
     .puzzle-container {
-        left: -1.5em;
+        left: -0.5em;
         max-height: 300px;
         max-width: 300px;
         padding: 0;
@@ -953,7 +960,6 @@ footer p {
         max-height: 150px;
         max-width: 150px;
         position: absolute;
-        top: 15px;
     }
     .image {
         bottom: 180px;
@@ -971,14 +977,15 @@ footer p {
     .buttons {
         color: #242F36;
         font-size: 12px;
-        left: 2.3em;
+        left: 1.6em;
         position: absolute;
-        top: -135px;
+        top: -150px;
         width: 35%;
     }
     .menu-modal {
         height: 70vh;
-        left: 0.5em;
+        left: 0.6em;
+        min-height: 40em;
         position: absolute;
         width: 88%;
     }
@@ -1027,7 +1034,7 @@ footer p {
     }
     .footer-icons {
         font-size: 14px;
-        padding-top: 50px;
+        padding-top: 120px;
     }
     .copyright {
         font-size: 12px;
@@ -2637,7 +2644,7 @@ footer p {
             margin: 0;
         }
         .flex-container {
-            bottom: 30px;
+            bottom: 200px;
             flex-direction: column-reverse;
             margin: 0 auto;
             padding-left: 7px;
@@ -2646,69 +2653,71 @@ footer p {
         }
         .puzzle-container {
             left: -1.5em;
-            max-height: 330px;
-            max-width: 330px;
+            max-height: 360px;
+            max-width: 360px;
             padding: 0;
             position: relative;
         }
         .image img {
-            max-height: 150px;
-            max-width: 150px;
+            max-height: 200px;
+            max-width: 200px;
             position: absolute;
             right: -15.5em;
-            top: 15px;
+            top: -100px;
         }
         .image {
             bottom: 180px;
             left: 134px;
-            max-height: 150px;
-            max-width: 150px;
+            max-height: 200px;
+            max-width: 200px;
             position: relative;
         }
         .tile {
-            background-size: 330px 330px;
-            height: 110px;
+            background-size: 360px 360px;
+            height: 120px;
             position: relative;
-            width: 110px;
+            width: 120px;
         }
         .buttons {
             color: #242F36;
             font-size: 12px;
             left: 12em;
             position: absolute;
-            top: -115px;
+            top: -215px;
             width: 35%;
         }
         .menu-modal {
-            height: 75vh;
             left: 1.2em;
+            min-height: 50em;
             position: absolute;
             width: 92%;
         }
         .sub-menu {
             position: relative;
+            top: 3em;
         }
         .menu-title {
-            font-size: 20px;
+            font-size: 30px;
+            top: 1em;
         }
         .menu-subtitle {
-            font-size: 17px;
+            font-size: 25px;
             padding: 0;
         }
         .menu-text p {
-            font-size: 14px;
+            font-size: 16px;
             margin: 7px;
-            padding: 1px 3px;
+            padding: 2px 4px;
         }
         .close-button {
             font-size: 14px;
-            right: 10px;
-            top: 16px;
+            right: 3em;
+            top: 3em;
         }
         #menu-button {
             font-size: 14px;
             margin-bottom: 10px;
-            padding: 5px;
+            padding: 10px;
             position: absolute;
             top: 10px;
             width: 70%;
@@ -2716,7 +2725,8 @@ footer p {
         button#new-game {
             font-size: 14px;
             margin-bottom: 10px;
-            padding: 5px;
+            margin-top: 10px;
+            padding: 10px;
             position: relative;
             top: 47px;
             width: 70%;
@@ -2725,8 +2735,12 @@ footer p {
             font-size: 14px;
             margin-bottom: 15px;
             margin-top: 70px;
-            padding: 5px;
-            width: 66%;
+            padding: 10px;
+            width: 62%;
+        }
+        .footer {
+            bottom: -300px;
+            position: relative;
         }
         .footer-icons {
             font-size: 14px;
@@ -3093,7 +3107,7 @@ footer p {
             margin: 0;
         }
         .flex-container {
-            bottom: 27px;
+            bottom: 250px;
             flex-direction: column-reverse;
             margin: 0 auto;
             padding-left: 7px;
@@ -3102,17 +3116,17 @@ footer p {
         }
         .puzzle-container {
             left: -1.5em;
-            max-height: 330px;
-            max-width: 330px;
+            max-height: 360px;
+            max-width: 360px;
             padding: 0;
             position: relative;
         }
         .image img {
-            max-height: 150px;
-            max-width: 150px;
+            max-height: 200px;
+            max-width: 200px;
             position: absolute;
-            right: -18em;
-            top: 15px;
+            right: -20em;
+            top: -120px;
         }
         .image {
             bottom: 180px;
@@ -3122,22 +3136,23 @@ footer p {
             position: relative;
         }
         .tile {
-            background-size: 330px 330px;
-            height: 110px;
+            background-size: 360px 360px;
+            height: 120px;
             position: relative;
-            width: 110px;
+            width: 120px;
         }
         .buttons {
             color: #242F36;
-            font-size: 12px;
-            left: 14em;
+            font-size: 14px;
+            left: 12em;
             position: absolute;
-            top: -110px;
+            top: -235px;
             width: 35%;
         }
         .menu-modal {
             height: 75vh;
             left: 1.2em;
+            min-height: 57em;
             position: absolute;
             width: 92%;
         }
@@ -3145,26 +3160,30 @@ footer p {
             position: relative;
         }
         .menu-title {
-            font-size: 20px;
+            font-size: 30px;
+            top: 1em;
+        }
+        .sub-menu {
+            top: 5em;
         }
         .menu-subtitle {
-            font-size: 17px;
+            font-size: 25px;
             padding: 0;
         }
         .menu-text p {
-            font-size: 14px;
+            font-size: 16px;
             margin: 7px;
-            padding: 1px 3px;
+            padding: 2px 5px;
         }
         .close-button {
             font-size: 14px;
-            right: 10px;
-            top: 16px;
+            right: 2em;
+            top: 3em;
         }
         #menu-button {
             font-size: 14px;
             margin-bottom: 10px;
-            padding: 5px;
+            padding: 10px;
             position: absolute;
             top: 10px;
             width: 70%;
@@ -3172,7 +3191,8 @@ footer p {
         button#new-game {
             font-size: 14px;
             margin-bottom: 10px;
-            padding: 5px;
+            margin-top: 10px;
+            padding: 10px;
             position: relative;
             top: 47px;
             width: 70%;
@@ -3181,8 +3201,12 @@ footer p {
             font-size: 14px;
             margin-bottom: 15px;
             margin-top: 70px;
-            padding: 5px;
-            width: 66%;
+            padding: 10px;
+            width: 62%;
+        }
+        .footer {
+            bottom: -440px;
+            position: relative;
         }
         .footer-icons {
             font-size: 14px;
@@ -3311,9 +3335,19 @@ footer p {
 
 /* for screen size over 910px and under 920px wide */
 @media (max-width: 920px) and (min-width: 910px) {
+    .game-window {
+        margin-top: 3em;
+        max-height: inherit;
+        min-height: 30em;
+        position: relative;
+        right: 0.8em;
+    }
+    h1 {
+        margin-top: 5%;
+    }
     .flex-container {
         margin-left: 0.1em;
-        padding-top: 8%;
+        padding-top: 5em;
     }
     .puzzle-container {
         background-size: 330px 330px;
@@ -3333,16 +3367,42 @@ footer p {
         width: 330px;
     }
     .buttons {
-        margin-right: 1.5%;
+        margin-right: 1.8%;
+    }
+    #menu-button {
+        padding: 5px;
+    }
+    button#new-game {
+        padding: 5px;
+    }
+    #moves {
+        padding: 5px;
     }
     .menu-modal {
+        height: 29em;
+        left: 0.5em;
         max-width: 842px;
     }
     .menu-text p {
         margin-left: 2%;
     }
     .menu-title {
+        font-size: 30px;
         top: 5%;
+    }
+    .sub-menu {
+        top: 1em;
+        position: relative;
+    }
+    .menu-subtitle {
+        font-size: 25px;
+    }
+    .menu-text p {
+        font-size: 16px;
+    }
+    .footer {
+        bottom: -40px;
+        position: relative;
     }
 }
 
@@ -3383,12 +3443,59 @@ footer p {
     }
 }
 
-/* for screen size over 960px and under 1200px wide */
-@media (max-width: 1200px) and (min-width: 960px) {
+/* for screen size over 960px and under 1000px wide */
+@media (max-width: 1000px) and (min-width: 960px) {
     .flex-container {
         margin-left: 0.8em;
     }
     .buttons {
             margin-right: 1%;
+    }
+}
+
+/* for screen size over 1001px and under 1100px wide */
+@media (max-width: 1100px) and (min-width: 1001px) {
+    h1 {
+        margin-top: 5%;
+    }
+    .game-window {
+        height: 30em;
+        margin-top: 2em;
+        min-height: 30em;
+    }
+    .menu-modal {
+        height: 28em;
+    }
+    .sub-menu {
+        margin-top: 1em;
+    }
+    .menu-title {
+        font-size: 30px;
+        top: 1em;
+    }
+    .menu-subtitle {
+        font-size: 25px;
+    }
+    .menu-text p {
+        font-size: 16px;
+    }
+    .close-button {
+        top: 2em;
+        right: 2em;
+    }
+    .buttons {
+        margin-right: 0.5em;
+    }
+    #menu-button {
+        padding: 5px;
+    }
+    button#new-game {
+        padding: 5px;
+    }
+    #moves {
+        padding: 5px;
+    }
+    .footer {
+        padding-top: 20px;
     }
 }
