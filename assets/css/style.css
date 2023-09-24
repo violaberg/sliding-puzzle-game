@@ -601,8 +601,12 @@ footer p {
     }
 }
 
-/* for screen size over 320px and under 360px wide */
-@media (max-width: 480px) and (min-width: 451px) {
+/* for screen size under 419px and over 401px wide */
+@media (max-width: 419px) and (min-width: 401px) {
+    * {
+        overflow-x: visible;
+        overflow-y: visible;
+    }
     body {
         height: 100vh;
     }
@@ -612,69 +616,598 @@ footer p {
     }
     .game-window {
         height: 75vh;
+        margin: 0;
     }
     .flex-container {
-        display: flex;
+        bottom: 95px;
         flex-direction: column-reverse;
-        margin-bottom: 0;
-        margin-top: 15%;
+        margin: 0 auto;
+        padding-left: 7px;
+        padding-right: 7px;
+        position: fixed;
     }
     .puzzle-container {
+        left: -1.5em;
         max-height: 300px;
         max-width: 300px;
         padding: 0;
+        position: relative;
     }
     .image img {
         max-height: 150px;
         max-width: 150px;
-        position: absolute;
-        right: 10%;
-        top: 14%;
+        position: fixed;
+        right: 60px;
+        top: 90px;
     }
     .image {
+        bottom: 180px;
+        left: 134px;
         max-height: 150px;
         max-width: 150px;
-        position: absolute;
-        right: 10%;
-        top: 14%;
+        position: relative;
     }
     .tile {
+        background-size: 300px 300px;
         height: 100px;
+        position: relative;
         width: 100px;
     }
     .buttons {
         color: #242F36;
-        font-size: 14px;
-        left: 2%;
-        margin-top: 0;
-        position: relative;
+        font-size: 12px;
+        left: 5em;
+        position: fixed;
+        top: 105px;
         width: 35%;
     }
     .menu-modal {
         height: 70vh;
+        left: 0.5em;
         position: absolute;
-        width: 87%;
+        width: 88%;
+    }
+    .sub-menu {
+        position: relative;
+    }
+    .menu-title {
+        font-size: 18px;
+    }
+    .menu-subtitle {
+        font-size: 15px;
+        padding: 0;
+    }
+    .menu-text p {
+        font-size: 13px;
+        margin: 7px;
+        padding: 1px 3px;
+    }
+    .close-button {
+        font-size: 10px;
+        right: 10px;
+        top: 16px;
     }
     #menu-button {
+        font-size: 12px;
         margin-bottom: 10px;
-        padding: 4px;
+        padding: 5px;
         position: absolute;
-        top: -40px;
-        width: 100%;
+        top: 10px;
+        width: 75%;
     }
     button#new-game {
+        font-size: 12px;
         margin-bottom: 10px;
-        margin-top: 0;
-        padding: 4px;
-        width: 100%;
+        padding: 5px;
+        position: relative;
+        top: 47px;
+        width: 75%;
     }
     #moves {
+        font-size: 12px;
         margin-bottom: 15px;
-        margin-top: 15px;
-        width: 95%;
+        margin-top: 70px;
+        padding: 5px;
+        width: 67%;
     }
     .footer-icons {
-        padding-top: 65px;
+        font-size: 14px;
+        padding-top: 50px;
+    }
+    .copyright {
+        font-size: 12px;
+    }
+}
+
+/* for screen size under 450px and over 420px wide */
+@media (max-width: 450px) and (min-width: 420px) {
+    * {
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+    body {
+        height: 100vh;
+    }
+    h1 {
+        font-size: 30px;
+        margin-bottom: 4%;
+    }
+    .game-window {
+        height: 75vh;
+        margin: 0;
+    }
+    .flex-container {
+        bottom: 95px;
+        flex-direction: column-reverse;
+        margin: 0 auto;
+        padding-left: 7px;
+        padding-right: 7px;
+        position: fixed;
+    }
+    .puzzle-container {
+        left: -1.5em;
+        max-height: 300px;
+        max-width: 300px;
+        padding: 0;
+        position: relative;
+    }
+    .image img {
+        max-height: 150px;
+        max-width: 150px;
+        position: fixed;
+        right: 65px;
+        top: 95px;
+    }
+    .image {
+        bottom: 180px;
+        left: 134px;
+        max-height: 150px;
+        max-width: 150px;
+        position: relative;
+    }
+    .tile {
+        background-size: 300px 300px;
+        height: 100px;
+        position: relative;
+        width: 100px;
+    }
+    .buttons {
+        color: #242F36;
+        font-size: 12px;
+        left: 5.5em;
+        position: fixed;
+        top: 105px;
+        width: 35%;
+    }
+    .menu-modal {
+        height: 70vh;
+        left: 0.5em;
+        position: absolute;
+        width: 90%;
+    }
+    .sub-menu {
+        position: relative;
+    }
+    .menu-title {
+        font-size: 18px;
+    }
+    .menu-subtitle {
+        font-size: 15px;
+        padding: 0;
+    }
+    .menu-text p {
+        font-size: 13px;
+        margin: 7px;
+        padding: 1px 3px;
+    }
+    .close-button {
+        font-size: 10px;
+        right: 10px;
+        top: 16px;
+    }
+    #menu-button {
+        font-size: 12px;
+        margin-bottom: 10px;
+        padding: 5px;
+        position: absolute;
+        top: 10px;
+        width: 75%;
+    }
+    button#new-game {
+        font-size: 12px;
+        margin-bottom: 10px;
+        padding: 5px;
+        position: relative;
+        top: 47px;
+        width: 75%;
+    }
+    #moves {
+        font-size: 12px;
+        margin-bottom: 15px;
+        margin-top: 70px;
+        padding: 5px;
+        width: 70%;
+    }
+    .footer-icons {
+        font-size: 14px;
+        padding-top: 50px;
+    }
+    .copyright {
+        font-size: 12px;
+    }
+}
+
+/* for screen size under 480px and over 451px wide */
+@media (max-width: 480px) and (min-width: 451px) {
+    * {
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+    body {
+        height: 100vh;
+    }
+    h1 {
+        font-size: 30px;
+        margin-bottom: 4%;
+    }
+    .game-window {
+        height: 75vh;
+        margin: 0;
+    }
+    .flex-container {
+        bottom: 91px;
+        flex-direction: column-reverse;
+        margin: 0 auto;
+        padding-left: 7px;
+        padding-right: 7px;
+        position: fixed;
+    }
+    .puzzle-container {
+        left: -1.5em;
+        max-height: 300px;
+        max-width: 300px;
+        padding: 0;
+        position: relative;
+    }
+    .image img {
+        max-height: 150px;
+        max-width: 150px;
+        position: fixed;
+        right: 79px;
+        top: 95px;
+    }
+    .image {
+        bottom: 180px;
+        left: 134px;
+        max-height: 150px;
+        max-width: 150px;
+        position: relative;
+    }
+    .tile {
+        background-size: 300px 300px;
+        height: 100px;
+        position: relative;
+        width: 100px;
+    }
+    .buttons {
+        color: #242F36;
+        font-size: 12px;
+        left: 6.5em;
+        position: fixed;
+        top: 105px;
+        width: 35%;
+    }
+    .menu-modal {
+        height: 70vh;
+        left: 0.5em;
+        position: absolute;
+        width: 90%;
+    }
+    .sub-menu {
+        position: relative;
+    }
+    .menu-title {
+        font-size: 18px;
+    }
+    .menu-subtitle {
+        font-size: 15px;
+        padding: 0;
+    }
+    .menu-text p {
+        font-size: 13px;
+        margin: 7px;
+        padding: 1px 3px;
+    }
+    .close-button {
+        font-size: 10px;
+        right: 10px;
+        top: 16px;
+    }
+    #menu-button {
+        font-size: 13px;
+        margin-bottom: 10px;
+        padding: 5px;
+        position: absolute;
+        top: 10px;
+        width: 75%;
+    }
+    button#new-game {
+        font-size: 13px;
+        margin-bottom: 10px;
+        padding: 5px;
+        position: relative;
+        top: 47px;
+        width: 75%;
+    }
+    #moves {
+        font-size: 13px;
+        margin-bottom: 15px;
+        margin-top: 70px;
+        padding: 5px;
+        width: 70%;
+    }
+    .footer-icons {
+        font-size: 14px;
+        padding-top: 50px;
+    }
+    .copyright {
+        font-size: 12px;
+    }
+}
+
+/* for screen size under 480px and over 451px wide */
+@media (max-width: 480px) and (min-width: 451px) {
+    * {
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+
+    body {
+        height: 100vh;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 4%;
+    }
+
+    .game-window {
+        height: 75vh;
+        margin: 0;
+    }
+
+    .flex-container {
+        bottom: 91px;
+        flex-direction: column-reverse;
+        margin: 0 auto;
+        padding-left: 7px;
+        padding-right: 7px;
+        position: fixed;
+    }
+
+    .puzzle-container {
+        left: -1.5em;
+        max-height: 300px;
+        max-width: 300px;
+        padding: 0;
+        position: relative;
+    }
+
+    .image img {
+        max-height: 150px;
+        max-width: 150px;
+        position: fixed;
+        right: 79px;
+        top: 95px;
+    }
+
+    .image {
+        bottom: 180px;
+        left: 134px;
+        max-height: 150px;
+        max-width: 150px;
+        position: relative;
+    }
+
+    .tile {
+        background-size: 300px 300px;
+        height: 100px;
+        position: relative;
+        width: 100px;
+    }
+
+    .buttons {
+        color: #242F36;
+        font-size: 12px;
+        left: 6.5em;
+        position: fixed;
+        top: 105px;
+        width: 35%;
+    }
+
+    .menu-modal {
+        height: 70vh;
+        left: 0.5em;
+        position: absolute;
+        width: 90%;
+    }
+
+    .sub-menu {
+        position: relative;
+    }
+
+    .menu-title {
+        font-size: 18px;
+    }
+
+    .menu-subtitle {
+        font-size: 15px;
+        padding: 0;
+    }
+
+    .menu-text p {
+        font-size: 13px;
+        margin: 7px;
+        padding: 1px 3px;
+    }
+
+    .close-button {
+        font-size: 10px;
+        right: 10px;
+        top: 16px;
+    }
+
+    #menu-button {
+        font-size: 13px;
+        margin-bottom: 10px;
+        padding: 5px;
+        position: absolute;
+        top: 10px;
+        width: 75%;
+    }
+
+    button#new-game {
+        font-size: 13px;
+        margin-bottom: 10px;
+        padding: 5px;
+        position: relative;
+        top: 47px;
+        width: 75%;
+    }
+
+    #moves {
+        font-size: 13px;
+        margin-bottom: 15px;
+        margin-top: 70px;
+        padding: 5px;
+        width: 70%;
+    }
+
+    .footer-icons {
+        font-size: 14px;
+        padding-top: 50px;
+    }
+
+    .copyright {
+        font-size: 12px;
+    }
+}
+
+/* for screen size under 481px and over 550px wide */
+@media (max-width: 570px) and (min-width: 481px) {
+    * {
+        overflow-x: visible;
+        overflow-y: visible;
+    }
+    body {
+        height: 100vh;
+    }
+    h1 {
+        font-size: 30px;
+        margin-bottom: 3%;
+    }
+    .game-window {
+        height: 80vh;
+        margin: 0;
+    }
+    .flex-container {
+        bottom: 70px;
+        flex-direction: column-reverse;
+        margin: 0 auto;
+        padding-left: 7px;
+        padding-right: 7px;
+        position: fixed;
+    }
+    .puzzle-container {
+        left: -1.5em;
+        max-height: 300px;
+        max-width: 300px;
+        padding: 0;
+        position: relative;
+    }
+    .image img {
+        max-height: 150px;
+        max-width: 150px;
+        position: fixed;
+        right: 80px;
+        top: 105px;
+    }
+    .image {
+        bottom: 180px;
+        left: 134px;
+        max-height: 150px;
+        max-width: 150px;
+        position: relative;
+    }
+    .tile {
+        background-size: 300px 300px;
+        height: 100px;
+        position: relative;
+        width: 100px;
+    }
+    .buttons {
+        color: #242F36;
+        font-size: 12px;
+        left: 7em;
+        position: fixed;
+        top: 105px;
+        width: 35%;
+    }
+    .menu-modal {
+        height: 75vh;
+        left: 0.5em;
+        position: absolute;
+        width: 90%;
+    }
+    .sub-menu {
+        position: relative;
+    }
+    .menu-title {
+        font-size: 18px;
+    }
+    .menu-subtitle {
+        font-size: 15px;
+        padding: 0;
+    }
+    .menu-text p {
+        font-size: 14px;
+        margin: 7px;
+        padding: 1px 3px;
+    }
+    .close-button {
+        font-size: 10px;
+        right: 10px;
+        top: 16px;
+    }
+    #menu-button {
+        font-size: 13px;
+        margin-bottom: 10px;
+        padding: 5px;
+        position: absolute;
+        top: 10px;
+        width: 75%;
+    }
+    button#new-game {
+        font-size: 13px;
+        margin-bottom: 10px;
+        padding: 5px;
+        position: relative;
+        top: 47px;
+        width: 75%;
+    }
+    #moves {
+        font-size: 13px;
+        margin-bottom: 15px;
+        margin-top: 70px;
+        padding: 5px;
+        width: 70%;
+    }
+    .footer-icons {
+        font-size: 14px;
+        padding-top: 80px;
+    }
+    .copyright {
+        font-size: 12px;
     }
 }
 
