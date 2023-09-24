@@ -3331,11 +3331,10 @@ footer p {
 /* for screen size over 910px and under 920px wide */
 @media (max-width: 920px) and (min-width: 910px) {
     .game-window {
-        margin-top: 3em;
-        max-height: inherit;
+        max-height: 30em;
         min-height: 30em;
         position: relative;
-        right: 0.8em;
+        top: 2em;
     }
     h1 {
         margin-top: 5%;
@@ -3374,16 +3373,17 @@ footer p {
         padding: 5px;
     }
     .menu-modal {
-        height: 29em;
         left: 0.5em;
         max-width: 842px;
+        min-height: 25em;
+        top: 8em;
     }
     .menu-text p {
         margin-left: 2%;
     }
     .menu-title {
         font-size: 30px;
-        top: 5%;
+        top: 1em;
     }
     .sub-menu {
         top: 1em;
@@ -3396,13 +3396,19 @@ footer p {
         font-size: 16px;
     }
     .footer {
-        bottom: -40px;
+        bottom: -50px;
         position: relative;
     }
 }
 
-/* for screen size over 959px and under 921px wide */
+/* for screen size over 959px and under 921px wide*/
 @media (max-width: 959px) and (min-width: 921px) {
+    .game-window {
+        max-height: 30em;
+        min-height: 30em;
+        position: relative;
+        top: 2em;
+    }
     .flex-container {
         margin-left: -0.2em;
         padding-top: 7%;
@@ -3428,7 +3434,10 @@ footer p {
         margin-right: 3%;
     }
     .menu-modal {
+        min-height: 27.8em;
         max-width: 865px;
+        position: absolute;
+        top: 7em;
     }
     .menu-text p {
         margin-left: 3%;
@@ -3436,61 +3445,123 @@ footer p {
     .menu-title {
         top: 5%;
     }
+    .footer {
+        padding-top: 50px;
+        position: relative;
+    }
+    .footer-icons {
+        font-size: 20px;
+    }
 }
 
 /* for screen size over 960px and under 1000px wide */
 @media (max-width: 1000px) and (min-width: 960px) {
-    .flex-container {
-        margin-left: 0.8em;
-    }
-    .buttons {
-            margin-right: 1%;
-    }
-}
-
-/* for screen size over 1001px and under 1100px wide */
-@media (max-width: 1100px) and (min-width: 1001px) {
-    h1 {
-        margin-top: 5%;
-    }
     .game-window {
-        height: 30em;
-        margin-top: 2em;
+            max-height: 30em;
+            min-height: 30em;
+            position: relative;
+            top: 2em;
+        }
+        .flex-container {
+            margin-left: 0.7em;
+        }
+        .menu-modal {
+            min-height: 28em;
+            position: fixed;
+            top: 7.5em;
+        }
+        .buttons {
+            margin-right: 0.5em;
+        }
+        .footer {
+            padding-top: 70px;
+            position: relative;
+        }
+        .footer-icons {
+            font-size: 20px;
+        }
+    }
+
+/* for screen size over 1001px and under 1200px wide */
+@media (max-width: 1200px) and (min-width: 1001px) {
+    .game-window {
+            max-height: 30em;
+            min-height: 30em;
+            position: relative;
+            top: 2em;
+        }
+        .flex-container {
+            margin-left: 0.7em;
+        }
+        .menu-modal {
+            min-height: 28em;
+            position: fixed;
+            top: 7.5em;
+        }
+        .buttons {
+            margin-right: 0.5em;
+        }
+        .footer {
+            padding-top: 70px;
+            position: relative;
+        }
+        .footer-icons {
+            font-size: 20px;
+        }
+    }
+
+/* for screen size over 1501px wide and under 2000px*/
+@media (max-width: 2000px) and (min-width: 1201px) {
+    .game-window {
+        max-height: 30em;
         min-height: 30em;
+        position: relative;
+        top: 2em;
+    }
+    .flex-container {
+        margin-left: 0.7em;
     }
     .menu-modal {
-        height: 28em;
-    }
-    .sub-menu {
-        margin-top: 1em;
-    }
-    .menu-title {
-        font-size: 30px;
-        top: 1em;
-    }
-    .menu-subtitle {
-        font-size: 25px;
-    }
-    .menu-text p {
-        font-size: 16px;
-    }
-    .close-button {
-        top: 2em;
-        right: 2em;
+        min-height: 29em;
+        position: fixed;
+        top: 7.5em;
     }
     .buttons {
         margin-right: 0.5em;
     }
-    #menu-button {
-        padding: 5px;
+    .footer {
+        padding-top: 50px;
+        position: relative;
     }
-    button#new-game {
-        padding: 5px;
+    .footer-icons {
+        font-size: 20px;
     }
-    #moves {
-        padding: 5px;
+}
+
+/* for screen size over 2001px wide and up*/
+@media (min-width: 2001px) {
+    .game-window {
+        max-height: 30em;
+        min-height: 30em;
+        position: relative;
+        top: 2em;
+    }
+    .flex-container {
+        margin-left: 0.7em;
+    }
+    .menu-modal {
+        min-height: 29em;
+        position: fixed;
+        top: 9em;
+            }
+    .buttons {
+        margin-right: 0.5em;
     }
     .footer {
-        padding-top: 20px;
+        padding-top: 50px;
+        position: relative;
+    }
+    .footer-icons {
+        font-size: 20px;
     }
 }
