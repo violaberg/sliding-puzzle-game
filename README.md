@@ -3,6 +3,7 @@
 ## **Overview**
 
 A Sliding Puzzle game is a popular classic type of puzzle that involves arranging tiles, also known as squares, in a specific order by sliding them around in a confined space. The most common is 3X3 or 4X4 grid puzzle with one empty space to allow for a movement. The objective is to rearrange the tiles to make a complete image in as little moves as possible. Originally it is known as one puzzle game when one holds the actual puzzle in hands. As a big fan of puzzles myself I set a goal of creating a game anyone can take with them with more than one option of image to choose from.
+![Main page](assets/images/main.PNG)
 
 ## Table of Contents:
 - [**Sliding Puzzle**](#sliding-puzzle)
@@ -19,8 +20,7 @@ A Sliding Puzzle game is a popular classic type of puzzle that involves arrangin
     - [**Favicon**](#favicon)
     - [**Header**](#header)
     - [**Logo**](#logo)
-    - [**Main menu**](#main-menu)
-      - [**Sub menus**](#sub-menus)
+    - [**Menu**](#menu)
     - [**Footer**](#footer)
   - [**Testing**](#testing)
   - [**Deployment**](#deployment)
@@ -67,6 +67,7 @@ For color scheme I chose cool colors as, especially shades of blue, are often as
 ### **Fonts**
 
 I chose Orbitron font to suit the game theme of the project.
+![Font example](assets/images/font.PNG)
 
 ## **Features**
 
@@ -84,12 +85,10 @@ Header was kept minimalistic as it keeps the game's focus on the gameplay itself
 During development I decided against adding an image for logo not to cluster the game look and kept it simple with title in a font suitable for my game.
 ![Logo](assets/images/logo.PNG)
 
-### **Main menu**
+### **Menu**
 
-#### **Sub menus**
-
-* Objective
-* Rules
+Menu was kept minimalistic to blend well with style. Accessible through Menu button with Rules and Objective as content. Once open it covers the rest of the game so not to interrupt it.
+![Menu](assets/images/menu.PNG)
 
 ### **Footer**
 

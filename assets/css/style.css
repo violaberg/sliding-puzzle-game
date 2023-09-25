@@ -365,19 +365,18 @@ footer p {
 
 /* for screen size under 320px and over 316px wide */
 @media (max-width: 320px) and (min-width: 316px) {
-    body {
-        height: 100vh;
-    }
     h1 {
         font-size: 25px;
         margin-bottom: 4%;
     }
     .game-window {
         margin: 0;
+        position: relative;
     }
     .flex-container {
-        bottom: 145px;
+        bottom: 8px;
         flex-direction: column-reverse;
+        left: 1.4em;
         margin: 0 auto;
         padding-left: 7px;
         padding-right: 7px;
@@ -394,8 +393,8 @@ footer p {
         max-height: 140px;
         max-width: 140px;
         position: absolute;
-        right: -0.3em;
-        top: 15px;
+        right: 0.9em;
+        top: 30px;
     }
     .image {
         bottom: 180px;
@@ -413,15 +412,15 @@ footer p {
     .buttons {
         color: #242F36;
         font-size: 12px;
-        left: 0.8em;
+        left: 0.2em;
         position: absolute;
-        top: -149px;
+        top: -136px;
         width: 32%;
     }
     .menu-modal {
         height: 65vh;
         position: absolute;
-        width: 87%;
+        max-width: 17em;
     }
     .sub-menu {
         position: relative;
@@ -464,6 +463,10 @@ footer p {
         margin-bottom: 15px;
         margin-top: 70px;
         width: 70%;
+    }
+    .footer {
+        bottom: -20px;
+        position: relative;
     }
     .footer-icons {
         font-size: 14px;
@@ -3253,7 +3256,7 @@ footer p {
 /* for screen size over 1201px wide and under 2000px*/
 @media (max-width: 2000px) and (min-width: 1201px) {
     h1 {
-        margin-top: 10%;
+        margin-top: 10px;
     }
     .game-window {
         max-height: 30em;
