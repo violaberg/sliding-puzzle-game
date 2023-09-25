@@ -3187,19 +3187,27 @@ footer p {
 
 /* for screen size over 1001px and under 1200px wide */
 @media (max-width: 1200px) and (min-width: 1001px) {
+    h1 {
+        left: 33%;
+        position: relative;
+        text-align: left;
+    }
     .game-window {
             max-height: 30em;
             min-height: 30em;
+            max-width: 55em;
             position: relative;
-            top: 2em;
+            right: 2.4em;
+            top: 1em;
         }
         .flex-container {
             margin-left: 0.7em;
         }
         .menu-modal {
+            left: 1.8em;
             min-height: 28em;
-            position: fixed;
-            top: 7.5em;
+            position: absolute;
+            top: 6.2em;
         }
         .buttons {
             margin-right: 0.5em;
@@ -3210,30 +3218,39 @@ footer p {
         }
         .footer-icons {
             font-size: 20px;
+            left: -2em;
+            position: relative;
+        }
+        .copyright {
+            left: -2.5em;
+            position: relative;
         }
     }
 
-/* for screen size over 1501px wide and under 2000px*/
+/* for screen size over 1201px wide and under 2000px*/
 @media (max-width: 2000px) and (min-width: 1201px) {
+    h1 {
+        margin-top: 10px;
+    }
     .game-window {
         max-height: 30em;
         min-height: 30em;
         position: relative;
-        top: 2em;
+        top: 0.5em;
     }
     .flex-container {
         margin-left: 0.7em;
     }
     .menu-modal {
         min-height: 29em;
-        position: fixed;
-        top: 7.5em;
+        position: absolute;
+        top: 4em;
     }
     .buttons {
         margin-right: 0.5em;
     }
     .footer {
-        padding-top: 50px;
+        padding-top: 30px;
         position: relative;
     }
     .footer-icons {
