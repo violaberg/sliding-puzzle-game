@@ -73,8 +73,7 @@ I chose Orbitron font to suit the game theme of the project.
 
 ### **Favicon**
 
-Favicon was created by myself with idea to recreate the look of sliding puzzle.
-![Favicon](../sliding-puzzle-game/favicon.ico)
+Favicon was created by myself with idea to recreate the look of sliding puzzle. I used [Faviconer](http://www.faviconer.com/) website to create it.
 
 ### **Header**
 
@@ -82,7 +81,7 @@ Header was kept minimalistic as it keeps the game's focus on the gameplay itself
 
 ### **Logo**
 
-During development I decided against adding an image for logo not to cluster the game look and kept it simple with title in a font suitable for my game.
+During development I decided against adding an image for logo not to cluster the game look and kept it simple with title in a font suitable for my game<br>
 ![Logo](assets/images/logo.PNG)
 
 ### **Menu**
