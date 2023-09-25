@@ -2635,7 +2635,7 @@ footer p {
             width: 62%;
         }
         .footer {
-            bottom: -315px;
+            bottom: -300px;
             position: relative;
         }
         .footer-icons {
@@ -3279,6 +3279,9 @@ footer p {
 
 /* for screen size over 2001px wide and up*/
 @media (min-width: 2001px) {
+    h1 {
+        top: 8%;
+    }
     .game-window {
         max-height: 30em;
         min-height: 30em;
