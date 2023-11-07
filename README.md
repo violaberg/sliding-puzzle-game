@@ -3,7 +3,7 @@
 ## **Overview**
 
 A Sliding Puzzle game is a popular classic type of puzzle that involves arranging tiles, also known as squares, in a specific order by sliding them around in a confined space. The most common is 3X3 or 4X4 grid puzzle with one empty space to allow for a movement. The objective is to rearrange the tiles to make a complete image in as little moves as possible. Originally it is known as one puzzle game when one holds the actual puzzle in hands. As a big fan of puzzles myself I set a goal of creating a game anyone can take with them with more than one option of image to choose from.
-![Main page](../images/main.png)
+![Main page](assets/images/main.png)
 
 ## Table of Contents:
 - [**Sliding Puzzle**](#sliding-puzzle)
@@ -56,9 +56,9 @@ A Sliding Puzzle game is a popular classic type of puzzle that involves arrangin
 
 To help planning and designing this project I made desktop and mobile wireframes. While I made some changes as I went along, please find original wireframes attached bellow:
 
-* [Desktop main page](images/desktop-wireframe.png)
-* [Desktop menu](images/desktop-menu-wireframe.png)
-* [Mobile wireframes](images/mobile-wireframe.png)
+* [Desktop main page](assets/images/desktop-wireframe.png)
+* [Desktop menu](assets/images/desktop-menu-wireframe.png)
+* [Mobile wireframes](assets/images/mobile-wireframe.png)
  
 ### **Color Scheme**
 
@@ -67,7 +67,7 @@ For color scheme I chose cool colors as, especially shades of blue, are often as
 ### **Fonts**
 
 I chose Orbitron font to suit the game theme of the project.
-![Font example](images/font.png)
+![Font example](assets/images/font.png)
 
 ## **Features**
 
@@ -82,17 +82,17 @@ Header was kept minimalistic as it keeps the game's focus on the gameplay itself
 ### **Logo**
 
 During development I decided against adding an image for logo not to cluster the game look and kept it simple with title in a font suitable for my game<br>
-![Logo](images/logo.png)
+![Logo](assets/images/logo.png)
 
 ### **Menu**
 
 Menu was kept minimalistic to blend well with style. Accessible through Menu button with Rules and Objective as content. Once open it covers the rest of the game so not to interrupt it.
-![Menu](images/menu.png)
+![Menu](assets/images/menu.png)
 
 ### **Footer**
 
 A clean footer adapts well to various screen sizes, including mobile devices. It ensures that the footer remains legible and functional on smaller screens, enhancing the user experience. Social media icons provide users with easy access to my social profiles, including Instagram where users can find some of images used for puzzles.
-![Footer](images/footer.png)
+![Footer](assets/images/footer.png)
 
 ## **Testing**
 
