@@ -3,7 +3,7 @@
 ## **Overview**
 
 A Sliding Puzzle game is a popular classic type of puzzle that involves arranging tiles, also known as squares, in a specific order by sliding them around in a confined space. The most common is 3X3 or 4X4 grid puzzle with one empty space to allow for a movement. The objective is to rearrange the tiles to make a complete image in as little moves as possible. Originally it is known as one puzzle game when one holds the actual puzzle in hands. As a big fan of puzzles myself I set a goal of creating a game anyone can take with them with more than one option of image to choose from.
-![Main page](images/main.png)
+![Main page](../images/main.png)
 
 ## Table of Contents:
 - [**Sliding Puzzle**](#sliding-puzzle)
