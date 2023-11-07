@@ -63,10 +63,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     for (let row = 1; row <= 3; row++) {
         for (let column = 1; column <= 3; column++) {
-            const tile = document.getElementById('tile' + row + column);
-            tile.addEventListener('click', function () {
-                chooseTile(row, column);
-                moveTiles('tile' + row + column, 'tile tile9');
+            const tileId = "tile" + row + column;
+        const tile = document.getElementById(tileId);
+
+        tile.addEventListener('click', function () {
+            chooseTile(row, column);
+            moveTiles(tileId, "tile tile9");
 
                 //Check if puzzle is solved
                 if (isPuzzleSolved()) {
