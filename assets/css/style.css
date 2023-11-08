@@ -32,7 +32,7 @@ p {
     font-size: 14px;
 }
 
-.container, .puzzle-container, .complete-puzzle, .menu-modal, #menu-button, #moves-counter, button#new-game {
+.container, .puzzle-container, .complete-puzzle, .menu-modal, .buttons {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
 
@@ -76,13 +76,6 @@ p {
     top: 20px;
 }
 
-#menu-button {
-    cursor: pointer;
-    margin-bottom: 20px;
-    margin-right: 12%;
-    padding: 2px;
-}
-
 .sub-menu {
     text-decoration: none;
 }
@@ -123,17 +116,6 @@ p {
 
 /*Button styling and positioning*/
 .buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 1%;
-}
-
-div.buttons > *:hover {
-    background-color: #2f97a0;
-}
-
-#moves {
     background-color: #F5F5F5;
     font-size: 13px;
     margin-right: 12%;
@@ -142,11 +124,8 @@ div.buttons > *:hover {
     text-align: center;
 }
 
-#new-game {
-    cursor: pointer;
-    margin-bottom: 20px;
-    margin-right: 12%;
-    padding: 2px;
+div.buttons > *:hover {
+    background-color: #2f97a0;
 }
 
 /*Styling and positioning for puzzle*/
@@ -156,56 +135,6 @@ div.buttons > *:hover {
     height: 360px;
     margin: 0 auto;
     width: 360px;
-}
-
-/*Styling for tiles*/
-.tile1 {
-    border: 1px solid #F5F5F5;
-    cursor: pointer;
-    display: table-cell;
-    height: 120px;
-    width: 120px;
-}
-
-/*Tile positioning*/
-
-.tile {
-    background: url(../images/coast-of-galway360.jpg);
-    background-position: left top;
-    background-size: 360px 360px;
-    border: 1px solid #F5F5F5;
-    cursor: pointer;
-    display: table-cell;
-    height: 120px;
-    width: 120px;
-}
-.tile1 {
-    background-position: left top;
-}
-.tile2 {
-    background-position: center top;
-}
-.tile3 {
-    background-position: right top;
-}
-.tile4 {
-    background-position: left center;
-}
-.tile5 {
-    background-position: center center;
-}
-.tile6 {
-    background-position: center right;
-}
-.tile7 {
-    background-position: left bottom;
-}
-.tile8 {
-    background-position: center bottom;
-}
-.tile.tile9 {
-    background: #F5F5F5;
-    cursor: default;
 }
 
 /*Original image positioning*/

@@ -129,8 +129,8 @@ The website was deployed to GitHub pages:
 ## **Credits**
 
 - The biggest thank you as always to my family during this busy time of juggling project, hackathon and life in general.
-- Thank you as well to my mentor David Bowers who supported my ambitious idea of making puzzle game in such a short time with no previous experience. And thank you for introducing me to rubber duck idea - it really did listen and solve my coding bugs.
-- And thank you to Kim for support and in general for convincing me to take on this course.
+- Thank you as well to my mentor [David Bowers](https://github.com/dnlbowers) who supported my ambitious idea of making puzzle game in such a short time with no previous experience. And thank you for introducing me to rubber duck idea - it really did listen and solve my coding bugs.
+- And thank you to [Kim](https://github.com/kimatron) for support and in general for convincing me to take on this course.
 
 ### **Content**
 
@@ -147,5 +147,6 @@ I extensively used various sources to learn about JavaScript to create sliding p
 - [CSS tricks](https://css-tricks.com/)
 
 - Photo used for puzzle was taken by myself.
+- Puzzle image was cut in tiles using [Image Online](https://imageonline.co/)
 - All icons are from [Font Awesome](https://fontawesome.com/)
 - Favicon was generated with [Faviconer](http://www.faviconer.com/)
