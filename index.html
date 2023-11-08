@@ -37,48 +37,24 @@
         space at a time, and tiles cannot jump over one another.</p>
             <p><span class="bold">Winning:</span> The game is considered solved or won when the tiles are in the correct order to make complete image.</p>
             <p><span class="bold">Reset and Shuffle:</span> Players can reset the puzzle to its initial state by clicking New Game to shuffle the tiles if they want to start over.</p>
-        </div>
+          </div>
         </div>
       </div>
       <!--End of modal-->
         <div class="game-container">
-        <div class="puzzle-container" id="puzzle-container">
-            <div class="first-row">
-                <div id="tile11" class="tile tile1" data-row="1" data-column="1">
-                </div>
-                <div id="tile12" class="tile tile2" data-row="1" data-column="2">
-                </div>
-                <div id="tile13" class="tile tile3" data-row="1" data-column="3">
-                </div>
+            <div class="buttons">
+                <!--A button to open modal-->
+                <button id="menu-button">Menu</button>
+                <!--New game button-->
+                <button id="new-game">New Game</button>
+                <!--Moves counter-->
+                <div id="moves">Moves: 0</div>
             </div>
-            <div class="second-row">
-                <div id="tile21" class="tile tile4" data-row="2" data-column="1">
-                </div>
-                <div id="tile22" class="tile tile5" data-row="2" data-column="2">
-                </div>
-                <div id="tile23" class="tile tile6" data-row="2" data-column="3">
-                </div>
-            </div>
-            <div class="third-row">
-                <div id="tile31" class="tile tile7" data-row="3" data-column="1">
-                </div>
-                <div id="tile32" class="tile tile8" data-row="3" data-column="2">
-                </div>
-                <div id="tile33" class="tile tile9" data-row="3" data-column="3">
-                </div>
-            </div>
-        </div>
-          <div class="buttons">
-            <!--A button to open modal-->
-            <button id="menu-button">Menu</button>
-            <!--New game button-->
-            <button id="new-game">New Game</button>
-            <!--Moves counter-->
-            <div id="moves">Moves: 0</div>
-          </div>
-          <div class="complete-puzzle">
+        <div class="puzzle-container"></div>
+        <div class="complete-puzzle">
             <img src="assets/images/coast-of-galway360.jpg" alt="Photo of Galway coast on a sunny day">
-          </div>
+        </div>
+        </div>
         </div>
     </main>
     <!--Footer-->

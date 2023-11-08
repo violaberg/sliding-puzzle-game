@@ -209,7 +209,7 @@ div.buttons > *:hover {
 }
 
 /*Original image positioning*/
-.image img {
+.complete-puzzle img {
     border: 1px solid #F5F5F5;
     height: auto;
     width: 360px;
