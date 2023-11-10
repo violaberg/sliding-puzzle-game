@@ -13,7 +13,6 @@ body {
 
 h1 {
     margin-bottom: 3%;
-    padding: 2%;
     font-size: 35px;
     text-align: center;
 }
@@ -26,7 +25,7 @@ p {
     font-size: 14px;
 }
 
-.puzzle-container,
+#puzzle-container,
 .game-container,
 .complete-puzzle,
 .menu-modal {
@@ -47,15 +46,33 @@ p {
     border: 5px solid #2f97a0;
     display: flex;
     flex-direction: column;
-    margin-bottom: 1%;
     max-height: 80vh;
+    max-width: 95vw;
+}
+
+/*Styling and positioning for puzzle*/
+#puzzle-container {
+    cursor: pointer;
+    display: flex;
+    flex-wrap: wrap;
+    height: 330px;
+    margin: 0 auto;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    width: 330px;
+}
+
+#puzzle-container img {
+    height: 108px;
+    width: 108px;
+    border: 1px solid #ebf5fb;
 }
 
 /*Complete puzzle positioning*/
 .complete-puzzle {
     display: flex;
     height: auto;
-    max-width: 50vw;
+    max-width: 33.3vw;
     position: relative;
 
 }
@@ -69,14 +86,13 @@ p {
 /*Menu modal styling*/
 .menu-modal {
     background: #ebf5fb;
-    border: 15px solid #2f97a0;
+    border: 5px solid #2f97a0;
     display: none;
-    max-height: 490px;
-    max-width: 912px;
+    max-height: 80vh;
+    max-width: 95vw;
     overflow: auto;
     padding-bottom: 35px;
     position: absolute;
-    width: 882px;
     z-index: 1;
 }
 
@@ -174,25 +190,18 @@ p {
     background-color: #2f97a0;
 }
 
-/*Styling and positioning for puzzle*/
-.puzzle-container {
-    cursor: pointer;
-    display: table;
-    height: 86vh;
-    margin: 0 auto;
-    margin-bottom: 3%;
-    margin-top: 3%;
-    width: 86vw;
+/*Footer styling*/
+.footer {
+    position: sticky;
 }
 
-/*Footer styling*/
 .footer-icons {
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
     list-style: none;
-    padding-top: 4%;
+    padding-top: 3%;
 }
 
 .footer-icons li {
@@ -207,5 +216,5 @@ footer p {
 }
 
 .copyright {
-    padding-top: 2px;
+    padding-top: 1%;
 }
