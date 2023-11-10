@@ -29,13 +29,14 @@
         </div>
           <div class="menu-subtitle">Rules</div>
           <div class="menu-text">
-            <p ><span class="bold">New Game:</span> At the beginning of the game click New Game button to shuffle the tiles.</p>
+            <p ><span class="bold">New Game:</span> At the beginning of the game click "New Game" to shuffle the tiles.</p>
             <p><span class="bold">Tile Movement:</span> The game is played on a grid with square tiles. There is one empty space that allows
         tiles to slide into it.</p>
             <p><span class="bold">Tile Sliding:</span> Tiles can be moved horizontally or vertically into the empty space. Only one tile can occupy the empty
         space at a time, and tiles cannot jump over one another.</p>
-            <p><span class="bold">Winning:</span> The game is considered solved or won when the tiles are in the correct order to make complete image.</p>
-            <p><span class="bold">Reset and Shuffle:</span> Players can reset the puzzle to its initial state by clicking New Game to shuffle the tiles if they want to start over.</p>
+            <p><span class="bold">Winning:</span> The game is considered solved or won when the tiles are in the correct order to make a complete image.</p>
+            <p><span class="bold">Reset and Shuffle:</span> To reset the puzzle to its initial state click on "New Game" to shuffle the tiles to start over.</p>
+            <p><span class="bold">Show/ close complete puzzle:</span> To see complete puzzle image click on "Show image", to close - click on image</p>
           </div>
         </div>
       </div>
@@ -46,13 +47,26 @@
                 <button id="menu-button">Menu</button>
                 <!--New game button-->
                 <button id="new-game">New Game</button>
+                <!--A button to show complete puzzle image-->
+                <button id="show-img">Show image</button>
                 <!--Moves counter-->
                 <div id="moves">Moves: 0</div>
             </div>
-            <div class="complete-puzzle">
+            <!--Complete puzzle modal-->
+            <div class="complete-puzzle" id="imgmodal">
                 <img src="assets/images/coast-of-galway360.jpg" alt="Photo of Galway coast on a sunny day">
             </div>
-            <div id="puzzle-container"></div>
+            <div id="puzzle-container">
+              <img id="0-0" src="assets/images/4.jpg">
+              <img id="0-1" src="assets/images/2.jpg">
+              <img id="0-2" src="assets/images/8.jpg">
+              <img id="1-0" src="assets/images/5.jpg">
+              <img id="1-1" src="assets/images/1.jpg">
+              <img id="1-2" src="assets/images/6.jpg">
+              <img id="2-0" src="assets/images/7.jpg">
+              <img id="2-1" src="assets/images/9.jpg">
+              <img id="2-2" src="assets/images/3.jpg">
+            </div>
         </div>
     <!--Footer-->
     <footer class="footer">

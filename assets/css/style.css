@@ -52,6 +52,7 @@ p {
 
 /*Styling and positioning for puzzle*/
 #puzzle-container {
+    border: 1px solid #ebf5fb;
     cursor: pointer;
     display: flex;
     flex-wrap: wrap;
@@ -70,15 +71,16 @@ p {
 
 /*Complete puzzle positioning*/
 .complete-puzzle {
-    display: flex;
+    display: none;
     height: auto;
+    margin-top: 12.5%;
     max-width: 33.3vw;
-    position: relative;
-
+    position: absolute;
+    z-index: 1;
 }
 
 .complete-puzzle img {
-    border: 1px solid #F5F5F5;
+    border: 2px solid #ebf5fb;
     height: auto;
     max-width: 100%;
 }
@@ -124,8 +126,6 @@ p {
     display: block;
     font-size: 18px;
     margin: 0 auto;
-    padding-bottom: 10px;
-    padding-top: 10px;
     text-align: center;
     text-decoration: none;
     width: 100%;
@@ -171,9 +171,20 @@ p {
     background-color: #2f97a0;
 }
 
+#show-img {
+    background-color: #ebf5fb;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    margin-bottom: 15%;
+    padding: 3%;
+}
+
+#show-img:hover {
+    background-color: #2f97a0;
+}
+
 #menu-button {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-    padding: 3.5%;
+    padding: 3%;
 }
 
 #menu-button:hover {
@@ -181,7 +192,7 @@ p {
 }
 
 #moves {
-    background-color: #F5F5F5;
+    background-color: #ebf5fb;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
     padding: 3.5%;
 }
