@@ -1,93 +1,155 @@
-const rows = 3;
-const cols = 3;
-let currentTile;
-let emptyTile;
 let count = 0;
 const body = document.body;
 const puzzleOverlay = document.getElementById('puzzle-overlay'); //Create overlay when puzzle modal is open
 const menuOverlay = document.getElementById('menu-overlay'); //Create overlay when menu modal is open
-const modal = document.getElementById('modal'); //Get modal
+const modal = document.getElementById('modal'); //Get menu modal
 const menuButton = document.getElementById('menu-button'); //Get the button to open menu modal
 const close = document.getElementsByClassName('close-button')[0]; //Get the element that closes modal
+const imgModal = document.getElementById('imgModal'); //Get complete puzzle modal
 const imgButton = document.getElementById('show-img'); //Get the button to open image modal
 const newGame = document.getElementById('new-game'); //Get a new game button
 let movesCounter = document.querySelector('#moves'); //Get moves counter button
 
 
-window.onload = function () {
-    for (let r = 0; r < rows; r++) {
-        for (let c = 0; c < cols; c++) {
+//Initial puzzle array
+const initialPuzzle = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 0] //0 for the empty tile
+];
 
-            //Create img tag and get tile coords
-            let tile = document.createElement('img');
-            tile.id = r.toString() + '-' + c.toString();
-            tile.src = initialPuzzle.shift() + '.jpg';
+//Check if puzzle is solved
+function isPuzzleSolved() {
+    let tileNumbers = [];
 
-            //Add functionality to move tiles
-            tile.addEventListener('dragstart', dragStart);
-            tile.addEventListener('dragover', dragOver);
-            tile.addEventListener('dragenter', dragEnter);
-            tile.addEventListener('dragleave', dragLeave);
-            tile.addEventListener('dragdrop', dragDrop);
-            tile.addEventListener('dragend', dragEnd);
-
-            document.getElementById('puzzle-container').append(tile);
+    //Collect the numbers of tiles
+    for (let row = 1; row <= 3; row++) {
+        for (let column = 1; column <= 3; column++) {
+            const tile = document.getElementById('tile' + row + column);
+            tileNumbers.push(parseInt(tile.textContent));
         }
     }
-};
 
-function dragStart() {
-    currentTile = this;
+    //Check if tiles are in sequence
+    for (let i = 0; i < tileNumbers.length - 1; i++) {
+        if (tileNumbers[i] !== i + 1) {
+            return false;
+        }
+    }
+
+    //The last tile is an empty one
+    return tileNumbers[tileNumbers - 1] === '9';
 }
 
-function dragOver(e) {
-    e.preventDefault();
+//Change puzzle to array
+function isSolvable(puzzle) {
+    const flatPuzzle = puzzle.flat();
+    const size = flatPuzzle.length;
+
+    let inversions = 0;
+    for (let i = 0; i < size - 1; i++) {
+        for (let j = 0; j < size; j++) {
+            if (flatPuzzle[i] !== 0 && flatPuzzle[j] !== 0 && flatPuzzle[i] > flatPuzzle[j]) {
+                inversions++;
+            }
+        }
+    }
+
+    return inversions % 2 === 0;
 }
 
-function dragEnter(e) {
-    e.preventDefault();
+//Atach event listeners to tiles
+document.addEventListener('DOMContentLoaded', function () {
+    newGame.addEventListener('click', function () {
+        shufflePuzzle();
+        count = 0;
+        movesCounter.innerHTML = 'Moves: ' + count;
+    });
+
+    for (let row = 1; row <= 3; row++) {
+        for (let column = 1; column <= 3; column++) {
+            const tileId = "tile" + row + column;
+            const tile = document.getElementById(tileId);
+
+            tile.addEventListener('click', function () {
+                chooseTile(row, column);
+                moveTiles(tileId, "tile33");
+
+                //Check if puzzle is solved
+                if (isPuzzleSolved()) {
+                    alert('Congratulations! You solved the puzzle!');
+                }
+            });
+        }
+    }
+});
+
+function moveTiles(tile1, tile2) {
+    let tempClass = document.getElementById(tile1).classList.value;
+    document.getElementById(tile1).classList.value = document.getElementById(tile2).classList.value;
+    document.getElementById(tile2).classList.value = tempClass;
+
+    //Count moves
+    count++;
+    movesCounter.innerHTML = 'Moves: ' + count;
 }
 
-function dragLeave(e) {
-    e.preventDefault();
-}
-
-function dragDrop() {
-    emptyTile = this;
-}
-
-function dragEnd() {
-
-    if (!emptyTile.src.includes('1.jpg')) {
+//Nested loops for each cell of the table
+function shufflePuzzle() {
+    if (!isSolvable(initialPuzzle)) {
+        alert('Puzzle is not solvable! Please start new game!');
         return;
     }
 
-    let currentCoords = currentTile.id.split('-');
-    let r = parseInt(currentCoords[0]);
-    let c = parseInt(currentCoords[1]);
+    document.getElementById('moves').innerHTML = 'Moves: 0';
 
-    let emptyCoords = emptyTile.id.split('-');
-    let r1 = parseInt(emptyCoords[0]);
-    let c1 = parseInt(emptyCoords[1]);
+    for (let row = 1; row <= 3; row++) {
+        for (let column = 1; column <= 3; column++) {
 
-    let dragRight = r == r1 && c1 == c + 1;
-    let dragLeft = r == r1 && c1 == c - 1;
+            let secondRow = Math.floor(Math.random() * 3 + 1);
+            let secondCol = Math.floor(Math.random() * 3 + 1);
 
-    let dragDown = c == c1 && r1 == r + 1;
-    let dragUp = c == c1 && r1 == r - 1;
-
-    let isAdjacent = dragRight || dragLeft || dragDown || dragUp;
-
-    if (isAdjacent) {
-        let currentImg = currentTile.src;
-        let emptyImg = emptyTile.src;
-
-        currentTile.src = emptyImg;
-        emptyTile.src = currentImg;
-
-        count += 1;
+            if (row !== secondRow || column !== secondCol) {
+                moveTiles("tile" + row + column, "tile" + secondRow + secondCol);
+            }
+        }
     }
+}
 
+newGame.addEventListener('click', shufflePuzzle);
+
+function chooseTile(row, column) {
+    let tile = document.getElementById("tile" + row + column);
+    let tileClass = tile.className;
+    if (tileClass != "tile33") {
+        if (column < 3) {
+            if (document.getElementById("tile" + row + (column + 1)).className == "tile33") {
+                moveTiles("tile" + row + column, "tile" + row + (column + 1));
+                return;
+            }
+        }
+
+        if (column > 1) {
+            if (document.getElementById("tile" + row + (column - 1)).className == "tile33") {
+                moveTiles("tile" + row + column, "tile" + row + (column - 1));
+                return;
+            }
+        }
+
+        if (row > 1) {
+            if (document.getElementById("tile" + (row - 1) + column).className == "tile33") {
+                moveTiles("tile" + row + column, "tile" + (row - 1) + column);
+                return;
+            }
+        }
+
+        if (row < 3) {
+            if (document.getElementById("tile" + (row + 1) + column).className == "tile33") {
+                moveTiles("tile" + row + column, "tile" + (row + 1) + column);
+                return;
+            }
+        }
+    }
 }
 
 //Open menu modal if button is clicked
@@ -110,7 +172,7 @@ close.onclick = function (event) {
 
 //Open image modal if button is clicked
 imgButton.onclick = function () {
-    imgmodal.style.display = 'block';
+    imgModal.style.display = 'block';
 
     // Disable the body
     body.style.overflow = 'hidden';
@@ -118,15 +180,15 @@ imgButton.onclick = function () {
 };
 
 //Close image modal when user clicks on image
-imgmodal.onclick = function (event) {
-    imgmodal.style.display = 'none';
+imgModal.onclick = function (event) {
+    imgModal.style.display = 'none';
 
     // Enable the body
     body.style.overflow = 'auto';
     puzzleOverlay.style.display = 'none';
 };
 
-movesCounter.addEventListener = ('click', function () {
+movesCounter.addEventListener('click', function () {
     count += 1;
     movesCounter.innerHTML = 'Moves: ' + count;
 });

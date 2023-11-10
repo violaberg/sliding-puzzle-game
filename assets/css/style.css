@@ -27,7 +27,6 @@ p {
 
 #puzzle-container,
 .game-container,
-.complete-puzzle,
 .menu-modal {
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
 }
@@ -70,6 +69,10 @@ p {
     height: 108px;
     width: 108px;
     border: 1px solid #ebf5fb;
+}
+
+.empty-tile {
+    background: rgba(36, 47, 54, 0.6);
 }
 
 /*Complete puzzle positioning*/
