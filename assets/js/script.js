@@ -3,6 +3,9 @@ const cols = 3;
 let currentTile;
 let emptyTile;
 let count = 0;
+const body = document.body;
+const puzzleOverlay = document.getElementById('puzzle-overlay'); //Create overlay when puzzle modal is open
+const menuOverlay = document.getElementById('menu-overlay'); //Create overlay when menu modal is open
 const modal = document.getElementById('modal'); //Get modal
 const menuButton = document.getElementById('menu-button'); //Get the button to open menu modal
 const close = document.getElementsByClassName('close-button')[0]; //Get the element that closes modal
@@ -90,21 +93,37 @@ function dragEnd() {
 //Open menu modal if button is clicked
 menuButton.onclick = function () {
     modal.style.display = 'block';
+
+    // Disable the body
+    body.style.overflow = 'hidden';
+    menuOverlay.style.display = 'block';
 };
 
 //Close menu modal when close (x) element is clicked
 close.onclick = function (event) {
     modal.style.display = 'none';
+
+    // Enable the body
+    body.style.overflow = 'auto';
+    menuOverlay.style.display = 'none';
 };
 
 //Open image modal if button is clicked
 imgButton.onclick = function () {
     imgmodal.style.display = 'block';
+
+    // Disable the body
+    body.style.overflow = 'hidden';
+    puzzleOverlay.style.display = 'block';
 };
 
 //Close image modal when user clicks on image
 imgmodal.onclick = function (event) {
     imgmodal.style.display = 'none';
+
+    // Enable the body
+    body.style.overflow = 'auto';
+    puzzleOverlay.style.display = 'none';
 };
 
 movesCounter.addEventListener = ('click', function () {

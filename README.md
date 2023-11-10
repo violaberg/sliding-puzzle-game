@@ -145,6 +145,7 @@ I extensively used various sources to learn about JavaScript to create sliding p
 - Watched many tutorials on [Youtube](https://www.youtube.com/)
 - Explored severel repositories on [GitHub](https://github.com/)
 - [CSS tricks](https://css-tricks.com/)
+- [Stack overflow](https://stackoverflow.com/questions/45607982/how-to-disable-background-when-modal-window-pops-up)
 
 - Photo used for puzzle was taken by myself.
 - Puzzle image was cut in tiles using [Image Online](https://imageonline.co/)

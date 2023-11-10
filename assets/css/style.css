@@ -44,10 +44,13 @@ p {
     align-items: center;
     background: #242F36;
     border: 5px solid #2f97a0;
+    bottom: 9%;
     display: flex;
     flex-direction: column;
     max-height: 80vh;
     max-width: 95vw;
+    position: relative;
+    top: 9%;
 }
 
 /*Styling and positioning for puzzle*/
@@ -85,17 +88,41 @@ p {
     max-width: 100%;
 }
 
+#puzzle-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(36, 47, 54, 0.6);
+    z-index: 0;
+}
+
 /*Menu modal styling*/
 .menu-modal {
     background: #ebf5fb;
     border: 5px solid #2f97a0;
+    bottom: 9%;
     display: none;
-    max-height: 80vh;
-    max-width: 95vw;
+    left: 3%;
     overflow: auto;
-    padding-bottom: 35px;
+    padding-bottom: 3%;
+    right: 3%;
     position: absolute;
+    top: 9%;
     z-index: 1;
+}
+
+#menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(36, 47, 54, 0.6);
+    z-index: 0;
 }
 
 .menu-title {
