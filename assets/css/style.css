@@ -69,8 +69,8 @@ p {
     border: 1px solid #ebf5fb;
 }
 
-.empty-tile {
-    background: rgba(36, 47, 54, 0.6);
+img#tile\ tile9 {
+    opacity: 0.1;
 }
 
 /*Complete puzzle positioning*/
@@ -297,5 +297,25 @@ footer p {
         margin: 0 auto;
         max-width: 66.6vw;
         padding: 3% 0;
+    }
+
+    .menu-modal {
+        margin: auto;
+        max-width: 66.6vw;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        margin-top: 1%;
+    }
+
+    .game-container {
+        max-width: 33.3vw;
+    }
+
+    .menu-modal {
+        margin: auto;
+        max-width: 33.3vw;
     }
 }
