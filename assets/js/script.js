@@ -68,12 +68,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     for (let row = 1; row <= 3; row++) {
         for (let column = 1; column <= 3; column++) {
-            const tileId = "tile" + row + column;
-            const tile = document.getElementById(tileId);
-
+            const tile = document.getElementById('tile' + row + column);
             tile.addEventListener('click', function () {
                 chooseTile(row, column);
-                moveTiles(tileId, "tile33");
+                moveTiles('tile' + row + column, 'tile tile9');
 
                 //Check if puzzle is solved
                 if (isPuzzleSolved()) {
@@ -93,9 +91,10 @@ function moveTiles(tile1, tile2) {
         return;
     }
 
-    const tempId = tile1Element.id;
-    tile1Element.id = tile2Element.id;
-    tile2Element.id = tempId;
+    // Swap the src attribute of the two tiles
+    const tempSrc = tile1Element.src;
+    tile1Element.src = tile2Element.src;
+    tile2Element.src = tempSrc;
 
     //Count moves
     count++;
@@ -133,30 +132,30 @@ newGame.addEventListener('click', shufflePuzzle);
 function chooseTile(row, column) {
     let tile = document.getElementById("tile" + row + column);
     let tileClass = tile.className;
-    if (tileClass != "tile9") {
+    if (tileClass != "tile tile9") {
         if (column < 3) {
-            if (document.getElementById("tile" + row + (column + 1)).className == "tile9") {
+            if (document.getElementById("tile" + row + (column + 1)).className == "tile tile9") {
                 moveTiles("tile" + row + column, "tile" + row + (column + 1));
                 return;
             }
         }
 
         if (column > 1) {
-            if (document.getElementById("tile" + row + (column - 1)).className == "tile9") {
+            if (document.getElementById("tile" + row + (column - 1)).className == "tile tile9") {
                 moveTiles("tile" + row + column, "tile" + row + (column - 1));
                 return;
             }
         }
 
         if (row > 1) {
-            if (document.getElementById("tile" + (row - 1) + column).className == "tile9") {
+            if (document.getElementById("tile" + (row - 1) + column).className == "tile tile9") {
                 moveTiles("tile" + row + column, "tile" + (row - 1) + column);
                 return;
             }
         }
 
         if (row < 3) {
-            if (document.getElementById("tile" + (row + 1) + column).className == "tile9") {
+            if (document.getElementById("tile" + (row + 1) + column).className == "tile tile9") {
                 moveTiles("tile" + row + column, "tile" + (row + 1) + column);
                 return;
             }
