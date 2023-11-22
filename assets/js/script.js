@@ -85,9 +85,17 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function moveTiles(tile1, tile2) {
-    let tempClass = document.getElementById(tile1).classList.value;
-    document.getElementById(tile1).classList.value = document.getElementById(tile2).classList.value;
-    document.getElementById(tile2).classList.value = tempClass;
+    const tile1Element = document.getElementById(tile1);
+    const tile2Element = document.getElementById(tile2);
+
+    if (!tile1Element || !tile2Element) {
+        console.error('Error: One or both tiles not found.', tile1, tile2);
+        return;
+    }
+
+    const tempId = tile1Element.id;
+    tile1Element.id = tile2Element.id;
+    tile2Element.id = tempId;
 
     //Count moves
     count++;
@@ -103,6 +111,7 @@ function shufflePuzzle() {
 
     document.getElementById('moves').innerHTML = 'Moves: 0';
 
+    console.log("Shuffling puzzle...");
     for (let row = 1; row <= 3; row++) {
         for (let column = 1; column <= 3; column++) {
 
@@ -110,7 +119,10 @@ function shufflePuzzle() {
             let secondCol = Math.floor(Math.random() * 3 + 1);
 
             if (row !== secondRow || column !== secondCol) {
-                moveTiles("tile" + row + column, "tile" + secondRow + secondCol);
+                const tile1 = "tile" + row + column;
+                const tile2 = "tile" + secondRow + secondCol;
+                console.log("Moving tiles:", tile1, tile2);
+                moveTiles(tile1, tile2);
             }
         }
     }
@@ -121,30 +133,30 @@ newGame.addEventListener('click', shufflePuzzle);
 function chooseTile(row, column) {
     let tile = document.getElementById("tile" + row + column);
     let tileClass = tile.className;
-    if (tileClass != "tile33") {
+    if (tileClass != "tile9") {
         if (column < 3) {
-            if (document.getElementById("tile" + row + (column + 1)).className == "tile33") {
+            if (document.getElementById("tile" + row + (column + 1)).className == "tile9") {
                 moveTiles("tile" + row + column, "tile" + row + (column + 1));
                 return;
             }
         }
 
         if (column > 1) {
-            if (document.getElementById("tile" + row + (column - 1)).className == "tile33") {
+            if (document.getElementById("tile" + row + (column - 1)).className == "tile9") {
                 moveTiles("tile" + row + column, "tile" + row + (column - 1));
                 return;
             }
         }
 
         if (row > 1) {
-            if (document.getElementById("tile" + (row - 1) + column).className == "tile33") {
+            if (document.getElementById("tile" + (row - 1) + column).className == "tile9") {
                 moveTiles("tile" + row + column, "tile" + (row - 1) + column);
                 return;
             }
         }
 
         if (row < 3) {
-            if (document.getElementById("tile" + (row + 1) + column).className == "tile33") {
+            if (document.getElementById("tile" + (row + 1) + column).className == "tile9") {
                 moveTiles("tile" + row + column, "tile" + (row + 1) + column);
                 return;
             }
