@@ -28,10 +28,10 @@
 Lighthouse results varied slightly depending on a time of day:
 
 * Mobile version:
-![Mobile lighthouse results](assets/images/mobile-lighthouse.png)
+![Mobile lighthouse results]()
 
 * Desktop version:
-![Desktop lighthouse results](assets/images/desktop.png)
+![Desktop lighthouse results]()
 
 ### **Am I Responsive**
 
@@ -41,7 +41,7 @@ I used [Am I Responsive](https://amiresponsive.co.uk/) website to check for resp
 ### **DevTools**
 
 I extensivelly used Chrome DevTools for responiveness. It helped with changing game layout for more narrow screens such as tablets and mobile phones. I took some screenhots and added bellow:
-![IPhoneSE](assets/images/iphone-se.png)
-![IPhone6 to IPhone8](assets/images/iphone6-8.png)
-![IPhone12Pro](assets/images/iphone12-pro.png)
-![Desktop screens over 1200px](assets/images/desktop-over-1200px.png)
+![IPhoneSE]()
+![IPhone6 to IPhone8]()
+![IPhone12Pro]()
+![Desktop screens over 1200px]()
