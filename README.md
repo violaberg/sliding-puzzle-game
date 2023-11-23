@@ -138,7 +138,7 @@ Content was written by myself.
 
 ### **Media**
 
-I extensively used various sources to learn about JavaScript to create sliding puzzle such as:
+I extensively used various sources to learn about JavaScript to create this project such as:
 
 - [Geeks for geeks](https://www.geeksforgeeks.org/)
 - [W3 schools](https://www.w3schools.com/)
@@ -149,5 +149,6 @@ I extensively used various sources to learn about JavaScript to create sliding p
 
 - Photo used for puzzle was taken by myself.
 - Puzzle image was cut in tiles using [Image Online](https://imageonline.co/)
+- Empty tile was created by editing image downloaded from [Vecteezy](https://www.vecteezy.com/vector-art/25256483-drying-editable-and-resizeable-vector-icon)
 - All icons are from [Font Awesome](https://fontawesome.com/)
 - Favicon was generated with [Faviconer](http://www.faviconer.com/)

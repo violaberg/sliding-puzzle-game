@@ -69,15 +69,17 @@ document.addEventListener('DOMContentLoaded', function () {
     for (let row = 1; row <= 3; row++) {
         for (let column = 1; column <= 3; column++) {
             const tile = document.getElementById('tile' + row + column);
-            tile.addEventListener('click', function () {
-                chooseTile(row, column);
-                moveTiles('tile' + row + column, 'tile tile9');
+            tile.addEventListener('click', (function (currentRow, currentColumn) {
+                return function () {
+                    chooseTile(currentRow, currentColumn);
+                    moveTiles('tile' + currentRow + currentColumn, 'tile33');
 
-                //Check if puzzle is solved
-                if (isPuzzleSolved()) {
-                    alert('Congratulations! You solved the puzzle!');
-                }
-            });
+                    //Check if puzzle is solved
+                    if (isPuzzleSolved()) {
+                        alert('Congratulations! You solved the puzzle!');
+                    }
+                };
+            })(row, column));
         }
     }
 });
@@ -86,15 +88,14 @@ function moveTiles(tile1, tile2) {
     const tile1Element = document.getElementById(tile1);
     const tile2Element = document.getElementById(tile2);
 
-    if (!tile1Element || !tile2Element) {
-        console.error('Error: One or both tiles not found.', tile1, tile2);
-        return;
-    }
-
     // Swap the src attribute of the two tiles
     const tempSrc = tile1Element.src;
     tile1Element.src = tile2Element.src;
     tile2Element.src = tempSrc;
+
+    // Swap data attributes to update tile positions
+    [tile1Element.dataset.row, tile2Element.dataset.row] = [tile2Element.dataset.row, tile1Element.dataset.row];
+    [tile1Element.dataset.column, tile2Element.dataset.column] = [tile2Element.dataset.column, tile1Element.dataset.column];
 
     //Count moves
     count++;
@@ -110,7 +111,6 @@ function shufflePuzzle() {
 
     document.getElementById('moves').innerHTML = 'Moves: 0';
 
-    console.log("Shuffling puzzle...");
     for (let row = 1; row <= 3; row++) {
         for (let column = 1; column <= 3; column++) {
 
@@ -120,7 +120,6 @@ function shufflePuzzle() {
             if (row !== secondRow || column !== secondCol) {
                 const tile1 = "tile" + row + column;
                 const tile2 = "tile" + secondRow + secondCol;
-                console.log("Moving tiles:", tile1, tile2);
                 moveTiles(tile1, tile2);
             }
         }
@@ -130,36 +129,34 @@ function shufflePuzzle() {
 newGame.addEventListener('click', shufflePuzzle);
 
 function chooseTile(row, column) {
-    let tile = document.getElementById("tile" + row + column);
-    let tileClass = tile.className;
-    if (tileClass != "tile tile9") {
-        if (column < 3) {
-            if (document.getElementById("tile" + row + (column + 1)).className == "tile tile9") {
-                moveTiles("tile" + row + column, "tile" + row + (column + 1));
-                return;
-            }
-        }
+    const tile = document.getElementById("tile" + row + column);
+    const tileClass = tile.className;
 
-        if (column > 1) {
-            if (document.getElementById("tile" + row + (column - 1)).className == "tile tile9") {
-                moveTiles("tile" + row + column, "tile" + row + (column - 1));
-                return;
-            }
-        }
+    // Get the positions of the adjacent tiles
+    const leftTile = document.getElementById("tile" + row + (column - 1));
+    const rightTile = document.getElementById("tile" + row + (column + 1));
+    const topTile = document.getElementById("tile" + (row - 1) + column);
+    const bottomTile = document.getElementById("tile" + (row + 1) + column);
 
-        if (row > 1) {
-            if (document.getElementById("tile" + (row - 1) + column).className == "tile tile9") {
-                moveTiles("tile" + row + column, "tile" + (row - 1) + column);
-                return;
-            }
-        }
+    // Check if any adjacent tile is the empty tile
+    const isLeftEmpty = leftTile && leftTile.className.includes("tile9");
+    const isRightEmpty = rightTile && rightTile.className.includes("tile9");
+    const isTopEmpty = topTile && topTile.className.includes("tile9");
+    const isBottomEmpty = bottomTile && bottomTile.className.includes("tile9");
 
-        if (row < 3) {
-            if (document.getElementById("tile" + (row + 1) + column).className == "tile tile9") {
-                moveTiles("tile" + row + column, "tile" + (row + 1) + column);
-                return;
-            }
+    // Check if the current tile can be moved
+    if (tileClass.includes("tile9") && (isLeftEmpty || isRightEmpty || isTopEmpty || isBottomEmpty)) {
+        if (isLeftEmpty) {
+            moveTiles("tile" + row + column, "tile" + row + (column - 1));
+        } else if (isRightEmpty) {
+            moveTiles("tile" + row + column, "tile" + row + (column + 1));
+        } else if (isTopEmpty) {
+            moveTiles("tile" + row + column, "tile" + (row - 1) + column);
+        } else if (isBottomEmpty) {
+            moveTiles("tile" + row + column, "tile" + (row + 1) + column);
         }
+    } else {
+        console.log(`No adjacent empty tile found for (${row}, ${column})`);
     }
 }
 
