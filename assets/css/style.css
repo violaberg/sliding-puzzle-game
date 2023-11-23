@@ -312,24 +312,36 @@ footer p {
     }
 }
 
+@media only screen and (min-width: 500px) {
+    h1 {
+        margin: 3%;
+    }
+
+    .container {
+        max-width: 66.6vw;
+        margin: auto;
+    }
+}
+
 @media only screen and (min-width: 768px) {
     h1 {
         font-size: 50px;
     }
 
-    .container {
-        margin-top: 15%;
-    }
-
     .game-container {
         margin: 0 auto;
-        max-width: 66.6vw;
         padding: 9% 0;
     }
 
     .menu-modal {
         margin: auto;
         max-width: 66.6vw;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .container {
+        max-width: 50vw;
     }
 }
 
@@ -340,10 +352,25 @@ footer p {
 
     .game-container {
         max-width: 33.3vw;
+        padding: 3% 0;
     }
 
     .menu-modal {
         margin: auto;
         max-width: 33.3vw;
+    }
+}
+
+@media only screen and (min-width: 1366px) {
+    h1 {
+        margin-bottom: 2%;
+    }
+
+    .game-container {
+        padding: 3% 0;
+    }
+
+    .footer-icons {
+        padding-top: 2%;
     }
 }
