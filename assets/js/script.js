@@ -1,4 +1,9 @@
+const body = document.body;
 const modal = document.getElementById('modal'); //Get modal
+const imgModal = document.getElementById('imgModal'); //Get complete puzzle modal
+const imgButton = document.getElementById('show-img'); //Get the button to open image modal
+const puzzleOverlay = document.getElementById('puzzle-overlay'); //Create overlay when puzzle modal is open
+const menuOverlay = document.getElementById('menu-overlay'); //Create overlay when menu modal is open
 const menuButton = document.getElementById('menu-button'); //Get the button to open modal
 const close = document.getElementsByClassName('close-button')[0]; //Get the element that closes modal
 const newGame = document.getElementById('new-game'); //Get a new game button
@@ -144,15 +149,41 @@ function chooseTile(row, column) {
         }
     }
 
-    //Open the modal if button is clicked
-    menuButton.onclick = function () {
-        modal.style.display = 'block';
-    };
+    //Open menu modal if button is clicked
+menuButton.onclick = function () {
+    modal.style.display = 'block';
 
-    //Close modal when close (x) element is clicked
-    close.onclick = function (event) {
-        modal.style.display = 'none';
-    };
+    // Disable the body
+    body.style.overflow = 'hidden';
+    menuOverlay.style.display = 'block';
+};
+
+//Close menu modal when close (x) element is clicked
+close.onclick = function (event) {
+    modal.style.display = 'none';
+
+    // Enable the body
+    body.style.overflow = 'auto';
+    menuOverlay.style.display = 'none';
+};
+
+//Open image modal if button is clicked
+imgButton.onclick = function () {
+    imgModal.style.display = 'block';
+
+    // Disable the body
+    body.style.overflow = 'hidden';
+    puzzleOverlay.style.display = 'block';
+};
+
+//Close image modal when user clicks on image
+imgModal.onclick = function (event) {
+    imgModal.style.display = 'none';
+
+    // Enable the body
+    body.style.overflow = 'auto';
+    puzzleOverlay.style.display = 'none';
+};
 
 movesCounter.addEventListener = ('click', function () {
     count += 1;
