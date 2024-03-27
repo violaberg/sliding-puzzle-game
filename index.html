@@ -9,9 +9,11 @@
     <link href="favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   </head>
   <body>
+    <div class="container">
     <h1>Sliding Puzzle</h1>
     <main>
-      <div class="menu-modal" id="modal"> <!--The Modal-->
+      <!--Menu Modal-->
+      <div class="menu-modal" id="modal">
         <h2 class="menu-title">Main Menu</h2>
         <span class="close-button">
           <a href="#" id="close"
@@ -22,24 +24,70 @@
           ></a>
         </span>
         <div class="sub-menu">
-          <button class="menu-subtitle">Objective</button>
+          <div class="menu-subtitle">Objective</div>
           <div class="menu-text">
-            <p>Solve a puzzle by rearranging tiles in correct order to make a complete image.</p>
-        </div>
-          <button class="menu-subtitle">Rules</button>
+            <p>
+              Solve a puzzle by rearranging tiles in correct order to make a
+              complete image.
+            </p>
+          </div>
+          <div class="menu-subtitle">Rules</div>
           <div class="menu-text">
-            <p ><span class="bold">New Game:</span> At the beginning of the game click New Game button to shuffle the tiles.</p>
-            <p><span class="bold">Tile Movement:</span> The game is played on a grid with square tiles. There is one empty space that allows
-        tiles to slide into it.</p>
-            <p><span class="bold">Tile Sliding:</span> Tiles can be moved horizontally or vertically into the empty space. Only one tile can occupy the empty
-        space at a time, and tiles cannot jump over one another.</p>
-            <p><span class="bold">Winning:</span> The game is considered solved or won when the tiles are in the correct order to make complete image.</p>
-            <p><span class="bold">Reset and Shuffle:</span> Players can reset the puzzle to its initial state by clicking New Game to shuffle the tiles if they want to start over.</p>
-        </div>
+            <p>
+              <span class="bold">New Game:</span> At the beginning of the game
+              click "New Game" to shuffle the tiles.
+            </p>
+            <p>
+              <span class="bold">Tile Movement:</span> The game is played on a
+              grid with square tiles. There is one empty space that allows tiles
+              to slide into it.
+            </p>
+            <p>
+              <span class="bold">Tile Sliding:</span> Tiles can be moved
+              horizontally or vertically into the empty space. Only one tile can
+              occupy the empty space at a time, and tiles cannot jump over one
+              another.
+            </p>
+            <p>
+              <span class="bold">Winning:</span> The game is considered solved
+              or won when the tiles are in the correct order to make a complete
+              image.
+            </p>
+            <p>
+              <span class="bold">Reset and Shuffle:</span> To reset the puzzle
+              to its initial state click on "New Game" to shuffle the tiles to
+              start over.
+            </p>
+            <p>
+              <span class="bold">Show/ close complete puzzle:</span> To see
+              complete puzzle image click on "Show image", to close - click on
+              image
+            </p>
+          </div>
         </div>
       </div>
-      <div class="game-window">
-        <div class="flex-container">
+      <div id="menu-overlay"></div>
+      <!--End of modal-->
+
+      <div class="game-container">
+        <div class="buttons">
+          <!--A button to open modal-->
+          <button id="menu-button">Menu</button>
+          <!--New game button-->
+          <button id="new-game">New Game</button>
+          <!--A button to show complete puzzle image-->
+          <button id="show-img">Show image</button>
+          <!--Moves counter-->
+          <div id="moves">Moves: 0</div>
+        </div>
+        <!--Complete puzzle modal-->
+        <div class="complete-puzzle" id="imgModal">
+          <img
+            src="assets/images/coast-of-galway360.jpg"
+            alt="Photo of Galway coast on a sunny day"
+          />
+        </div>
+        <div id="puzzle-overlay"></div>
         <div class="puzzle-container" id="puzzle-container">
             <div class="first-row">
                 <div id="tile11" class="tile tile1" data-row="1" data-column="1">
@@ -66,17 +114,9 @@
                 </div>
             </div>
         </div>
-          <div class="buttons">
-            <button id="menu-button">Menu</button> <!--Opens modal-->
-            <button id="new-game">New Game</button>
-            <div id="moves">Moves: 0</div>
-          </div>
-          <div class="image">
-            <img src="assets/images/coast-of-galway360.jpg" alt="Photo of Galway coast on a sunny day"/>
-          </div>
-        </div>
       </div>
     </main>
+    <!--Footer-->
     <footer class="footer">
       <ul class="footer-icons">
         <li>
@@ -94,7 +134,10 @@
             target="_blank"
             rel="noopener"
             aria-label="Visit my Instagram page (opens in a new tab)"
-            ><i class="fa-brands fa-instagram fa-xl" style="color: #000000"></i
+            ><i
+              class="fa-brands fa-instagram fa-xl"
+              style="color: #000000"
+            ></i
           ></a>
         </li>
         <li>
@@ -109,6 +152,8 @@
       </ul>
       <p class="copyright">&copy;reated by violaberg</p>
     </footer>
+    <!--End of footer-->
+  </div>
     <script
       src="https://kit.fontawesome.com/284fde1047.js"
       crossorigin="anonymous"
