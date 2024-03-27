@@ -71,7 +71,6 @@ document.addEventListener('DOMContentLoaded', function () {
             const tile = document.getElementById('tile' + row + column);
             tile.addEventListener('click', function () {
                 chooseTile(row, column);
-                moveTiles('tile' + row + column, 'tile tile9');
 
                 //Check if puzzle is solved
                 if (isPuzzleSolved()) {
