@@ -4,6 +4,10 @@
 
 A Sliding Puzzle game is a popular classic type of puzzle that involves arranging tiles, also known as squares, in a specific order by sliding them around in a confined space. The most common is 3X3 or 4X4 grid puzzle with one empty space to allow for a movement. The objective is to rearrange the tiles to make a complete image in as little moves as possible. Originally it is known as one puzzle game when one holds the actual puzzle in hands. As a big fan of puzzles myself I set a goal of creating a game anyone can take with them with more than one option of image to choose from.
 
+![AmIResponsive](assets/images/am-i-responsive.png)
+
+[Link to the live website](https://violaberg.github.io/sliding-puzzle-game/)
+
 ## Table of Contents:
 - [**Sliding Puzzle**](#sliding-puzzle)
   - [**Overview**](#overview)
@@ -54,11 +58,11 @@ A Sliding Puzzle game is a popular classic type of puzzle that involves arrangin
 
 ### **Wireframes**
 
-To help planning and designing this project I made desktop and mobile wireframes. While I made some changes as I went along, please find original wireframes attached bellow:
+To help planning and designing this project I made desktop and mobile wireframes. During the development I made changes as I went along to have better user experience. Original wireframes can be found attached bellow:
 
-* [Desktop main page](assets/images/Desktop%20wireframe.png)
-* [Desktop menu](assets/images/Desktop%20menu%20wireframe.png)
-* [Mobile wireframes](assets/images/Mobile%20wireframe.png)
+* [Desktop main page](assets/images/desktop-wireframe.png)
+* [Desktop menu](assets/images/desktop-menu-wireframe.png)
+* [Mobile wireframe](assets/images/mobile-wireframe.png)
  
 ### **Color Scheme**
 
@@ -67,6 +71,8 @@ For color scheme I chose cool colors as, especially shades of blue, are often as
 ### **Fonts**
 
 I chose Orbitron font to suit the game theme of the project.
+
+![Font](assets/images/font.png)
 
 ## **Features**
 
@@ -82,7 +88,7 @@ Header was kept minimalistic as it keeps the game's focus on the gameplay itself
 ### **Logo**
 
 During development I decided against adding an image for logo not to cluster the game look and kept it simple with title in a font suitable for my game.
-![Logo](assets/images/logo.PNG)
+![Logo](assets/images/logo.png)
 
 ### **Main menu**
 
@@ -94,7 +100,7 @@ During development I decided against adding an image for logo not to cluster the
 ### **Footer**
 
 A clean footer adapts well to various screen sizes, including mobile devices. It ensures that the footer remains legible and functional on smaller screens, enhancing the user experience. Social media icons provide users with easy access to my social profiles, including Instagram where users can find some of images used for puzzles.
-![Footer](assets/images/footer.PNG)
+![Footer](assets/images/footer.png)
 
 ## **Testing**
 

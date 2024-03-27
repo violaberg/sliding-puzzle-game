@@ -14,16 +14,21 @@
 
 * **Wanted Outcome** - Clearly shown paragraphs in menu under Objectives and Rules.
   * ***Issue Found and solution used*** - Paragraphs weren't visible at all. Eventually I found two properties set in CSS for them: 'overflow: hidden' and 'max-height: 0', once I removed them, issue was fixed.
+  * ***Issue Found and solution used*** - Console error: Can't read properties of null. With some help from Slack, we found I call moveTiles function twice. Second time around it was throwing error, once I removed the line, error was gone.
 
 ## **Testing after development**
 
 ### **Validator Testing**
 
-* While testing in JShint during development, I noticed few unused valuables that I haven't noticed before and could delete safely.
+* While testing in JShint during development, I noticed few unused valuables that I haven't noticed before and could delete safely. No errors left.
 
-![Validator screenshot]()
+![HTML validator screenshot](assets/images/html-validator.png)
+![CSS validator screenshot](assets/images/css-validator.png)
 
 ### **Lighthouse**
+
+![Desktop](assets/images/desktop-lighthouse.png)
+![Mobile](assets/images/mobile-lighthouse.png)
 
 ### **Am I Responsive**
 
